@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="fifo_sum">
+		<CBX_INST_ENTRY INSTANCE_NAME="|fifo_sum|fifi_sum_ctrl:fifi_sum_ctrl_inst|fifo1:fifo1_inst1|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_u521.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fifo_sum|fifi_sum_ctrl:fifi_sum_ctrl_inst|fifo1:fifo1_inst2|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_u521.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

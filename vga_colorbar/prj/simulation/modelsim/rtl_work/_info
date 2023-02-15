@@ -1,0 +1,137 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\vga_colorbar\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+Z1 !s110 1657079259
+VF8E3EI;CmI^HX0HLU>kNT0
+04 15 4 work tb_vga_colorbar fast 0
+=1-48ba4e63e9b7-62c505db-261-4b08
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vclk_gen
+Z2 !s110 1657079258
+IhC1MD3;iK0ec:MN2cZ]2j3
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 dE:\code\workspace_FPGA\vga_colorbar\prj\simulation\modelsim
+w1656923452
+8E:/code/workspace_FPGA/vga_colorbar/prj/ipcore/clk_gen/clk_gen.v
+FE:/code/workspace_FPGA/vga_colorbar/prj/ipcore/clk_gen/clk_gen.v
+L0 39
+Z5 OL;L;10.2;57
+r1
+31
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 >=0@KIE2Q?^U2?6z3Y1M52
+!s85 0
+!s108 1657079258.770000
+!s107 E:/code/workspace_FPGA/vga_colorbar/prj/ipcore/clk_gen/clk_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_colorbar/prj/ipcore/clk_gen|E:/code/workspace_FPGA/vga_colorbar/prj/ipcore/clk_gen/clk_gen.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/vga_colorbar/prj/ipcore/clk_gen -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vclk_gen_altpll
+R2
+Ili9NJOeZBm:3DV@eS6^eh1
+R3
+R4
+w1657077361
+8E:/code/workspace_FPGA/vga_colorbar/prj/db/clk_gen_altpll.v
+FE:/code/workspace_FPGA/vga_colorbar/prj/db/clk_gen_altpll.v
+L0 29
+R5
+r1
+31
+R6
+!i10b 1
+!s100 4m[F]VjcZ]kZX<A?AInVa2
+!s85 0
+!s108 1657079258.956000
+!s107 E:/code/workspace_FPGA/vga_colorbar/prj/db/clk_gen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_colorbar/prj/db|E:/code/workspace_FPGA/vga_colorbar/prj/db/clk_gen_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/vga_colorbar/prj/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_vga_colorbar
+IBAgTI9L?31cnHbLj>aVVV0
+R3
+R4
+w1657079200
+8E:/code/workspace_FPGA/vga_colorbar/prj/../sim/tb_vga_colorbar.v
+FE:/code/workspace_FPGA/vga_colorbar/prj/../sim/tb_vga_colorbar.v
+L0 3
+R5
+r1
+31
+R6
+R1
+!i10b 1
+!s100 QkF3EZbF:?SN6g_IL]CPj0
+!s85 0
+!s108 1657079259.122000
+!s107 E:/code/workspace_FPGA/vga_colorbar/prj/../sim/tb_vga_colorbar.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_colorbar/prj/../sim|E:/code/workspace_FPGA/vga_colorbar/prj/../sim/tb_vga_colorbar.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/vga_colorbar/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vvga_colorbar
+IFm2:Q1SPOk]8I43B6Q2DN2
+R3
+R4
+w1657078841
+8E:/code/workspace_FPGA/vga_colorbar/rtl/vga_colorbar.v
+FE:/code/workspace_FPGA/vga_colorbar/rtl/vga_colorbar.v
+L0 1
+R5
+r1
+31
+R6
+R2
+Z7 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/vga_colorbar/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 A09VbMbaX9UJO]oO^1R:B0
+!s85 0
+!s108 1657079258.279000
+!s107 E:/code/workspace_FPGA/vga_colorbar/rtl/vga_colorbar.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_colorbar/rtl|E:/code/workspace_FPGA/vga_colorbar/rtl/vga_colorbar.v|
+vvga_ctrl
+R2
+IY05;no`;`6T]`j6OGbD[02
+R3
+R4
+w1657073713
+8E:/code/workspace_FPGA/vga_colorbar/rtl/vga_ctrl.v
+FE:/code/workspace_FPGA/vga_colorbar/rtl/vga_ctrl.v
+L0 1
+R5
+r1
+31
+R6
+R7
+!i10b 1
+!s100 ne5L1AJW_R9V68gI;FCI23
+!s85 0
+!s108 1657079258.609000
+!s107 E:/code/workspace_FPGA/vga_colorbar/rtl/vga_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_colorbar/rtl|E:/code/workspace_FPGA/vga_colorbar/rtl/vga_ctrl.v|
+vvga_pic
+R2
+I6KcNKMKlDB]BHJ2jR6=LQ1
+R3
+R4
+w1657072306
+8E:/code/workspace_FPGA/vga_colorbar/rtl/vga_pic.v
+FE:/code/workspace_FPGA/vga_colorbar/rtl/vga_pic.v
+L0 1
+R5
+r1
+31
+R6
+R7
+!i10b 1
+!s100 kPVJU2IL>2A^Vi4moe0RK3
+!s85 0
+!s108 1657079258.449000
+!s107 E:/code/workspace_FPGA/vga_colorbar/rtl/vga_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_colorbar/rtl|E:/code/workspace_FPGA/vga_colorbar/rtl/vga_pic.v|

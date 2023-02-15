@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\decoder3_8\quartus_prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+V48?AzUN;WM5TVeN7jPTK<3
+04 13 4 work tb_decoder3_8 fast 0
+=1-48ba4e63e9b7-62a06964-3cc-6adc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+Z1 dE:\code\workspace_FPGA\decoder3_8\quartus_prj\simulation\modelsim
+!s110 1654679909
+vdecoder3_8
+I;hdT_ko5CQR@>?RkPc<fT1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R1
+w1654675153
+8E:/code/workspace_FPGA/decoder3_8/rtl/decoder3_8.v
+FE:/code/workspace_FPGA/decoder3_8/rtl/decoder3_8.v
+L0 1
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s110 1654684890
+!i10b 1
+!s100 @NJeP6MGnHDFnk?GFc0O[2
+!s85 0
+!s108 1654684890.864000
+!s107 E:/code/workspace_FPGA/decoder3_8/rtl/decoder3_8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/decoder3_8/rtl|E:/code/workspace_FPGA/decoder3_8/rtl/decoder3_8.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/decoder3_8/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_decoder3_8
+!s110 1654684891
+!i10b 1
+!s100 Rb<LKJazX1FXK^I6TSa]_0
+ImWW9V7NkW:mJnYGI=4BVA3
+R2
+R1
+w1654671978
+8E:/code/workspace_FPGA/decoder3_8/quartus_prj/../sim/tb_decoder.v
+FE:/code/workspace_FPGA/decoder3_8/quartus_prj/../sim/tb_decoder.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1654684891.090000
+!s107 E:/code/workspace_FPGA/decoder3_8/quartus_prj/../sim/tb_decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/decoder3_8/quartus_prj/../sim|E:/code/workspace_FPGA/decoder3_8/quartus_prj/../sim/tb_decoder.v|
+R4
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/decoder3_8/quartus_prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="rom">
+		<CBX_INST_ENTRY INSTANCE_NAME="|rom|rom_8x256:rom_8x256_inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_i7d1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

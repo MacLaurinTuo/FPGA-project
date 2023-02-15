@@ -1,0 +1,237 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\freq_meter\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+Z1 !s110 1669191509
+VTDXPh2=E;K=0TUJN1hBmA1
+04 13 4 work tb_freq_meter fast 0
+=1-48ba4e63e9b7-637dd755-265-25ec
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vbcd_8421
+Z2 !s110 1669191507
+I6W<;^6:BPBIWc1`6kYl[G0
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 dE:\code\workspace_FPGA\freq_meter\prj\simulation\modelsim
+w1655732423
+8E:/code/workspace_FPGA/freq_meter/rtl/bcd_8421.v
+FE:/code/workspace_FPGA/freq_meter/rtl/bcd_8421.v
+L0 1
+Z5 OL;L;10.2;57
+r1
+31
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z7 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/freq_meter/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 njWi>O^ihH>g1k4k<;Td^3
+!s85 0
+!s108 1669191507.309000
+!s107 E:/code/workspace_FPGA/freq_meter/rtl/bcd_8421.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/rtl|E:/code/workspace_FPGA/freq_meter/rtl/bcd_8421.v|
+vclk_stand_gen
+Z8 !s110 1669191508
+I9XgWf51Y?>AhezcAVM5WY0
+R3
+R4
+w1669190078
+8E:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_stand_gen/clk_stand_gen.v
+FE:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_stand_gen/clk_stand_gen.v
+L0 39
+R5
+r1
+31
+R6
+!i10b 1
+!s100 J6l>Yb>oeBZABHYDQ1;B>1
+!s85 0
+!s108 1669191508.210000
+!s107 E:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_stand_gen/clk_stand_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_stand_gen|E:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_stand_gen/clk_stand_gen.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_stand_gen -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vclk_stand_gen_altpll
+R8
+I_;jSJYjR6aRAWH5DzWcai3
+R3
+R4
+w1669190271
+8E:/code/workspace_FPGA/freq_meter/prj/db/clk_stand_gen_altpll.v
+FE:/code/workspace_FPGA/freq_meter/prj/db/clk_stand_gen_altpll.v
+L0 30
+R5
+r1
+31
+R6
+Z9 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/freq_meter/prj/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 XghZ8IZ3zYR8UOb;?DBNz3
+!s85 0
+!s108 1669191508.798000
+!s107 E:/code/workspace_FPGA/freq_meter/prj/db/clk_stand_gen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/prj/db|E:/code/workspace_FPGA/freq_meter/prj/db/clk_stand_gen_altpll.v|
+vclk_test_gen
+R8
+I;<8B?S2U?K41>Zb3E1Foe2
+R3
+R4
+w1669191353
+8E:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_test_gen/clk_test_gen.v
+FE:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_test_gen/clk_test_gen.v
+L0 39
+R5
+r1
+31
+R6
+!i10b 1
+!s100 @>MP?02_ekd>`4?dR;of51
+!s85 0
+!s108 1669191508.417000
+!s107 E:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_test_gen/clk_test_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_test_gen|E:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_test_gen/clk_test_gen.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/freq_meter/prj/ipcore_dir/clk_test_gen -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vclk_test_gen_altpll
+R8
+IaekPFilQ89DX;T>@j99lc3
+R3
+R4
+w1669191358
+8E:/code/workspace_FPGA/freq_meter/prj/db/clk_test_gen_altpll.v
+FE:/code/workspace_FPGA/freq_meter/prj/db/clk_test_gen_altpll.v
+L0 30
+R5
+r1
+31
+R6
+R9
+!i10b 1
+!s100 ;@ezOJiYLH9hS?hUY^<_L0
+!s85 0
+!s108 1669191508.615000
+!s107 E:/code/workspace_FPGA/freq_meter/prj/db/clk_test_gen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/prj/db|E:/code/workspace_FPGA/freq_meter/prj/db/clk_test_gen_altpll.v|
+vfreq_meter
+R2
+I48jgHD1lnn1HLM6ZWHFha1
+R3
+R4
+w1669189061
+8E:/code/workspace_FPGA/freq_meter/rtl/freq_meter.v
+FE:/code/workspace_FPGA/freq_meter/rtl/freq_meter.v
+L0 1
+R5
+r1
+31
+R6
+R7
+!i10b 1
+!s100 ?HId;`TV7j5Yd04gg3>D<0
+!s85 0
+!s108 1669191507.805000
+!s107 E:/code/workspace_FPGA/freq_meter/rtl/freq_meter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/rtl|E:/code/workspace_FPGA/freq_meter/rtl/freq_meter.v|
+vfreq_meter_ctrl
+Ii_eB2eNoMYfK_Skd=k>K]0
+R3
+R4
+w1669190250
+8E:/code/workspace_FPGA/freq_meter/rtl/freq_meter_ctrl.v
+FE:/code/workspace_FPGA/freq_meter/rtl/freq_meter_ctrl.v
+L0 1
+R5
+r1
+31
+R6
+R7
+R8
+!i10b 1
+!s100 bFjXMGWPSFcE:_K1SVHQY0
+!s85 0
+!s108 1669191508.013000
+!s107 E:/code/workspace_FPGA/freq_meter/rtl/freq_meter_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/rtl|E:/code/workspace_FPGA/freq_meter/rtl/freq_meter_ctrl.v|
+vhc595_ctrl
+I@Mi0O<9G@2nZLFCe[Y@i30
+R3
+R4
+w1655457693
+8E:/code/workspace_FPGA/freq_meter/rtl/hc595_ctrl.v
+FE:/code/workspace_FPGA/freq_meter/rtl/hc595_ctrl.v
+L0 1
+R5
+r1
+31
+R6
+R7
+R2
+!i10b 1
+!s100 D<hz:1WE=[_8S0_jk<l]C3
+!s85 0
+!s108 1669191507.086000
+!s107 E:/code/workspace_FPGA/freq_meter/rtl/hc595_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/rtl|E:/code/workspace_FPGA/freq_meter/rtl/hc595_ctrl.v|
+vseg_595_dynamic
+Z10 !s110 1669191506
+I<zBhP2;4QH_N_IMc<<WH23
+R3
+R4
+w1655711036
+8E:/code/workspace_FPGA/freq_meter/rtl/seg_595_dynamic.v
+FE:/code/workspace_FPGA/freq_meter/rtl/seg_595_dynamic.v
+L0 1
+R5
+r1
+31
+R6
+R7
+!i10b 1
+!s100 ?TVVc>?@C2P90LblAj@4I0
+!s85 0
+!s108 1669191506.869000
+!s107 E:/code/workspace_FPGA/freq_meter/rtl/seg_595_dynamic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/rtl|E:/code/workspace_FPGA/freq_meter/rtl/seg_595_dynamic.v|
+vseg_dynamic
+I4P20D[N0e4nIc@7cOEOB82
+R3
+R4
+w1655907236
+8E:/code/workspace_FPGA/freq_meter/rtl/seg_dynamic.v
+FE:/code/workspace_FPGA/freq_meter/rtl/seg_dynamic.v
+L0 1
+R5
+r1
+31
+R6
+R10
+R7
+!i10b 1
+!s100 C5W2X<f4XX^8OEg9Z8j6Z3
+!s85 0
+!s108 1669191506.655000
+!s107 E:/code/workspace_FPGA/freq_meter/rtl/seg_dynamic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/rtl|E:/code/workspace_FPGA/freq_meter/rtl/seg_dynamic.v|
+vtb_freq_meter
+IA3iah38dl=:1>k::z2QbG3
+R3
+R4
+w1669190687
+8E:/code/workspace_FPGA/freq_meter/prj/../sim/tb_freq_meter.v
+FE:/code/workspace_FPGA/freq_meter/prj/../sim/tb_freq_meter.v
+L0 3
+R5
+r1
+31
+R6
+R1
+!i10b 1
+!s100 >e2=^:>PRfQ=AbLd3dH`F2
+!s85 0
+!s108 1669191509.000000
+!s107 E:/code/workspace_FPGA/freq_meter/prj/../sim/tb_freq_meter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/freq_meter/prj/../sim|E:/code/workspace_FPGA/freq_meter/prj/../sim/tb_freq_meter.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/freq_meter/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

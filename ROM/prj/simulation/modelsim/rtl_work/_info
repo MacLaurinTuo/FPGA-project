@@ -1,0 +1,197 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\ROM\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1656339362
+VaF8nPObIcUz=8eQlhB4MS0
+04 6 4 work tb_rom fast 0
+=1-48ba4e63e9b7-62b9bba2-7d-a9c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vbcd_8421
+Z1 !s110 1656339360
+Iz5^@TeiddaFTmWfLXz_YJ3
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\ROM\prj\simulation\modelsim
+w1655732423
+8E:/code/workspace_FPGA/ROM/rtl/bcd_8421.v
+FE:/code/workspace_FPGA/ROM/rtl/bcd_8421.v
+L0 1
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z6 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/ROM/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 njWi>O^ihH>g1k4k<;Td^3
+!s85 0
+!s108 1656339360.763000
+!s107 E:/code/workspace_FPGA/ROM/rtl/bcd_8421.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/ROM/rtl|E:/code/workspace_FPGA/ROM/rtl/bcd_8421.v|
+vhc595_ctrl
+R1
+IhGmAkUFo0K`0n_BPM2T7Q2
+R2
+R3
+w1655457693
+8E:/code/workspace_FPGA/ROM/rtl/hc595_ctrl.v
+FE:/code/workspace_FPGA/ROM/rtl/hc595_ctrl.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 D<hz:1WE=[_8S0_jk<l]C3
+!s85 0
+!s108 1656339360.595000
+!s107 E:/code/workspace_FPGA/ROM/rtl/hc595_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/ROM/rtl|E:/code/workspace_FPGA/ROM/rtl/hc595_ctrl.v|
+vkey_filter
+IjHM]Co^f24EemOJ[jfCle0
+R2
+R3
+w1655041439
+8E:/code/workspace_FPGA/ROM/rtl/key_filter.v
+FE:/code/workspace_FPGA/ROM/rtl/key_filter.v
+L0 1
+R4
+r1
+31
+R5
+R6
+R1
+!i10b 1
+!s100 mC5MAQ0F`DG^:YMESZXA91
+!s85 0
+!s108 1656339360.423000
+!s107 E:/code/workspace_FPGA/ROM/rtl/key_filter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/ROM/rtl|E:/code/workspace_FPGA/ROM/rtl/key_filter.v|
+vrom
+Z7 !s110 1656339358
+I93O^6^79E>U<Nh7TWS2M83
+R2
+R3
+w1656336613
+8E:/code/workspace_FPGA/ROM/rtl/rom.v
+FE:/code/workspace_FPGA/ROM/rtl/rom.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 QH[2C?GX>UA^b[_5hMHzQ3
+!s85 0
+!s108 1656339358.948000
+!s107 E:/code/workspace_FPGA/ROM/rtl/rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/ROM/rtl|E:/code/workspace_FPGA/ROM/rtl/rom.v|
+vrom_8x256
+Ij8NmI<d<`g;;PjaGd[R7`1
+R2
+R3
+w1656245402
+8E:/code/workspace_FPGA/ROM/prj/ipcore/rom_8x256/rom_8x256.v
+FE:/code/workspace_FPGA/ROM/prj/ipcore/rom_8x256/rom_8x256.v
+L0 39
+R4
+r1
+31
+R5
+Z8 !s110 1656339361
+!i10b 1
+!s100 WZgnGoC6b[EC387`CoReX3
+!s85 0
+!s108 1656339361.052000
+!s107 E:/code/workspace_FPGA/ROM/prj/ipcore/rom_8x256/rom_8x256.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/ROM/prj/ipcore/rom_8x256|E:/code/workspace_FPGA/ROM/prj/ipcore/rom_8x256/rom_8x256.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/ROM/prj/ipcore/rom_8x256 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vrom_ctrl
+R1
+In9T7i04l`3mPjGcBH4XGK1
+R2
+R3
+w1656319660
+8E:/code/workspace_FPGA/ROM/rtl/rom_ctrl.v
+FE:/code/workspace_FPGA/ROM/rtl/rom_ctrl.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 Jlf8iIVc<5UJUYI7[8oma3
+!s85 0
+!s108 1656339360.916000
+!s107 E:/code/workspace_FPGA/ROM/rtl/rom_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/ROM/rtl|E:/code/workspace_FPGA/ROM/rtl/rom_ctrl.v|
+vseg_595_dynamic
+R7
+I7EEd_Mz<mMDc?lEVcJf<I3
+R2
+R3
+w1655711036
+8E:/code/workspace_FPGA/ROM/rtl/seg_595_dynamic.v
+FE:/code/workspace_FPGA/ROM/rtl/seg_595_dynamic.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 ?TVVc>?@C2P90LblAj@4I0
+!s85 0
+!s108 1656339358.799000
+!s107 E:/code/workspace_FPGA/ROM/rtl/seg_595_dynamic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/ROM/rtl|E:/code/workspace_FPGA/ROM/rtl/seg_595_dynamic.v|
+vseg_dynamic
+I3Ga<;^5ozW`?I>PSU9mnn0
+R2
+R3
+w1655907236
+8E:/code/workspace_FPGA/ROM/rtl/seg_dynamic.v
+FE:/code/workspace_FPGA/ROM/rtl/seg_dynamic.v
+L0 1
+R4
+r1
+31
+R5
+R7
+R6
+!i10b 1
+!s100 C5W2X<f4XX^8OEg9Z8j6Z3
+!s85 0
+!s108 1656339358.637000
+!s107 E:/code/workspace_FPGA/ROM/rtl/seg_dynamic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/ROM/rtl|E:/code/workspace_FPGA/ROM/rtl/seg_dynamic.v|
+vtb_rom
+R8
+IZ1i7;EgZ2L^@U41I8I7EP1
+R2
+R3
+w1656338853
+8E:/code/workspace_FPGA/ROM/prj/../sim/tb_rom.v
+FE:/code/workspace_FPGA/ROM/prj/../sim/tb_rom.v
+L0 2
+R4
+r1
+31
+R5
+!i10b 1
+!s100 =2E^mXc=1i=E48Vk6OfRH3
+!s85 0
+!s108 1656339361.239000
+!s107 E:/code/workspace_FPGA/ROM/prj/../sim/tb_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/ROM/prj/../sim|E:/code/workspace_FPGA/ROM/prj/../sim/tb_rom.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/ROM/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

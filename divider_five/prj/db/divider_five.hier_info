@@ -1,0 +1,14 @@
+|divider_five
+sys_clk => clk1.CLK
+sys_clk => cnt[0].CLK
+sys_clk => cnt[1].CLK
+sys_clk => cnt[2].CLK
+sys_clk => clk2.CLK
+sys_rst_n => cnt[0].ACLR
+sys_rst_n => cnt[1].ACLR
+sys_rst_n => cnt[2].ACLR
+sys_rst_n => clk2.PRESET
+sys_rst_n => clk1.PRESET
+clk_out << clk_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\key_filter\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1655038901
+VjWBHGYC[L6PKGlOAXjMfg3
+04 13 4 work tb_key_filter fast 0
+=1-48ba4e63e9b7-62a5e3b5-209-4df4
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vkey_filter
+ID@6fg:IE3O3UBHVNcQdgc1
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:\code\workspace_FPGA\key_filter\prj\simulation\modelsim
+w1654958614
+8E:/code/workspace_FPGA/key_filter/rtl/key_filter.v
+FE:/code/workspace_FPGA/key_filter/rtl/key_filter.v
+L0 1
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s110 1655038900
+!i10b 1
+!s100 B6b1UoW@iJNL3kQ7LmzJV1
+!s85 0
+!s108 1655038900.725000
+!s107 E:/code/workspace_FPGA/key_filter/rtl/key_filter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/key_filter/rtl|E:/code/workspace_FPGA/key_filter/rtl/key_filter.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/key_filter/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_key_filter
+R5
+IDJ?TH[1DSkgY;23]UBAZX0
+R1
+R2
+w1654962026
+8E:/code/workspace_FPGA/key_filter/prj/../sim/tb_key_filter.v
+FE:/code/workspace_FPGA/key_filter/prj/../sim/tb_key_filter.v
+L0 2
+R3
+r1
+31
+R4
+!i10b 1
+!s100 ?O<EObnJ`zObc6@UZ2k^k1
+!s85 0
+!s108 1655038900.963000
+!s107 E:/code/workspace_FPGA/key_filter/prj/../sim/tb_key_filter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/key_filter/prj/../sim|E:/code/workspace_FPGA/key_filter/prj/../sim/tb_key_filter.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/key_filter/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

@@ -1,0 +1,24 @@
+|complex_fsm
+sys_clk => po_money~reg0.CLK
+sys_clk => po_cola~reg0.CLK
+sys_clk => state~3.DATAIN
+sys_rst_n => po_cola~reg0.ACLR
+sys_rst_n => po_money~reg0.ACLR
+sys_rst_n => state~5.DATAIN
+pi_money_half => state.OUTPUTSELECT
+pi_money_half => state.OUTPUTSELECT
+pi_money_half => state.OUTPUTSELECT
+pi_money_half => always1.IN0
+pi_money_half => Selector1.IN3
+pi_money_half => Selector2.IN4
+pi_money_half => Selector3.IN4
+pi_money_half => Selector4.IN4
+pi_money_one => always1.IN0
+pi_money_one => always2.IN0
+pi_money_one => state.DATAA
+pi_money_one => state.DATAA
+pi_money_one => state.DATAA
+po_cola <= po_cola~reg0.DB_MAX_OUTPUT_PORT_TYPE
+po_money <= po_money~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

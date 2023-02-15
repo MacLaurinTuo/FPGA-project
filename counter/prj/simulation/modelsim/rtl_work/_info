@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\counter\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1654836139
+VnRJ;colzPl?=@AY>Pa^J73
+04 10 4 work tb_counter fast 0
+=2-48ba4e63e9b7-62a2cbab-e2-30e0
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vcounter
+IOWLN;_C_TEj<iL7C[<;2]0
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:\code\workspace_FPGA\counter\prj\simulation\modelsim
+w1654836043
+8E:/code/workspace_FPGA/counter/rtl/counter.v
+FE:/code/workspace_FPGA/counter/rtl/counter.v
+L0 38
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s110 1654836110
+!i10b 1
+!s100 ^dT^bVek07dFZ3:Yh_CBf2
+!s85 0
+!s108 1654836110.383000
+!s107 E:/code/workspace_FPGA/counter/rtl/counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/counter/rtl|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|E:/code/workspace_FPGA/counter/rtl/counter.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/counter/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_counter
+I1[oYcVI_8Ee_K0`=IRbN^0
+R1
+R2
+w1654833329
+8E:/code/workspace_FPGA/counter/prj/../sim/tb_counter.v
+FE:/code/workspace_FPGA/counter/prj/../sim/tb_counter.v
+L0 2
+R3
+r1
+31
+R4
+!s110 1654833494
+!i10b 1
+!s100 ;czb=?WZ]7GGTziNFHW?U2
+!s85 0
+!s108 1654833494.365000
+!s107 E:/code/workspace_FPGA/counter/prj/../sim/tb_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/counter/prj/../sim|E:/code/workspace_FPGA/counter/prj/../sim/tb_counter.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/counter/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\simple_fsm\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+V=o3@MCO89TNXPzODQUg;;1
+04 13 4 work tb_simple_fsm fast 0
+=1-48ba4e63e9b7-62a82782-2fb-3e38
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+Z1 dE:\code\workspace_FPGA\simple_fsm\prj\simulation\modelsim
+!s110 1655187330
+vsimple_fsm
+ITAaT2G]Ifci3SH=i44`LB1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R1
+w1655182506
+8E:/code/workspace_FPGA/simple_fsm/rtl/simple_fsm.v
+FE:/code/workspace_FPGA/simple_fsm/rtl/simple_fsm.v
+L0 1
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s110 1655197031
+!i10b 1
+!s100 cK9WSVcE`B@oEcDTe5>gW0
+!s85 0
+!s108 1655197031.610000
+!s107 E:/code/workspace_FPGA/simple_fsm/rtl/simple_fsm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/simple_fsm/rtl|E:/code/workspace_FPGA/simple_fsm/rtl/simple_fsm.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/simple_fsm/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_simple_fsm
+R5
+!i10b 1
+!s100 9AW9?7?RhGj>kgfI@L0BI0
+Iga3e3GlNh:8N<P1zlXdIO1
+R2
+R1
+w1655188024
+8E:/code/workspace_FPGA/simple_fsm/prj/../sim/tb_simple_fsm.v
+FE:/code/workspace_FPGA/simple_fsm/prj/../sim/tb_simple_fsm.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1655197031.778000
+!s107 E:/code/workspace_FPGA/simple_fsm/prj/../sim/tb_simple_fsm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/simple_fsm/prj/../sim|E:/code/workspace_FPGA/simple_fsm/prj/../sim/tb_simple_fsm.v|
+R4
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/simple_fsm/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

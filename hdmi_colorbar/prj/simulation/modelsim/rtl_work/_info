@@ -1,0 +1,238 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\hdmi_colorbar\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1669817528
+VPdiLRcj_T?g5Mag`M[KAI3
+04 16 4 work tb_hdmi_colorbar fast 0
+=1-48ba4e63e9b7-638764b7-2fc-b10
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vclk_gen
+Z1 !s110 1669817517
+I@hG?G2Bgz[eMTbNblCHSn2
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\hdmi_colorbar\prj\simulation\modelsim
+w1669778999
+8E:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/clk_gen/clk_gen.v
+FE:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/clk_gen/clk_gen.v
+L0 39
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 L0Wa?Y;lW[hXOEhdFVmoz2
+!s85 0
+!s108 1669817517.649000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/clk_gen/clk_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/clk_gen|E:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/clk_gen/clk_gen.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/clk_gen -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vclk_gen_altpll
+R1
+IZnYS@9?=Ai1ga?[fEzh`Z0
+R2
+R3
+w1669793958
+8E:/code/workspace_FPGA/hdmi_colorbar/prj/db/clk_gen_altpll.v
+FE:/code/workspace_FPGA/hdmi_colorbar/prj/db/clk_gen_altpll.v
+L0 30
+R4
+r1
+31
+R5
+!i10b 1
+!s100 4VZ;Q0ifWRUL;]0Ozz[GI1
+!s85 0
+!s108 1669817517.866000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/prj/db/clk_gen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/prj/db|E:/code/workspace_FPGA/hdmi_colorbar/prj/db/clk_gen_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/hdmi_colorbar/prj/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vDDR
+R1
+I7mc1ZYOWAY[bUf<AlN@DR3
+R2
+R3
+w1669684723
+8E:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/DDR/DDR.v
+FE:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/DDR/DDR.v
+L0 39
+R4
+r1
+31
+R5
+n@d@d@r
+!i10b 1
+!s100 `ROIKk6HEzdlDUf8M[?O<0
+!s85 0
+!s108 1669817517.476000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/DDR/DDR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/DDR|E:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/DDR/DDR.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/hdmi_colorbar/prj/ip_core/DDR -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vencode
+IbFTh:Ij]m:4B_7CXz<RBD2
+R2
+R3
+w1669815883
+8E:/code/workspace_FPGA/hdmi_colorbar/rtl/encode.v
+FE:/code/workspace_FPGA/hdmi_colorbar/rtl/encode.v
+L0 1
+R4
+r1
+31
+R5
+Z6 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/hdmi_colorbar/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+R1
+!i10b 1
+!s100 Tf9CKbhY=LX[l5Cbd0g9m3
+!s85 0
+!s108 1669817516.992000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/rtl/encode.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/rtl|E:/code/workspace_FPGA/hdmi_colorbar/rtl/encode.v|
+vencode1
+InN?9E]bb[c5:j_ZR?nQDH0
+R2
+R3
+w1669797458
+8E:/code/workspace_FPGA/hdmi_colorbar/rtl/encode1.v
+FE:/code/workspace_FPGA/hdmi_colorbar/rtl/encode1.v
+L0 46
+R4
+r1
+31
+R5
+R6
+!s110 1669817515
+!i10b 1
+!s100 o8[S[j0okcgj^ai3PeM5]0
+!s85 0
+!s108 1669817515.792000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/rtl/encode1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/rtl|E:/code/workspace_FPGA/hdmi_colorbar/rtl/encode1.v|
+vhdmi_colorbar
+Z7 !s110 1669817516
+I:<0M?IlbTAk=M1[AcXaQ30
+R2
+R3
+w1669817483
+8E:/code/workspace_FPGA/hdmi_colorbar/rtl/hdmi_colorbar.v
+FE:/code/workspace_FPGA/hdmi_colorbar/rtl/hdmi_colorbar.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 CC^e@dRRI6O@[L<<Ec0862
+!s85 0
+!s108 1669817516.810000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/rtl/hdmi_colorbar.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/rtl|E:/code/workspace_FPGA/hdmi_colorbar/rtl/hdmi_colorbar.v|
+vhdmi_ctrl
+R7
+IWC=lzj:hbiaKI2BbDR0IQ0
+R2
+R3
+w1669798751
+8E:/code/workspace_FPGA/hdmi_colorbar/rtl/hdmi_ctrl.v
+FE:/code/workspace_FPGA/hdmi_colorbar/rtl/hdmi_ctrl.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 ;UHgEPlR5GoF47enz`kBm3
+!s85 0
+!s108 1669817516.605000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/rtl/hdmi_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/rtl|E:/code/workspace_FPGA/hdmi_colorbar/rtl/hdmi_ctrl.v|
+vpar_to_ser
+R7
+I^^@f]V;cIOXk3D4lm08TI2
+R2
+R3
+w1669794129
+8E:/code/workspace_FPGA/hdmi_colorbar/rtl/par_to_ser.v
+FE:/code/workspace_FPGA/hdmi_colorbar/rtl/par_to_ser.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 bKzI6N<CUTXQaa7dT`8ZC1
+!s85 0
+!s108 1669817516.412000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/rtl/par_to_ser.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/rtl|E:/code/workspace_FPGA/hdmi_colorbar/rtl/par_to_ser.v|
+vtb_hdmi_colorbar
+IFYilQHB]1[`W>Y]lJ3_=;2
+R2
+R3
+w1669793727
+8E:/code/workspace_FPGA/hdmi_colorbar/prj/../sim/tb_hdmi_colorbar.v
+FE:/code/workspace_FPGA/hdmi_colorbar/prj/../sim/tb_hdmi_colorbar.v
+L0 3
+R4
+r1
+31
+R5
+!s110 1669817518
+!i10b 1
+!s100 O?`Rjiii^Xfb23HlG@kCi1
+!s85 0
+!s108 1669817518.065000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/prj/../sim/tb_hdmi_colorbar.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/prj/../sim|E:/code/workspace_FPGA/hdmi_colorbar/prj/../sim/tb_hdmi_colorbar.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/hdmi_colorbar/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vvga_ctrl
+R7
+Ik36TnVjzelIATL3YO9fT82
+R2
+R3
+w1669794419
+8E:/code/workspace_FPGA/hdmi_colorbar/rtl/vga_ctrl.v
+FE:/code/workspace_FPGA/hdmi_colorbar/rtl/vga_ctrl.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 of2NNb3IafE5RVH>j`RjB3
+!s85 0
+!s108 1669817516.200000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/rtl/vga_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/rtl|E:/code/workspace_FPGA/hdmi_colorbar/rtl/vga_ctrl.v|
+vvga_pic
+I0FjhB<]N]iiaQ[ZSQ[7=K1
+R2
+R3
+w1669363444
+8E:/code/workspace_FPGA/hdmi_colorbar/rtl/vga_pic.v
+FE:/code/workspace_FPGA/hdmi_colorbar/rtl/vga_pic.v
+L0 1
+R4
+r1
+31
+R5
+R6
+R7
+!i10b 1
+!s100 I?TN=IQD15`]gW1iBb:3E2
+!s85 0
+!s108 1669817516.000000
+!s107 E:/code/workspace_FPGA/hdmi_colorbar/rtl/vga_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/hdmi_colorbar/rtl|E:/code/workspace_FPGA/hdmi_colorbar/rtl/vga_pic.v|

@@ -1,0 +1,39 @@
+Sat Jun 11 21:14:13 +0800 2022
+Trace back: Dataset not found: Region
+    while executing
+"DatasetInfo name Region"
+    ("eval" body line 1)
+    invoked from within
+"eval "DatasetInfo $option $ds""
+    (procedure "dataset info" line 6)
+    invoked from within
+"dataset info name $namespace"
+    (procedure "namespaceOf" line 9)
+    invoked from within
+"namespaceOf $sig"
+    (procedure "_showDFReadersDrivers" line 18)
+    invoked from within
+"_showDFReadersDrivers drivers .main_pane.wave.interior.cs.body.pw.wf 1"
+    ("eval" body line 1)
+    invoked from within
+"eval _showDFReadersDrivers "drivers" $winname $classic $args"
+    (procedure "Wave::ShowDFDrivers" line 2)
+    invoked from within
+"Wave::ShowDFDrivers $top 1"
+    ("dataflow" arm line 2)
+    invoked from within
+"switch $m {
+               "none" {}
+               "dataflow" {
+                  Wave::ShowDFDrivers $top 1
+               }
+               "schemat..."
+    (procedure "Wave::1Up" line 24)
+    invoked from within
+"Wave::1Up $widget $x $y"
+    (procedure "Wave::SelectUp" line 4)
+    invoked from within
+"Wave::SelectUp	 .main_pane.wave.interior.cs.body.pw.wf.grid.row0,wave.data 395 113 680 316 "
+    (command bound to event)
+  <2:D:/develop_tools/modelsim10.2/tcl/tk8.5/bgerror.tcl:95: ::tkerror {Dataset not found: Region}
+  <1:eval:1: ::tk::dialog::error::bgerror {Dataset not found: Region}

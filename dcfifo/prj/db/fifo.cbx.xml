@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="fifo">
+		<CBX_INST_ENTRY INSTANCE_NAME="|fifo|dcfifo_8x256to16x128:dcfifo_8x256to16x128_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component" CBX_FILE_NAME="dcfifo_5nl1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

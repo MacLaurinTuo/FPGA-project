@@ -1,0 +1,1607 @@
+TimeQuest Timing Analyzer report for rs232
+Wed Dec 07 14:12:17 2022
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'sys_clk'
+ 13. Slow 1200mV 85C Model Hold: 'sys_clk'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'sys_clk'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Slow 1200mV 85C Model Metastability Report
+ 20. Slow 1200mV 0C Model Fmax Summary
+ 21. Slow 1200mV 0C Model Setup Summary
+ 22. Slow 1200mV 0C Model Hold Summary
+ 23. Slow 1200mV 0C Model Recovery Summary
+ 24. Slow 1200mV 0C Model Removal Summary
+ 25. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 26. Slow 1200mV 0C Model Setup: 'sys_clk'
+ 27. Slow 1200mV 0C Model Hold: 'sys_clk'
+ 28. Slow 1200mV 0C Model Minimum Pulse Width: 'sys_clk'
+ 29. Setup Times
+ 30. Hold Times
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Slow 1200mV 0C Model Metastability Report
+ 34. Fast 1200mV 0C Model Setup Summary
+ 35. Fast 1200mV 0C Model Hold Summary
+ 36. Fast 1200mV 0C Model Recovery Summary
+ 37. Fast 1200mV 0C Model Removal Summary
+ 38. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 39. Fast 1200mV 0C Model Setup: 'sys_clk'
+ 40. Fast 1200mV 0C Model Hold: 'sys_clk'
+ 41. Fast 1200mV 0C Model Minimum Pulse Width: 'sys_clk'
+ 42. Setup Times
+ 43. Hold Times
+ 44. Clock to Output Times
+ 45. Minimum Clock to Output Times
+ 46. Fast 1200mV 0C Model Metastability Report
+ 47. Multicorner Timing Analysis Summary
+ 48. Setup Times
+ 49. Hold Times
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Board Trace Model Assignments
+ 53. Input Transition Times
+ 54. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 55. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 56. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 57. Setup Transfers
+ 58. Hold Transfers
+ 59. Report TCCS
+ 60. Report RSKM
+ 61. Unconstrained Paths
+ 62. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                        ;
++--------------------+-----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name      ; rs232                                               ;
+; Device Family      ; Cyclone IV E                                        ;
+; Device Name        ; EP4CE10F17C8                                        ;
+; Timing Models      ; Final                                               ;
+; Delay Model        ; Combined                                            ;
+; Rise/Fall Delays   ; Enabled                                             ;
++--------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; sys_clk    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sys_clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 282.41 MHz ; 250.0 MHz       ; sys_clk    ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++---------+--------+------------------+
+; Clock   ; Slack  ; End Point TNS    ;
++---------+--------+------------------+
+; sys_clk ; -2.541 ; -104.410         ;
++---------+--------+------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++---------+-------+------------------+
+; Clock   ; Slack ; End Point TNS    ;
++---------+-------+------------------+
+; sys_clk ; 0.454 ; 0.000            ;
++---------+-------+------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++---------+--------+--------------------------------+
+; Clock   ; Slack  ; End Point TNS                  ;
++---------+--------+--------------------------------+
+; sys_clk ; -3.000 ; -93.707                        ;
++---------+--------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'sys_clk'                                                                                                               ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.541 ; uart_tx:uart_tx_inst|bit_cnt[1]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.461      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.420 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.341      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.416 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.337      ;
+; -2.410 ; uart_rx:uart_rx_inst|po_data[4]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.078     ; 3.333      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.250 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.170      ;
+; -2.243 ; uart_tx:uart_tx_inst|bit_cnt[0]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.163      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.242 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.162      ;
+; -2.164 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|work_en      ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.084      ;
+; -2.127 ; uart_rx:uart_rx_inst|po_data[2]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.047      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.098 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 3.018      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.096 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.017      ;
+; -2.086 ; uart_rx:uart_rx_inst|baud_cnt[8]  ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.007      ;
+; -2.086 ; uart_rx:uart_rx_inst|baud_cnt[8]  ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.007      ;
+; -2.086 ; uart_rx:uart_rx_inst|baud_cnt[8]  ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.007      ;
+; -2.086 ; uart_rx:uart_rx_inst|baud_cnt[8]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 3.007      ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'sys_clk'                                                                                                               ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.454 ; uart_rx:uart_rx_inst|rx_data[7]   ; uart_rx:uart_rx_inst|rx_data[7]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_rx:uart_rx_inst|rx_data[1]   ; uart_rx:uart_rx_inst|rx_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_rx:uart_rx_inst|rx_data[2]   ; uart_rx:uart_rx_inst|rx_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_rx:uart_rx_inst|rx_data[0]   ; uart_rx:uart_rx_inst|rx_data[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_rx:uart_rx_inst|rx_data[5]   ; uart_rx:uart_rx_inst|rx_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_rx:uart_rx_inst|rx_data[6]   ; uart_rx:uart_rx_inst|rx_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_rx:uart_rx_inst|rx_data[4]   ; uart_rx:uart_rx_inst|rx_data[4]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_rx:uart_rx_inst|rx_data[3]   ; uart_rx:uart_rx_inst|rx_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_tx:uart_tx_inst|work_en      ; uart_tx:uart_tx_inst|work_en      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_rx:uart_rx_inst|work_en      ; uart_rx:uart_rx_inst|work_en      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.466 ; uart_rx:uart_rx_inst|bit_cnt[3]   ; uart_rx:uart_rx_inst|bit_cnt[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.758      ;
+; 0.503 ; uart_rx:uart_rx_inst|rx_data[5]   ; uart_rx:uart_rx_inst|po_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.795      ;
+; 0.503 ; uart_rx:uart_rx_inst|rx_data[4]   ; uart_rx:uart_rx_inst|po_data[4]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.795      ;
+; 0.504 ; uart_rx:uart_rx_inst|rx_reg1      ; uart_rx:uart_rx_inst|rx_reg2      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.796      ;
+; 0.505 ; uart_rx:uart_rx_inst|po_flag      ; uart_tx:uart_tx_inst|work_en      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.797      ;
+; 0.508 ; uart_tx:uart_tx_inst|baud_cnt[12] ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.801      ;
+; 0.528 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|bit_cnt[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.820      ;
+; 0.700 ; uart_rx:uart_rx_inst|rx_data[6]   ; uart_rx:uart_rx_inst|po_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.992      ;
+; 0.701 ; uart_rx:uart_rx_inst|rx_data[3]   ; uart_rx:uart_rx_inst|po_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.993      ;
+; 0.707 ; uart_rx:uart_rx_inst|rx_data[2]   ; uart_rx:uart_rx_inst|po_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.083      ; 1.002      ;
+; 0.707 ; uart_rx:uart_rx_inst|rx_reg2      ; uart_rx:uart_rx_inst|rx_reg3      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.999      ;
+; 0.721 ; uart_tx:uart_tx_inst|baud_cnt[12] ; uart_tx:uart_tx_inst|bit_flag     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.013      ;
+; 0.744 ; uart_tx:uart_tx_inst|baud_cnt[9]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.037      ;
+; 0.744 ; uart_tx:uart_tx_inst|baud_cnt[11] ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.037      ;
+; 0.745 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.038      ;
+; 0.747 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.040      ;
+; 0.747 ; uart_tx:uart_tx_inst|baud_cnt[7]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.040      ;
+; 0.747 ; uart_rx:uart_rx_inst|baud_cnt[1]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.039      ;
+; 0.748 ; uart_tx:uart_tx_inst|baud_cnt[8]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.041      ;
+; 0.748 ; uart_rx:uart_rx_inst|baud_cnt[7]  ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.040      ;
+; 0.761 ; uart_tx:uart_tx_inst|baud_cnt[1]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.054      ;
+; 0.764 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; uart_rx:uart_rx_inst|baud_cnt[2]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.056      ;
+; 0.765 ; uart_tx:uart_tx_inst|baud_cnt[2]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.057      ;
+; 0.766 ; uart_tx:uart_tx_inst|baud_cnt[10] ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.059      ;
+; 0.766 ; uart_tx:uart_tx_inst|baud_cnt[6]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.059      ;
+; 0.766 ; uart_tx:uart_tx_inst|bit_cnt[2]   ; uart_tx:uart_tx_inst|bit_cnt[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.058      ;
+; 0.766 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.058      ;
+; 0.766 ; uart_rx:uart_rx_inst|baud_cnt[0]  ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.058      ;
+; 0.767 ; uart_rx:uart_rx_inst|baud_cnt[8]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.059      ;
+; 0.767 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.059      ;
+; 0.770 ; uart_rx:uart_rx_inst|bit_cnt[1]   ; uart_rx:uart_rx_inst|bit_cnt[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.062      ;
+; 0.771 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.064      ;
+; 0.771 ; uart_rx:uart_rx_inst|baud_cnt[5]  ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.063      ;
+; 0.772 ; uart_rx:uart_rx_inst|baud_cnt[3]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.064      ;
+; 0.773 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|bit_cnt[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.065      ;
+; 0.773 ; uart_rx:uart_rx_inst|baud_cnt[4]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.065      ;
+; 0.791 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.083      ;
+; 0.816 ; uart_rx:uart_rx_inst|rx_reg2      ; uart_rx:uart_rx_inst|start_flag   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.108      ;
+; 0.817 ; uart_tx:uart_tx_inst|bit_cnt[0]   ; uart_tx:uart_tx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.109      ;
+; 0.834 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.126      ;
+; 0.839 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|start_flag   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.131      ;
+; 0.904 ; uart_rx:uart_rx_inst|rx_data[1]   ; uart_rx:uart_rx_inst|po_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.083      ; 1.199      ;
+; 0.934 ; uart_rx:uart_rx_inst|rx_data[0]   ; uart_rx:uart_rx_inst|po_data[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.083      ; 1.229      ;
+; 0.959 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|rx_data[7]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.251      ;
+; 0.974 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|rx_flag      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.266      ;
+; 0.978 ; uart_rx:uart_rx_inst|work_en      ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.270      ;
+; 0.983 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[7]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.275      ;
+; 1.002 ; uart_tx:uart_tx_inst|bit_flag     ; uart_tx:uart_tx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.294      ;
+; 1.050 ; uart_tx:uart_tx_inst|bit_cnt[3]   ; uart_tx:uart_tx_inst|bit_cnt[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.342      ;
+; 1.056 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.349      ;
+; 1.058 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.351      ;
+; 1.067 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.360      ;
+; 1.067 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.360      ;
+; 1.069 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.362      ;
+; 1.071 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.364      ;
+; 1.075 ; uart_rx:uart_rx_inst|bit_cnt[3]   ; uart_rx:uart_rx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.367      ;
+; 1.085 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.378      ;
+; 1.085 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.378      ;
+; 1.085 ; uart_rx:uart_rx_inst|work_en      ; uart_rx:uart_rx_inst|start_flag   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.378      ;
+; 1.087 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.380      ;
+; 1.087 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.380      ;
+; 1.087 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[4]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.380      ;
+; 1.094 ; uart_rx:uart_rx_inst|bit_cnt[0]   ; uart_rx:uart_rx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.386      ;
+; 1.099 ; uart_tx:uart_tx_inst|baud_cnt[11] ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.392      ;
+; 1.099 ; uart_tx:uart_tx_inst|baud_cnt[9]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.392      ;
+; 1.100 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.393      ;
+; 1.101 ; uart_tx:uart_tx_inst|bit_cnt[0]   ; uart_tx:uart_tx_inst|bit_cnt[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.393      ;
+; 1.101 ; uart_tx:uart_tx_inst|baud_cnt[7]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.394      ;
+; 1.101 ; uart_rx:uart_rx_inst|baud_cnt[1]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.393      ;
+; 1.101 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.394      ;
+; 1.102 ; uart_rx:uart_rx_inst|baud_cnt[7]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.394      ;
+; 1.109 ; uart_tx:uart_tx_inst|baud_cnt[8]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.402      ;
+; 1.109 ; uart_rx:uart_rx_inst|baud_cnt[0]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.401      ;
+; 1.109 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.402      ;
+; 1.116 ; uart_tx:uart_tx_inst|baud_cnt[1]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.409      ;
+; 1.118 ; uart_tx:uart_tx_inst|baud_cnt[8]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.411      ;
+; 1.118 ; uart_rx:uart_rx_inst|baud_cnt[0]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.410      ;
+; 1.118 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.411      ;
+; 1.119 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.411      ;
+; 1.119 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.411      ;
+; 1.122 ; uart_tx:uart_tx_inst|baud_cnt[10] ; uart_tx:uart_tx_inst|bit_flag     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.414      ;
+; 1.125 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; uart_rx:uart_rx_inst|bit_cnt[1]   ; uart_rx:uart_rx_inst|bit_cnt[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.417      ;
+; 1.125 ; uart_rx:uart_rx_inst|baud_cnt[2]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.417      ;
+; 1.126 ; uart_tx:uart_tx_inst|baud_cnt[2]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.419      ;
+; 1.126 ; uart_rx:uart_rx_inst|baud_cnt[5]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.418      ;
+; 1.126 ; uart_rx:uart_rx_inst|baud_cnt[3]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.418      ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'sys_clk'                                                                 ;
++--------+--------------+----------------+------------------+---------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+---------+------------+-----------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; sys_clk ; Rise       ; sys_clk                           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[9]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[0]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[1]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[2]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[3]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_flag     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[0]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[1]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[2]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[3]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[4]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[5]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[6]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[7]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_flag      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[0]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[1]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[2]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[3]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[4]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[5]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[6]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[7]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_flag      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg1      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg2      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg3      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|start_flag   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|work_en      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[9]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[0]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[1]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[2]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[3]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_flag     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|tx           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|work_en      ;
+; 0.285  ; 0.505        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|work_en      ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[0]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[10] ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[11] ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[12] ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[1]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[2]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[3]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[4]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[5]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[6]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[7]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[8]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[9]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[0]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[1]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[2]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[7]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_flag      ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[0]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[10] ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[11] ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[12] ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[1]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[2]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[3]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[4]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[5]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[6]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[7]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[8]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[9]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[0]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[1]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[2]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[3]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_flag     ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|work_en      ;
++--------+--------------+----------------+------------------+---------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rx        ; sys_clk    ; 2.739 ; 3.046 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rx        ; sys_clk    ; -2.232 ; -2.541 ; Rise       ; sys_clk         ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; tx        ; sys_clk    ; 8.090 ; 8.232 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; tx        ; sys_clk    ; 7.804 ; 7.942 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 299.49 MHz ; 250.0 MHz       ; sys_clk    ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; sys_clk ; -2.339 ; -93.621         ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; sys_clk ; 0.402 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; sys_clk ; -3.000 ; -93.707                       ;
++---------+--------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'sys_clk'                                                                                                                ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.339 ; uart_tx:uart_tx_inst|bit_cnt[1]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.270      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.180      ;
+; -2.249 ; uart_rx:uart_rx_inst|po_data[4]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 3.181      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.183 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.114      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.078 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 3.009      ;
+; -2.057 ; uart_tx:uart_tx_inst|bit_cnt[0]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.988      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.009 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.939      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -2.001 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.931      ;
+; -1.942 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|work_en      ; sys_clk      ; sys_clk     ; 1.000        ; -0.074     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.940 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 2.870      ;
+; -1.931 ; uart_rx:uart_rx_inst|po_data[2]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.862      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.921 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.852      ;
+; -1.896 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.827      ;
+; -1.896 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.827      ;
+; -1.896 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.827      ;
+; -1.896 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 2.827      ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'sys_clk'                                                                                                                ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.402 ; uart_rx:uart_rx_inst|rx_data[7]   ; uart_rx:uart_rx_inst|rx_data[7]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_rx:uart_rx_inst|rx_data[1]   ; uart_rx:uart_rx_inst|rx_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_rx:uart_rx_inst|rx_data[2]   ; uart_rx:uart_rx_inst|rx_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_rx:uart_rx_inst|rx_data[0]   ; uart_rx:uart_rx_inst|rx_data[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_rx:uart_rx_inst|rx_data[5]   ; uart_rx:uart_rx_inst|rx_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_rx:uart_rx_inst|rx_data[6]   ; uart_rx:uart_rx_inst|rx_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_rx:uart_rx_inst|rx_data[4]   ; uart_rx:uart_rx_inst|rx_data[4]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_rx:uart_rx_inst|rx_data[3]   ; uart_rx:uart_rx_inst|rx_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_tx:uart_tx_inst|work_en      ; uart_tx:uart_tx_inst|work_en      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_rx:uart_rx_inst|work_en      ; uart_rx:uart_rx_inst|work_en      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.417 ; uart_rx:uart_rx_inst|bit_cnt[3]   ; uart_rx:uart_rx_inst|bit_cnt[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.684      ;
+; 0.469 ; uart_tx:uart_tx_inst|baud_cnt[12] ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.736      ;
+; 0.471 ; uart_rx:uart_rx_inst|rx_data[4]   ; uart_rx:uart_rx_inst|po_data[4]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.738      ;
+; 0.472 ; uart_rx:uart_rx_inst|rx_data[5]   ; uart_rx:uart_rx_inst|po_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.739      ;
+; 0.473 ; uart_rx:uart_rx_inst|rx_reg1      ; uart_rx:uart_rx_inst|rx_reg2      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.740      ;
+; 0.473 ; uart_rx:uart_rx_inst|po_flag      ; uart_tx:uart_tx_inst|work_en      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.740      ;
+; 0.488 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|bit_cnt[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.755      ;
+; 0.627 ; uart_rx:uart_rx_inst|rx_data[2]   ; uart_rx:uart_rx_inst|po_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.895      ;
+; 0.647 ; uart_rx:uart_rx_inst|rx_data[6]   ; uart_rx:uart_rx_inst|po_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.914      ;
+; 0.647 ; uart_rx:uart_rx_inst|rx_data[3]   ; uart_rx:uart_rx_inst|po_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.914      ;
+; 0.654 ; uart_rx:uart_rx_inst|rx_reg2      ; uart_rx:uart_rx_inst|rx_reg3      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.921      ;
+; 0.680 ; uart_tx:uart_tx_inst|baud_cnt[12] ; uart_tx:uart_tx_inst|bit_flag     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.947      ;
+; 0.693 ; uart_tx:uart_tx_inst|baud_cnt[9]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.960      ;
+; 0.693 ; uart_tx:uart_tx_inst|baud_cnt[11] ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.960      ;
+; 0.695 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.962      ;
+; 0.695 ; uart_tx:uart_tx_inst|baud_cnt[7]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.962      ;
+; 0.696 ; uart_rx:uart_rx_inst|baud_cnt[1]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.962      ;
+; 0.697 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.964      ;
+; 0.698 ; uart_rx:uart_rx_inst|baud_cnt[7]  ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.964      ;
+; 0.699 ; uart_tx:uart_tx_inst|baud_cnt[8]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.966      ;
+; 0.706 ; uart_tx:uart_tx_inst|baud_cnt[1]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.973      ;
+; 0.709 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; uart_rx:uart_rx_inst|baud_cnt[2]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.975      ;
+; 0.710 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.976      ;
+; 0.711 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.977      ;
+; 0.711 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.977      ;
+; 0.712 ; uart_tx:uart_tx_inst|baud_cnt[10] ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; uart_tx:uart_tx_inst|baud_cnt[2]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.979      ;
+; 0.713 ; uart_tx:uart_tx_inst|baud_cnt[6]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.980      ;
+; 0.713 ; uart_rx:uart_rx_inst|bit_cnt[1]   ; uart_rx:uart_rx_inst|bit_cnt[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.980      ;
+; 0.714 ; uart_rx:uart_rx_inst|baud_cnt[8]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.980      ;
+; 0.714 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.980      ;
+; 0.715 ; uart_tx:uart_tx_inst|bit_cnt[2]   ; uart_tx:uart_tx_inst|bit_cnt[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.982      ;
+; 0.715 ; uart_rx:uart_rx_inst|baud_cnt[5]  ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.981      ;
+; 0.717 ; uart_rx:uart_rx_inst|baud_cnt[3]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.983      ;
+; 0.717 ; uart_rx:uart_rx_inst|baud_cnt[0]  ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.983      ;
+; 0.718 ; uart_rx:uart_rx_inst|baud_cnt[4]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.984      ;
+; 0.719 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|bit_cnt[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.986      ;
+; 0.722 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.989      ;
+; 0.733 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 0.999      ;
+; 0.758 ; uart_rx:uart_rx_inst|rx_reg2      ; uart_rx:uart_rx_inst|start_flag   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.025      ;
+; 0.764 ; uart_tx:uart_tx_inst|bit_cnt[0]   ; uart_tx:uart_tx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.031      ;
+; 0.774 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.041      ;
+; 0.783 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|start_flag   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.050      ;
+; 0.832 ; uart_rx:uart_rx_inst|rx_data[1]   ; uart_rx:uart_rx_inst|po_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.100      ;
+; 0.854 ; uart_rx:uart_rx_inst|rx_data[0]   ; uart_rx:uart_rx_inst|po_data[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.122      ;
+; 0.869 ; uart_rx:uart_rx_inst|work_en      ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.136      ;
+; 0.891 ; uart_tx:uart_tx_inst|bit_flag     ; uart_tx:uart_tx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.158      ;
+; 0.893 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[7]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.160      ;
+; 0.895 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|rx_data[7]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.162      ;
+; 0.907 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|rx_flag      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.174      ;
+; 0.946 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.214      ;
+; 0.949 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.217      ;
+; 0.957 ; uart_rx:uart_rx_inst|bit_cnt[3]   ; uart_rx:uart_rx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.224      ;
+; 0.959 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.227      ;
+; 0.962 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.230      ;
+; 0.964 ; uart_tx:uart_tx_inst|bit_cnt[3]   ; uart_tx:uart_tx_inst|bit_cnt[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.231      ;
+; 0.975 ; uart_rx:uart_rx_inst|work_en      ; uart_rx:uart_rx_inst|start_flag   ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 1.244      ;
+; 0.980 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.248      ;
+; 0.982 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.250      ;
+; 1.002 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.270      ;
+; 1.002 ; uart_tx:uart_tx_inst|baud_cnt[10] ; uart_tx:uart_tx_inst|bit_flag     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.269      ;
+; 1.003 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.271      ;
+; 1.005 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[4]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.273      ;
+; 1.006 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.274      ;
+; 1.006 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.274      ;
+; 1.007 ; uart_rx:uart_rx_inst|bit_cnt[0]   ; uart_rx:uart_rx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.274      ;
+; 1.015 ; uart_tx:uart_tx_inst|baud_cnt[11] ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.282      ;
+; 1.015 ; uart_tx:uart_tx_inst|baud_cnt[9]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.282      ;
+; 1.017 ; uart_rx:uart_rx_inst|baud_cnt[0]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.283      ;
+; 1.017 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.284      ;
+; 1.017 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.284      ;
+; 1.018 ; uart_tx:uart_tx_inst|baud_cnt[8]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.285      ;
+; 1.019 ; uart_tx:uart_tx_inst|baud_cnt[7]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.286      ;
+; 1.020 ; uart_rx:uart_rx_inst|baud_cnt[1]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.286      ;
+; 1.021 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.288      ;
+; 1.022 ; uart_rx:uart_rx_inst|baud_cnt[7]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.288      ;
+; 1.025 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|rx_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.293      ;
+; 1.028 ; uart_tx:uart_tx_inst|baud_cnt[1]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; uart_rx:uart_rx_inst|baud_cnt[2]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.294      ;
+; 1.029 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.295      ;
+; 1.030 ; uart_tx:uart_tx_inst|baud_cnt[10] ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.297      ;
+; 1.030 ; uart_tx:uart_tx_inst|baud_cnt[2]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.297      ;
+; 1.031 ; uart_tx:uart_tx_inst|baud_cnt[6]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.298      ;
+; 1.032 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.298      ;
+; 1.032 ; uart_rx:uart_rx_inst|baud_cnt[8]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.298      ;
+; 1.032 ; uart_rx:uart_rx_inst|bit_cnt[0]   ; uart_rx:uart_rx_inst|bit_cnt[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.299      ;
+; 1.032 ; uart_rx:uart_rx_inst|baud_cnt[0]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.298      ;
+; 1.032 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.299      ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'sys_clk'                                                                  ;
++--------+--------------+----------------+------------------+---------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+---------+------------+-----------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; sys_clk ; Rise       ; sys_clk                           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[9]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[0]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[1]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[2]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[3]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_flag     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[0]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[1]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[2]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[3]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[4]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[5]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[6]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[7]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_flag      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[0]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[1]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[2]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[3]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[4]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[5]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[6]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[7]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_flag      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg1      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg2      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg3      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|start_flag   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|work_en      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[9]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[0]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[1]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[2]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[3]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_flag     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|tx           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|work_en      ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[0]   ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[1]   ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[2]   ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[7]   ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_flag      ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[0]   ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[1]   ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[2]   ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[3]   ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_flag     ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|work_en      ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[0]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[1]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[2]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[3]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_flag     ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[3]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[4]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[5]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[6]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[0]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[1]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[2]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[3]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[4]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[5]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[6]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[7]   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_flag      ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg1      ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg2      ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg3      ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|start_flag   ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|work_en      ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[0]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[10] ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[11] ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[12] ;
++--------+--------------+----------------+------------------+---------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rx        ; sys_clk    ; 2.449 ; 2.580 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rx        ; sys_clk    ; -1.994 ; -2.131 ; Rise       ; sys_clk         ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; tx        ; sys_clk    ; 7.287 ; 7.589 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; tx        ; sys_clk    ; 7.011 ; 7.303 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; sys_clk ; -0.493 ; -13.735         ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; sys_clk ; 0.187 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; sys_clk ; -3.000 ; -67.954                       ;
++---------+--------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'sys_clk'                                                                                                                ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.493 ; uart_tx:uart_tx_inst|bit_cnt[1]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 1.445      ;
+; -0.432 ; uart_rx:uart_rx_inst|po_data[4]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 1.385      ;
+; -0.427 ; uart_tx:uart_tx_inst|bit_cnt[0]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 1.379      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.422 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.373      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.399 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.350      ;
+; -0.371 ; uart_rx:uart_rx_inst|po_data[2]   ; uart_tx:uart_tx_inst|tx           ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 1.323      ;
+; -0.367 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|work_en      ; sys_clk      ; sys_clk     ; 1.000        ; -0.038     ; 1.316      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.356 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.307      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.334 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.285      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.324 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.275      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.307 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.258      ;
+; -0.306 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[2]   ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 1.259      ;
+; -0.306 ; uart_rx:uart_rx_inst|baud_cnt[2]  ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.257      ;
+; -0.306 ; uart_rx:uart_rx_inst|baud_cnt[2]  ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.257      ;
+; -0.306 ; uart_rx:uart_rx_inst|baud_cnt[2]  ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 1.257      ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'sys_clk'                                                                                                                ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.187 ; uart_rx:uart_rx_inst|rx_data[7]   ; uart_rx:uart_rx_inst|rx_data[7]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_rx:uart_rx_inst|rx_data[1]   ; uart_rx:uart_rx_inst|rx_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_rx:uart_rx_inst|rx_data[2]   ; uart_rx:uart_rx_inst|rx_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_rx:uart_rx_inst|rx_data[0]   ; uart_rx:uart_rx_inst|rx_data[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_rx:uart_rx_inst|rx_data[5]   ; uart_rx:uart_rx_inst|rx_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_rx:uart_rx_inst|rx_data[6]   ; uart_rx:uart_rx_inst|rx_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_rx:uart_rx_inst|rx_data[4]   ; uart_rx:uart_rx_inst|rx_data[4]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_rx:uart_rx_inst|rx_data[3]   ; uart_rx:uart_rx_inst|rx_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_tx:uart_tx_inst|work_en      ; uart_tx:uart_tx_inst|work_en      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_rx:uart_rx_inst|work_en      ; uart_rx:uart_rx_inst|work_en      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.194 ; uart_rx:uart_rx_inst|rx_data[4]   ; uart_rx:uart_rx_inst|po_data[4]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; uart_rx:uart_rx_inst|bit_cnt[3]   ; uart_rx:uart_rx_inst|bit_cnt[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.314      ;
+; 0.195 ; uart_rx:uart_rx_inst|rx_data[5]   ; uart_rx:uart_rx_inst|po_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.315      ;
+; 0.196 ; uart_rx:uart_rx_inst|rx_reg1      ; uart_rx:uart_rx_inst|rx_reg2      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.316      ;
+; 0.196 ; uart_rx:uart_rx_inst|po_flag      ; uart_tx:uart_tx_inst|work_en      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.316      ;
+; 0.204 ; uart_tx:uart_tx_inst|baud_cnt[12] ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.324      ;
+; 0.221 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|bit_cnt[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.341      ;
+; 0.267 ; uart_rx:uart_rx_inst|rx_data[2]   ; uart_rx:uart_rx_inst|po_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.388      ;
+; 0.268 ; uart_rx:uart_rx_inst|rx_data[6]   ; uart_rx:uart_rx_inst|po_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.388      ;
+; 0.269 ; uart_rx:uart_rx_inst|rx_data[3]   ; uart_rx:uart_rx_inst|po_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.389      ;
+; 0.272 ; uart_rx:uart_rx_inst|rx_reg2      ; uart_rx:uart_rx_inst|rx_reg3      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.392      ;
+; 0.281 ; uart_tx:uart_tx_inst|baud_cnt[12] ; uart_tx:uart_tx_inst|bit_flag     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.401      ;
+; 0.298 ; uart_tx:uart_tx_inst|baud_cnt[9]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.418      ;
+; 0.298 ; uart_tx:uart_tx_inst|baud_cnt[11] ; uart_tx:uart_tx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.418      ;
+; 0.299 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; uart_tx:uart_tx_inst|baud_cnt[7]  ; uart_tx:uart_tx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; uart_rx:uart_rx_inst|baud_cnt[7]  ; uart_rx:uart_rx_inst|baud_cnt[7]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.419      ;
+; 0.300 ; uart_rx:uart_rx_inst|baud_cnt[1]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.420      ;
+; 0.301 ; uart_tx:uart_tx_inst|baud_cnt[8]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.421      ;
+; 0.304 ; uart_rx:uart_rx_inst|baud_cnt[0]  ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.424      ;
+; 0.305 ; uart_tx:uart_tx_inst|baud_cnt[1]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.425      ;
+; 0.306 ; uart_tx:uart_tx_inst|baud_cnt[4]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; uart_rx:uart_rx_inst|baud_cnt[10] ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; uart_rx:uart_rx_inst|baud_cnt[2]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.426      ;
+; 0.307 ; uart_tx:uart_tx_inst|baud_cnt[2]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; uart_tx:uart_tx_inst|baud_cnt[6]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; uart_rx:uart_rx_inst|baud_cnt[6]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.427      ;
+; 0.308 ; uart_tx:uart_tx_inst|baud_cnt[10] ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.428      ;
+; 0.308 ; uart_rx:uart_rx_inst|baud_cnt[8]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.428      ;
+; 0.309 ; uart_rx:uart_rx_inst|baud_cnt[5]  ; uart_rx:uart_rx_inst|baud_cnt[5]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.429      ;
+; 0.310 ; uart_tx:uart_tx_inst|bit_cnt[2]   ; uart_tx:uart_tx_inst|bit_cnt[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.430      ;
+; 0.310 ; uart_rx:uart_rx_inst|bit_cnt[1]   ; uart_rx:uart_rx_inst|bit_cnt[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.430      ;
+; 0.311 ; uart_rx:uart_rx_inst|baud_cnt[4]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.431      ;
+; 0.311 ; uart_rx:uart_rx_inst|baud_cnt[3]  ; uart_rx:uart_rx_inst|baud_cnt[3]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.431      ;
+; 0.312 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.432      ;
+; 0.312 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|bit_cnt[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.432      ;
+; 0.318 ; uart_rx:uart_rx_inst|baud_cnt[12] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.438      ;
+; 0.328 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|start_flag   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.448      ;
+; 0.330 ; uart_tx:uart_tx_inst|bit_cnt[0]   ; uart_tx:uart_tx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.450      ;
+; 0.331 ; uart_rx:uart_rx_inst|rx_reg2      ; uart_rx:uart_rx_inst|start_flag   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.451      ;
+; 0.334 ; uart_rx:uart_rx_inst|rx_data[1]   ; uart_rx:uart_rx_inst|po_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.455      ;
+; 0.343 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.463      ;
+; 0.344 ; uart_rx:uart_rx_inst|rx_data[0]   ; uart_rx:uart_rx_inst|po_data[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.465      ;
+; 0.377 ; uart_rx:uart_rx_inst|work_en      ; uart_rx:uart_rx_inst|baud_cnt[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.498      ;
+; 0.382 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|rx_flag      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.502      ;
+; 0.384 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|rx_data[7]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.504      ;
+; 0.385 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[7]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.505      ;
+; 0.390 ; uart_tx:uart_tx_inst|bit_flag     ; uart_tx:uart_tx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.510      ;
+; 0.412 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.534      ;
+; 0.414 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.536      ;
+; 0.415 ; uart_tx:uart_tx_inst|bit_cnt[3]   ; uart_tx:uart_tx_inst|bit_cnt[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.535      ;
+; 0.415 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.537      ;
+; 0.416 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.538      ;
+; 0.418 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.540      ;
+; 0.419 ; uart_rx:uart_rx_inst|bit_cnt[3]   ; uart_rx:uart_rx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.539      ;
+; 0.421 ; uart_rx:uart_rx_inst|bit_cnt[2]   ; uart_rx:uart_rx_inst|rx_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.543      ;
+; 0.424 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.546      ;
+; 0.425 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[5]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.547      ;
+; 0.426 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[4]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.548      ;
+; 0.427 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.549      ;
+; 0.427 ; uart_rx:uart_rx_inst|rx_reg3      ; uart_rx:uart_rx_inst|rx_data[6]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.549      ;
+; 0.431 ; uart_rx:uart_rx_inst|work_en      ; uart_rx:uart_rx_inst|start_flag   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.553      ;
+; 0.432 ; uart_rx:uart_rx_inst|rx_data[7]   ; uart_rx:uart_rx_inst|po_data[7]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.039      ; 0.555      ;
+; 0.437 ; uart_rx:uart_rx_inst|rx_flag      ; uart_rx:uart_rx_inst|po_flag      ; sys_clk      ; sys_clk     ; 0.000        ; 0.039      ; 0.560      ;
+; 0.440 ; uart_tx:uart_tx_inst|baud_cnt[10] ; uart_tx:uart_tx_inst|bit_flag     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.560      ;
+; 0.443 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|rx_data[3]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.565      ;
+; 0.447 ; uart_tx:uart_tx_inst|bit_cnt[0]   ; uart_tx:uart_tx_inst|bit_cnt[1]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.567      ;
+; 0.447 ; uart_tx:uart_tx_inst|baud_cnt[11] ; uart_tx:uart_tx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.567      ;
+; 0.447 ; uart_tx:uart_tx_inst|baud_cnt[9]  ; uart_tx:uart_tx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.567      ;
+; 0.448 ; uart_tx:uart_tx_inst|baud_cnt[7]  ; uart_tx:uart_tx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.568      ;
+; 0.448 ; uart_tx:uart_tx_inst|baud_cnt[3]  ; uart_tx:uart_tx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.568      ;
+; 0.448 ; uart_tx:uart_tx_inst|baud_cnt[5]  ; uart_tx:uart_tx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.568      ;
+; 0.448 ; uart_rx:uart_rx_inst|baud_cnt[7]  ; uart_rx:uart_rx_inst|baud_cnt[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.568      ;
+; 0.449 ; uart_rx:uart_rx_inst|baud_cnt[1]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.569      ;
+; 0.450 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|rx_data[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.572      ;
+; 0.450 ; uart_rx:uart_rx_inst|bit_flag     ; uart_rx:uart_rx_inst|rx_data[4]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.038      ; 0.572      ;
+; 0.454 ; uart_tx:uart_tx_inst|baud_cnt[1]  ; uart_tx:uart_tx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.574      ;
+; 0.456 ; uart_rx:uart_rx_inst|baud_cnt[9]  ; uart_rx:uart_rx_inst|baud_cnt[10] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.576      ;
+; 0.456 ; uart_rx:uart_rx_inst|baud_cnt[11] ; uart_rx:uart_rx_inst|baud_cnt[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.576      ;
+; 0.456 ; uart_rx:uart_rx_inst|bit_cnt[0]   ; uart_rx:uart_rx_inst|bit_cnt[0]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.576      ;
+; 0.457 ; uart_rx:uart_rx_inst|baud_cnt[0]  ; uart_rx:uart_rx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.577      ;
+; 0.458 ; uart_rx:uart_rx_inst|baud_cnt[5]  ; uart_rx:uart_rx_inst|baud_cnt[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.578      ;
+; 0.459 ; uart_tx:uart_tx_inst|baud_cnt[8]  ; uart_tx:uart_tx_inst|baud_cnt[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.579      ;
+; 0.459 ; uart_tx:uart_tx_inst|baud_cnt[0]  ; uart_tx:uart_tx_inst|baud_cnt[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.579      ;
+; 0.459 ; uart_rx:uart_rx_inst|bit_cnt[1]   ; uart_rx:uart_rx_inst|bit_cnt[2]   ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.579      ;
+; 0.460 ; uart_rx:uart_rx_inst|baud_cnt[3]  ; uart_rx:uart_rx_inst|baud_cnt[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.580      ;
+; 0.460 ; uart_rx:uart_rx_inst|baud_cnt[0]  ; uart_rx:uart_rx_inst|baud_cnt[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.580      ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'sys_clk'                                                                 ;
++--------+--------------+----------------+-----------------+---------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock   ; Clock Edge ; Target                            ;
++--------+--------------+----------------+-----------------+---------+------------+-----------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; sys_clk ; Rise       ; sys_clk                           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[10] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[11] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[12] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[5]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[7]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[8]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[9]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_flag     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[4]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[5]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[6]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_data[7]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|po_flag      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[4]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[5]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[6]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[7]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_flag      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg1      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg2      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg3      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|start_flag   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|work_en      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[10] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[11] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[12] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[5]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[7]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[8]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[9]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_cnt[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|bit_flag     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|tx           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|work_en      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[0]   ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[1]   ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[2]   ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_cnt[3]   ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|bit_flag     ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_data[7]   ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_flag      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg1      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg2      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|rx_reg3      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|start_flag   ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[0]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[10] ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[11] ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[12] ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[1]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[2]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[3]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[4]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[5]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[6]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[7]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[8]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|baud_cnt[9]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_rx:uart_rx_inst|work_en      ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[0]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[10] ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[11] ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[12] ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[1]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[2]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[3]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[4]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[5]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[6]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[7]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[8]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; uart_tx:uart_tx_inst|baud_cnt[9]  ;
++--------+--------------+----------------+-----------------+---------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rx        ; sys_clk    ; 1.288 ; 1.921 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rx        ; sys_clk    ; -1.065 ; -1.695 ; Rise       ; sys_clk         ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; tx        ; sys_clk    ; 3.924 ; 3.777 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; tx        ; sys_clk    ; 3.792 ; 3.651 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.541   ; 0.187 ; N/A      ; N/A     ; -3.000              ;
+;  sys_clk         ; -2.541   ; 0.187 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -104.41  ; 0.0   ; 0.0      ; 0.0     ; -93.707             ;
+;  sys_clk         ; -104.410 ; 0.000 ; N/A      ; N/A     ; -93.707             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rx        ; sys_clk    ; 2.739 ; 3.046 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rx        ; sys_clk    ; -1.065 ; -1.695 ; Rise       ; sys_clk         ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; tx        ; sys_clk    ; 8.090 ; 8.232 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; tx        ; sys_clk    ; 3.792 ; 3.651 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; tx            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; sys_clk                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sys_rst_n               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rx                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tx            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tx            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tx            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sys_clk    ; sys_clk  ; 775      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sys_clk    ; sys_clk  ; 775      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 62    ; 62   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Processing started: Wed Dec 07 14:12:15 2022
+Info: Command: quartus_sta rs232 -c rs232
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'rs232.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name sys_clk sys_clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.541
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.541            -104.410 sys_clk 
+Info (332146): Worst-case hold slack is 0.454
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.454               0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -93.707 sys_clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.339
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.339             -93.621 sys_clk 
+Info (332146): Worst-case hold slack is 0.402
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.402               0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -93.707 sys_clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.493
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.493             -13.735 sys_clk 
+Info (332146): Worst-case hold slack is 0.187
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.187               0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -67.954 sys_clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4659 megabytes
+    Info: Processing ended: Wed Dec 07 14:12:17 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

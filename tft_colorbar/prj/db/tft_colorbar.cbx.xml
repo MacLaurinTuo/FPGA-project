@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="tft_colorbar">
+		<CBX_INST_ENTRY INSTANCE_NAME="|tft_colorbar|clk_gen:clk_gen_inst|altpll:altpll_component" CBX_FILE_NAME="clk_gen_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

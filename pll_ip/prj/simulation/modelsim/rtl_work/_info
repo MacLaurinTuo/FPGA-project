@@ -1,0 +1,69 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\pll_ip\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+vpll_ip
+IUGh@;biRe6lKUJ0JI:=8^0
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:\code\workspace_FPGA\pll_ip\prj\simulation\modelsim
+w1656233841
+8E:/code/workspace_FPGA/pll_ip/prj/ipcore_dir/pll_ip/pll_ip.v
+FE:/code/workspace_FPGA/pll_ip/prj/ipcore_dir/pll_ip/pll_ip.v
+L0 39
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s110 1656344117
+!i10b 1
+!s100 VBU?OT7bAOiB<`JJDQ1J]0
+!s85 0
+!s108 1656344117.010000
+!s107 E:/code/workspace_FPGA/pll_ip/prj/ipcore_dir/pll_ip/pll_ip.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/pll_ip/prj/ipcore_dir/pll_ip|E:/code/workspace_FPGA/pll_ip/prj/ipcore_dir/pll_ip/pll_ip.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/pll_ip/prj/ipcore_dir/pll_ip -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vpll_ip_altpll
+R5
+I9oQiFkK9];EJVIVnYmD2=3
+R1
+R2
+w1656232790
+8E:/code/workspace_FPGA/pll_ip/prj/db/pll_ip_altpll.v
+FE:/code/workspace_FPGA/pll_ip/prj/db/pll_ip_altpll.v
+L0 29
+R3
+r1
+31
+R4
+!i10b 1
+!s100 a1kmLjO[MK<WVa@e2Yj5U1
+!s85 0
+!s108 1656344117.225000
+!s107 E:/code/workspace_FPGA/pll_ip/prj/db/pll_ip_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/pll_ip/prj/db|E:/code/workspace_FPGA/pll_ip/prj/db/pll_ip_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/pll_ip/prj/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_pll
+R5
+!i10b 1
+!s100 nOM1`^Y>EB9_iDIa;Z6:O1
+IT__a>iR>g`n>QP1haA_V[2
+R1
+R2
+w1656343747
+8E:/code/workspace_FPGA/pll_ip/prj/../sim/tb_pll.v
+FE:/code/workspace_FPGA/pll_ip/prj/../sim/tb_pll.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1656344117.446000
+!s107 E:/code/workspace_FPGA/pll_ip/prj/../sim/tb_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/pll_ip/prj/../sim|E:/code/workspace_FPGA/pll_ip/prj/../sim/tb_pll.v|
+R4
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/pll_ip/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

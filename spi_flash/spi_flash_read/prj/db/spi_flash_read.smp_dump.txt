@@ -1,0 +1,6 @@
+
+State Machine - |spi_flash_read|flash_read_ctrl:flash_read_ctrl_inst|state
+Name state.SEND state.READ state.IDLE 
+state.IDLE 0 0 0 
+state.READ 0 1 1 
+state.SEND 1 0 1 

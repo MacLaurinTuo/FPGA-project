@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="tft_ram_pic">
+		<CBX_INST_ENTRY INSTANCE_NAME="|tft_ram_pic|tft_pic:tft_pic_inst|ram_pic:ram_pic_inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_nlm1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|tft_ram_pic|vga_clk:vga_clk_inst|altpll:altpll_component" CBX_FILE_NAME="vga_clk_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\led\quartus_prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1654608541
+V[C<?o;3iI^0LWRQ6[nn?82
+04 6 4 work tb_led fast 0
+=1-48ba4e63e9b7-629f529d-6f-7058
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vled
+IekEVQhUdAOb7JiYSTh>fF1
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:\code\workspace_FPGA\led\quartus_prj\simulation\modelsim
+w1654603385
+8E:/code/workspace_FPGA/led/rtl/led.v
+FE:/code/workspace_FPGA/led/rtl/led.v
+L0 1
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s110 1654608540
+!i10b 1
+!s100 :0iD]J[HdkKj9S_]50=mb0
+!s85 0
+!s108 1654608539.945000
+!s107 E:/code/workspace_FPGA/led/rtl/led.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/led/rtl|E:/code/workspace_FPGA/led/rtl/led.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/led/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_led
+R5
+I;0n]zP5H>2HXm[h8j15m70
+R1
+R2
+w1654608126
+8E:/code/workspace_FPGA/led/quartus_prj/../sim/tb_led.v
+FE:/code/workspace_FPGA/led/quartus_prj/../sim/tb_led.v
+L0 2
+R3
+r1
+31
+R4
+!i10b 1
+!s100 Jbf_5c3SK0AddinD69NkB0
+!s85 0
+!s108 1654608540.236000
+!s107 E:/code/workspace_FPGA/led/quartus_prj/../sim/tb_led.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/led/quartus_prj/../sim|E:/code/workspace_FPGA/led/quartus_prj/../sim/tb_led.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/led/quartus_prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

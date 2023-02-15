@@ -1,0 +1,45 @@
+|flash_se_ctrl
+sys_clk => mosi~reg0.CLK
+sys_clk => cs_n~reg0.CLK
+sys_clk => cnt_bit[0].CLK
+sys_clk => cnt_bit[1].CLK
+sys_clk => cnt_bit[2].CLK
+sys_clk => sck~reg0.CLK
+sys_clk => cnt_sck[0].CLK
+sys_clk => cnt_sck[1].CLK
+sys_clk => cnt_byte[0].CLK
+sys_clk => cnt_byte[1].CLK
+sys_clk => cnt_byte[2].CLK
+sys_clk => cnt_clk[0].CLK
+sys_clk => cnt_clk[1].CLK
+sys_clk => cnt_clk[2].CLK
+sys_clk => cnt_clk[3].CLK
+sys_clk => cnt_clk[4].CLK
+sys_clk => state~5.DATAIN
+sys_rst_n => cnt_clk[0].ACLR
+sys_rst_n => cnt_clk[1].ACLR
+sys_rst_n => cnt_clk[2].ACLR
+sys_rst_n => cnt_clk[3].ACLR
+sys_rst_n => cnt_clk[4].ACLR
+sys_rst_n => sck~reg0.ACLR
+sys_rst_n => cs_n~reg0.PRESET
+sys_rst_n => mosi~reg0.ACLR
+sys_rst_n => cnt_byte[0].ACLR
+sys_rst_n => cnt_byte[1].ACLR
+sys_rst_n => cnt_byte[2].ACLR
+sys_rst_n => cnt_sck[0].ACLR
+sys_rst_n => cnt_sck[1].ACLR
+sys_rst_n => cnt_bit[0].ACLR
+sys_rst_n => cnt_bit[1].ACLR
+sys_rst_n => cnt_bit[2].ACLR
+sys_rst_n => state~7.DATAIN
+key => state.OUTPUTSELECT
+key => state.OUTPUTSELECT
+key => state.OUTPUTSELECT
+key => state.OUTPUTSELECT
+key => cs_n.OUTPUTSELECT
+sck <= sck~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cs_n <= cs_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mosi <= mosi~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

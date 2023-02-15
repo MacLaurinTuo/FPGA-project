@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\divider_five\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1654914840
+VDgST9:FTP<gdA3ZW:M9LC0
+04 15 4 work tb_divider_five fast 0
+=1-48ba4e63e9b7-62a3ff18-10f-12ac
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vdivider_five
+INhY[IVE4R0LN5BQNQB2Jo2
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:\code\workspace_FPGA\divider_five\prj\simulation\modelsim
+w1654914419
+8E:/code/workspace_FPGA/divider_five/rtl/divider_five.v
+FE:/code/workspace_FPGA/divider_five/rtl/divider_five.v
+L0 1
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s110 1654914837
+!i10b 1
+!s100 MbWKjZEb2n3zjRAK=3z5g0
+!s85 0
+!s108 1654914837.282000
+!s107 E:/code/workspace_FPGA/divider_five/rtl/divider_five.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/divider_five/rtl|E:/code/workspace_FPGA/divider_five/rtl/divider_five.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/divider_five/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_divider_five
+R5
+I_O6VC_82DmGZfn^^Ki6eG0
+R1
+R2
+w1654914802
+8E:/code/workspace_FPGA/divider_five/prj/../sim/tb_divider_five.v
+FE:/code/workspace_FPGA/divider_five/prj/../sim/tb_divider_five.v
+L0 2
+R3
+r1
+31
+R4
+!i10b 1
+!s100 ]7eNW_454A>@3fc@VEz2>1
+!s85 0
+!s108 1654914837.477000
+!s107 E:/code/workspace_FPGA/divider_five/prj/../sim/tb_divider_five.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/divider_five/prj/../sim|E:/code/workspace_FPGA/divider_five/prj/../sim/tb_divider_five.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/divider_five/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

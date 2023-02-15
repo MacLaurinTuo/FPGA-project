@@ -1,0 +1,97 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\seg_595_static\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1655457730
+VKOQFimEYQ=Y1[]E<dfSz?3
+04 17 4 work tb_seg_595_static fast 0
+=4-48ba4e63e9b7-62ac47c2-270-604
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vhc595_ctrl
+IaO@neH<;OU97TSzeAU2eD2
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:\code\workspace_FPGA\seg_595_static\prj\simulation\modelsim
+w1655457693
+8E:/code/workspace_FPGA/seg_595_static/rtl/hc595_ctrl.v
+FE:/code/workspace_FPGA/seg_595_static/rtl/hc595_ctrl.v
+L0 1
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/seg_595_static/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s110 1655457717
+!i10b 1
+!s100 D<hz:1WE=[_8S0_jk<l]C3
+!s85 0
+!s108 1655457717.173000
+!s107 E:/code/workspace_FPGA/seg_595_static/rtl/hc595_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/seg_595_static/rtl|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|E:/code/workspace_FPGA/seg_595_static/rtl/hc595_ctrl.v|
+vseg_595_static
+Ij>imW5L7TaD0mQbZifOQF2
+R1
+R2
+w1655455951
+8E:/code/workspace_FPGA/seg_595_static/rtl/seg_595_static.v
+FE:/code/workspace_FPGA/seg_595_static/rtl/seg_595_static.v
+L0 1
+R3
+r1
+31
+R4
+R5
+Z6 !s110 1655456125
+!i10b 1
+!s100 >k`NcRCm]D_lV9TYFKK:a3
+!s85 0
+!s108 1655456125.010000
+!s107 E:/code/workspace_FPGA/seg_595_static/rtl/seg_595_static.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/seg_595_static/rtl|E:/code/workspace_FPGA/seg_595_static/rtl/seg_595_static.v|
+vseg_static
+R6
+I`X<MOO1o=8kd`LfRX:SBl0
+R1
+R2
+w1655451525
+8E:/code/workspace_FPGA/seg_595_static/rtl/seg_static.v
+FE:/code/workspace_FPGA/seg_595_static/rtl/seg_static.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 B<JSRO[lGKKKAj9U_jK8M2
+!s85 0
+!s108 1655456125.208000
+!s107 E:/code/workspace_FPGA/seg_595_static/rtl/seg_static.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/seg_595_static/rtl|E:/code/workspace_FPGA/seg_595_static/rtl/seg_static.v|
+vtb_seg_595_static
+R6
+I4B79iQ2dc0CWY?]UbMaON1
+R1
+R2
+w1655447392
+8E:/code/workspace_FPGA/seg_595_static/prj/../sim/tb_seg_595_static.v
+FE:/code/workspace_FPGA/seg_595_static/prj/../sim/tb_seg_595_static.v
+L0 2
+R3
+r1
+31
+R4
+!i10b 1
+!s100 =E=]57Ij7NgRzi[6[ST[c2
+!s85 0
+!s108 1655456125.421000
+!s107 E:/code/workspace_FPGA/seg_595_static/prj/../sim/tb_seg_595_static.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/seg_595_static/prj/../sim|E:/code/workspace_FPGA/seg_595_static/prj/../sim/tb_seg_595_static.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/seg_595_static/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

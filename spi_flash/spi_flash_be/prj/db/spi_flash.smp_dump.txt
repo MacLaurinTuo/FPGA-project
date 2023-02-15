@@ -1,0 +1,7 @@
+
+State Machine - |flash_be_ctrl|state
+Name state.BE state.DELAY state.WR_EN state.IDLE 
+state.IDLE 0 0 0 0 
+state.WR_EN 0 0 1 1 
+state.DELAY 0 1 0 1 
+state.BE 1 0 0 1 

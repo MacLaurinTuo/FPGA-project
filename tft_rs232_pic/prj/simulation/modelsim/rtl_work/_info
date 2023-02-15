@@ -1,0 +1,177 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\tft_rs232_pic\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1671329470
+VlcjHbRo[N1]ehmjV<CCNl1
+04 14 4 work tb_tft_ram_pic fast 0
+=1-48ba4e63e9b7-639e76bd-299-5eec
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vram_pic
+Z1 !s110 1671329468
+ILXFdS<nA7G[aNWcze<B@23
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\tft_rs232_pic\prj\simulation\modelsim
+w1671277752
+8E:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/ram_pic/ram_pic.v
+FE:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/ram_pic/ram_pic.v
+L0 39
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 f@aD3g<1Knmkh@7?;4bDY0
+!s85 0
+!s108 1671329468.760000
+!s107 E:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/ram_pic/ram_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/ram_pic|E:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/ram_pic/ram_pic.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/ram_pic -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_tft_ram_pic
+IYECJoI=Ck8]GJfU7k48L_3
+R2
+R3
+w1671293146
+8E:/code/workspace_FPGA/tft_rs232_pic/prj/../sim/tb_tft_ram_pic.v
+FE:/code/workspace_FPGA/tft_rs232_pic/prj/../sim/tb_tft_ram_pic.v
+L0 3
+R4
+r1
+31
+R5
+!s110 1671329469
+!i10b 1
+!s100 oX;;lUaR@XHAi=_EFdU[^2
+!s85 0
+!s108 1671329469.082000
+!s107 E:/code/workspace_FPGA/tft_rs232_pic/prj/../sim/tb_tft_ram_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rs232_pic/prj/../sim|E:/code/workspace_FPGA/tft_rs232_pic/prj/../sim/tb_tft_ram_pic.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_rs232_pic/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtft_ctrl
+I6E^]25:nII2QUekA`kGKJ1
+R2
+R3
+w1671278963
+8E:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_ctrl.v
+FE:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_ctrl.v
+L0 1
+R4
+r1
+31
+R5
+Z6 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_rs232_pic/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+R1
+!i10b 1
+!s100 elHPZ_IHn@zzZ=NFQg<o40
+!s85 0
+!s108 1671329468.095000
+!s107 E:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rs232_pic/rtl|E:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_ctrl.v|
+vtft_pic
+Z7 !s110 1671329467
+IKKFY;0[M7Qfm8hAlmgN1C3
+R2
+R3
+w1671328662
+8E:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_pic.v
+FE:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_pic.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 MNc^0N<dmFoF@ge:J3KWF1
+!s85 0
+!s108 1671329467.914000
+!s107 E:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rs232_pic/rtl|E:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_pic.v|
+vtft_ram_pic
+R7
+I;SgIcgG:dPU45g0XXD>Qd1
+R2
+R3
+w1671329203
+8E:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_ram_pic.v
+FE:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_ram_pic.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 Ln9INVgZ=8=GHoZgTM8Cg3
+!s85 0
+!s108 1671329467.761000
+!s107 E:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_ram_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rs232_pic/rtl|E:/code/workspace_FPGA/tft_rs232_pic/rtl/tft_ram_pic.v|
+vuart_rx
+I7b2cYk;h2D>Z?Mb`Xoc[l2
+R2
+R3
+w1657727310
+8E:/code/workspace_FPGA/tft_rs232_pic/rtl/uart_rx.v
+FE:/code/workspace_FPGA/tft_rs232_pic/rtl/uart_rx.v
+L0 1
+R4
+r1
+31
+R5
+R7
+R6
+!i10b 1
+!s100 ePae^Iz06Qj_h>cnB3H_i2
+!s85 0
+!s108 1671329467.600000
+!s107 E:/code/workspace_FPGA/tft_rs232_pic/rtl/uart_rx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rs232_pic/rtl|E:/code/workspace_FPGA/tft_rs232_pic/rtl/uart_rx.v|
+vvga_clk
+R1
+IT3j33R1gkeXkneo<dXbzc0
+R2
+R3
+w1671267980
+8E:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/vga_clk/vga_clk.v
+FE:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/vga_clk/vga_clk.v
+L0 39
+R4
+r1
+31
+R5
+!i10b 1
+!s100 ^[ofFR7?^ndfXzgd_S4a^2
+!s85 0
+!s108 1671329468.239000
+!s107 E:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/vga_clk/vga_clk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/vga_clk|E:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/vga_clk/vga_clk.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_rs232_pic/prj/ip_core/vga_clk -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vvga_clk_altpll
+R1
+Iei0iHNb>@ZZWGD:Oe6;6e3
+R2
+R3
+w1671328671
+8E:/code/workspace_FPGA/tft_rs232_pic/prj/db/vga_clk_altpll.v
+FE:/code/workspace_FPGA/tft_rs232_pic/prj/db/vga_clk_altpll.v
+L0 30
+R4
+r1
+31
+R5
+!i10b 1
+!s100 EMnYh`jE?Z2n>T>8ERFh51
+!s85 0
+!s108 1671329468.925000
+!s107 E:/code/workspace_FPGA/tft_rs232_pic/prj/db/vga_clk_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rs232_pic/prj/db|E:/code/workspace_FPGA/tft_rs232_pic/prj/db/vga_clk_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_rs232_pic/prj/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

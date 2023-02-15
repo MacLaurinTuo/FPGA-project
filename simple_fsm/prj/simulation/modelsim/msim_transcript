@@ -1,0 +1,3881 @@
+# Reading D:/develop_tools/modelsim10.2/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.2 Feb  2 2013 
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do simple_fsm_run_msim_rtl_verilog.do 
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+# 
+# vmap altera_ver ./verilog_libs/altera_ver
+# Copying D:\develop_tools\modelsim10.2\win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\develop_tools\modelsim10.2\win64/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# vlog -vlog01compat -work altera_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_primitives.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_HIGH
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# 
+# vlib verilog_libs/lpm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
+# 
+# vmap lpm_ver ./verilog_libs/lpm_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work lpm_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/220model.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_mux
+# 	lpm_decode
+# 	lpm_clshift
+# 	lpm_add_sub
+# 	lpm_compare
+# 	lpm_mult
+# 	lpm_divide
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# 
+# vlib verilog_libs/sgate_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
+# 
+# vmap sgate_ver ./verilog_libs/sgate_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work sgate_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/sgate.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# 
+# Top level modules:
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# 
+# vlib verilog_libs/altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
+# 
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_mf_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_mf.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# 
+# vlib verilog_libs/altera_lnsim_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
+# 
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+# Modifying modelsim.ini
+# vlog -sv -work altera_lnsim_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_lnsim.sv}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling package altera_lnsim_functions
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_lnsim_functions
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module ama_latency_function
+# -- Compiling module altera_pll_reconfig_tasks
+# -- Compiling module altera_syncram
+# -- Compiling module ALTERA_LNSIM_MEMORY_INITIALIZATION
+# -- Compiling module altera_stratixv_pll
+# -- Compiling module altera_arriav_pll
+# -- Compiling module altera_arriavgz_pll
+# -- Compiling module altera_cyclonev_pll
+# -- Compiling module altera_pll
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module pll_dps_lcell_comb
+# -- Compiling module twentynm_iopll_ip
+# 
+# Top level modules:
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# 	altera_syncram
+# 	altera_pll
+# 
+# vlib verilog_libs/cycloneiv_hssi_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_hssi_ver".
+# 
+# vmap cycloneiv_hssi_ver ./verilog_libs/cycloneiv_hssi_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_hssi_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_hssi_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_reg
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_out_block
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_parallel_register
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_ser
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det
+# -- Compiling module cycloneiv_hssi_tx_pma
+# -- Compiling module cycloneiv_hssi_rx_pma_sub_deser
+# -- Compiling module cycloneiv_hssi_rx_pma_sub_clkdiv
+# -- Compiling module cycloneiv_hssi_rx_pma
+# -- Compiling module cycloneiv_hssi_pcs_reset
+# -- Compiling module cycloneiv_hssi_digi_chnl_hip_spt
+# -- Compiling module cycloneiv_hssi_phystatus_generator_fsm
+# -- Compiling module cycloneiv_hssi_phystatus_generator
+# -- Compiling module cycloneiv_hssi_rx_pipe_interface
+# -- Compiling module cycloneiv_hssi_tx_pipe_interface
+# -- Compiling module cycloneiv_hssi_q_pipe_interface_top
+# -- Compiling module cycloneiv_hssi_tx_digis_txclk_gating
+# -- Compiling module cycloneiv_hssi_tx_digi_txclk_ctl
+# -- Compiling module cycloneiv_hssi_tx_digis_ram8x49_syn
+# -- Compiling module cycloneiv_hssi_tx_digis_ph_fifo
+# -- Compiling module cycloneiv_hssi_tx_digi_tx_ctrl
+# -- Compiling module cycloneiv_hssi_tx_digi_bist_gen
+# -- Compiling module cycloneiv_hssi_tx_digi_prbs_gen
+# -- Compiling module cycloneiv_hssi_tx_digi_enc_chnl_top
+# -- Compiling module cycloneiv_hssi_tx_digi_iq_pipe_tx
+# -- Compiling module cycloneiv_hssi_tx_digi
+# -- Compiling module cycloneiv_hssi_tx_pcs
+# -- Compiling module cycloneiv_hssi_cmu_dprio_map
+# -- Compiling module cycloneiv_hssi_cmu_dprio_top
+# -- Compiling module cycloneiv_hssi_rx_digis_ph_fifo
+# -- Compiling module cycloneiv_hssi_rx_digis_ram16x14_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_ram20x16_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_ram8x70_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_rxclk_gating
+# -- Compiling module cycloneiv_hssi_rx_digi_rxclk_ctl
+# -- Compiling module cycloneiv_hssi_rx_digi_auto_speed_neg
+# -- Compiling module cycloneiv_hssi_rx_digi_bist_ver
+# -- Compiling module cycloneiv_hssi_rx_digi_cdr_ctrl
+# -- Compiling module cycloneiv_hssi_rx_digi_comp_chnl_top
+# -- Compiling module cycloneiv_hssi_rx_digi_rx_ctrl
+# -- Compiling module cycloneiv_hssi_rx_digi_dec_chnl_top
+# -- Compiling module cycloneiv_hssi_rx_digi_dskw_fifo
+# -- Compiling module cycloneiv_hssi_rx_digi_freqdet
+# -- Compiling module cycloneiv_hssi_rx_digi_eii_module
+# -- Compiling module cycloneiv_hssi_rx_digi_pcs_channel_testbus
+# -- Compiling module cycloneiv_hssi_rx_digi_iq_pipe_rx
+# -- Compiling module cycloneiv_hssi_rx_digi_prbs_ver
+# -- Compiling module cycloneiv_hssi_rx_digi_wordalign
+# -- Compiling module cycloneiv_hssi_rx_digi
+# -- Compiling module cycloneiv_hssi_rx_pcs
+# -- Compiling module cycloneiv_hssi_dskw_sm
+# -- Compiling module cycloneiv_hssi_tx_sm
+# -- Compiling module cycloneiv_hssi_rcv_sm
+# -- Compiling module cycloneiv_hssi_cmu_chnl_reset
+# -- Compiling module cycloneiv_hssi_cmu_quad_reset
+# -- Compiling module cycloneiv_hssi_cmu_auto_speed_neg
+# -- Compiling module cycloneiv_hssi_cmu_clk_gating
+# -- Compiling module cycloneiv_hssi_cmu_clk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_rx_ctrl
+# -- Compiling module cycloneiv_hssi_cmu_rxclk_gating
+# -- Compiling module cycloneiv_hssi_cmu_rxclk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_tx_ctrl
+# -- Compiling module cycloneiv_hssi_cmu_txclk_gating
+# -- Compiling module cycloneiv_hssi_cmu_txclk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_bit
+# -- Compiling module cycloneiv_hssi_cmu_dprio_bit_pma
+# -- Compiling module cycloneiv_hssi_cmu_dprio_16bit
+# -- Compiling module cycloneiv_hssi_cmu_dprio_16bit_pma
+# -- Compiling module cycloneiv_hssi_cmu_dprio_reg_chnl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_chnl_bus_out_mux
+# -- Compiling module cycloneiv_hssi_cmu_dprio_chnl_top
+# -- Compiling module cycloneiv_hssi_cmu_dprio_status
+# -- Compiling module cycloneiv_hssi_cmu_dprio_addr
+# -- Compiling module cycloneiv_hssi_cmu_dprio_cnt
+# -- Compiling module cycloneiv_hssi_cmu_dprio_ctl_data
+# -- Compiling module cycloneiv_hssi_cmu_dprio_sm
+# -- Compiling module cycloneiv_hssi_cmu_dprio_reg_centrl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_centrl_bus_out_mux
+# -- Compiling module cycloneiv_hssi_cmu_dprio_centrl_top
+# -- Compiling module cycloneiv_hssi_cmu_dprio_map_index
+# -- Compiling module cycloneiv_hssi_cmu
+# -- Compiling module cycloneiv_hssi_calibration_block
+# 
+# Top level modules:
+# 	cycloneiv_hssi_tx_pma
+# 	cycloneiv_hssi_rx_pma
+# 	cycloneiv_hssi_tx_pcs
+# 	cycloneiv_hssi_rx_pcs
+# 	cycloneiv_hssi_cmu_dprio_centrl_top
+# 	cycloneiv_hssi_cmu
+# 	cycloneiv_hssi_calibration_block
+# 
+# vlib verilog_libs/cycloneiv_pcie_hip_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_pcie_hip_ver".
+# 
+# vmap cycloneiv_pcie_hip_ver ./verilog_libs/cycloneiv_pcie_hip_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_pcie_hip_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_pcie_hip_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module cycloneiv_pciehip_param
+# -- Compiling module cycloneiv_pciehip_clkmux
+# -- Compiling module cycloneiv_pciehip_dprio_bit
+# -- Compiling module cycloneiv_pciehip_dprio_16bit
+# -- Compiling module cycloneiv_pciehip_dprio_addr
+# -- Compiling module cycloneiv_pciehip_dprio_cnt
+# -- Compiling module cycloneiv_pciehip_dprio_ctl_data
+# -- Compiling module cycloneiv_pciehip_dprio_sm
+# -- Compiling module cycloneiv_pciehip_dprio_bus_out_mux
+# -- Compiling module cycloneiv_pciehip_dprio_reg
+# -- Compiling module cycloneiv_pciehip_dprio_reg_top
+# -- Compiling module cycloneiv_pciehip_hip_dprio_top
+# -- Compiling module cycloneiv_pciehip_compute_bit
+# -- Compiling module cycloneiv_pciehip_ecc_gen
+# -- Compiling module cycloneiv_pciehip_ecc_chk
+# -- Compiling module cycloneiv_pciehip_ecc_decoder
+# -- Compiling module cycloneiv_pciehip_pulse_ext
+# -- Compiling module cycloneiv_pciehip_hip_mram
+# -- Compiling module cycloneiv_pciehip_mram_top
+# -- Compiling module cycloneiv_pciehip_pciexp_dcfiforam
+# -- Compiling module cycloneiv_pciehip_pciexp_dcram_rtry
+# -- Compiling module cycloneiv_pciehip_pciexp_dcram_rxvc
+# -- Compiling module cycloneiv_pciehip_iei_detect
+# -- Compiling module cycloneiv_pciehip_pciexp_top_hip
+# -- Compiling module cycloneiv_pciehip_hip_top
+# -- Compiling module cycloneiv_hssi_pcie_hip
+# 
+# Top level modules:
+# 	cycloneiv_hssi_pcie_hip
+# 
+# vlib verilog_libs/cycloneiv_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_ver".
+# 
+# vmap cycloneiv_ver ./verilog_libs/cycloneiv_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling UDP CYCLONEIV_PRIM_DFFE
+# -- Compiling UDP CYCLONEIV_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEIV_PRIM_DFFEAS_HIGH
+# -- Compiling module cycloneiv_dffe
+# -- Compiling module cycloneiv_mux21
+# -- Compiling module cycloneiv_mux41
+# -- Compiling module cycloneiv_and1
+# -- Compiling module cycloneiv_and16
+# -- Compiling module cycloneiv_bmux21
+# -- Compiling module cycloneiv_b17mux21
+# -- Compiling module cycloneiv_nmux21
+# -- Compiling module cycloneiv_b5mux21
+# -- Compiling module cycloneiv_latch
+# -- Compiling module cycloneiv_routing_wire
+# -- Compiling module cycloneiv_lcell_comb
+# -- Compiling module cycloneiv_io_ibuf
+# -- Compiling module cycloneiv_io_obuf
+# -- Compiling module cycloneiv_ddio_out
+# -- Compiling module cycloneiv_ddio_oe
+# -- Compiling module cycloneiv_ff
+# -- Compiling module cycloneiv_ram_pulse_generator
+# -- Compiling module cycloneiv_ram_register
+# -- Compiling module cycloneiv_ram_block
+# -- Compiling module cycloneiv_mac_data_reg
+# -- Compiling module cycloneiv_mac_sign_reg
+# -- Compiling module cycloneiv_mac_mult_internal
+# -- Compiling module cycloneiv_mac_mult
+# -- Compiling module cycloneiv_mac_out
+# -- Compiling module cycloneiv_io_pad
+# -- Compiling module cycloneiv_ena_reg
+# -- Compiling module cycloneiv_clkctrl
+# -- Compiling module cycloneiv_pseudo_diff_out
+# -- Compiling module cycloneiv_rublock
+# -- Compiling module cycloneiv_termination_ctrl
+# -- Compiling module cycloneiv_termination_rupdn
+# -- Compiling module cycloneiv_termination
+# -- Compiling module cycloneiv_jtag
+# -- Compiling module cycloneiv_crcblock
+# -- Compiling module cycloneiv_oscillator
+# -- Compiling module cycloneiv_controller
+# -- Compiling module cycloneiv_m_cntr
+# -- Compiling module cycloneiv_n_cntr
+# -- Compiling module cycloneiv_scale_cntr
+# -- Compiling module cycloneiv_post_divider
+# -- Compiling module cycloneiv_pll_reg
+# -- Compiling module cycloneiv_pll
+# 
+# Top level modules:
+# 	cycloneiv_dffe
+# 	cycloneiv_and1
+# 	cycloneiv_and16
+# 	cycloneiv_bmux21
+# 	cycloneiv_b17mux21
+# 	cycloneiv_nmux21
+# 	cycloneiv_b5mux21
+# 	cycloneiv_lcell_comb
+# 	cycloneiv_io_ibuf
+# 	cycloneiv_io_obuf
+# 	cycloneiv_ddio_out
+# 	cycloneiv_ddio_oe
+# 	cycloneiv_ff
+# 	cycloneiv_ram_block
+# 	cycloneiv_mac_mult
+# 	cycloneiv_mac_out
+# 	cycloneiv_io_pad
+# 	cycloneiv_clkctrl
+# 	cycloneiv_pseudo_diff_out
+# 	cycloneiv_rublock
+# 	cycloneiv_termination
+# 	cycloneiv_jtag
+# 	cycloneiv_crcblock
+# 	cycloneiv_oscillator
+# 	cycloneiv_controller
+# 	cycloneiv_pll_reg
+# 	cycloneiv_pll
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/code/workspace_FPGA/simple_fsm/rtl {E:/code/workspace_FPGA/simple_fsm/rtl/simple_fsm.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module simple_fsm
+# 
+# Top level modules:
+# 	simple_fsm
+# 
+# vlog -vlog01compat -work work +incdir+E:/code/workspace_FPGA/simple_fsm/prj/../sim {E:/code/workspace_FPGA/simple_fsm/prj/../sim/tb_simple_fsm.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module tb_simple_fsm
+# 
+# Top level modules:
+# 	tb_simple_fsm
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_simple_fsm
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_simple_fsm 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "simple_fsm(fast)".
+# 
+# Loading work.tb_simple_fsm(fast)
+# Loading work.simple_fsm(fast)
+# ** Error: (vsim-PLI-3070) E:/code/workspace_FPGA/simple_fsm/prj/../sim/tb_simple_fsm.v(33): $timeformat : Too many arguments.
+# 
+#         Region: /tb_simple_fsm
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./simple_fsm_run_msim_rtl_verilog.do PAUSED at line 48
+do simple_fsm_run_msim_rtl_verilog.do
+# transcript on
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+# 
+# vmap altera_ver ./verilog_libs/altera_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_primitives.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_HIGH
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# 
+# vlib verilog_libs/lpm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
+# 
+# vmap lpm_ver ./verilog_libs/lpm_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work lpm_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/220model.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_mux
+# 	lpm_decode
+# 	lpm_clshift
+# 	lpm_add_sub
+# 	lpm_compare
+# 	lpm_mult
+# 	lpm_divide
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# 
+# vlib verilog_libs/sgate_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
+# 
+# vmap sgate_ver ./verilog_libs/sgate_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work sgate_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/sgate.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# 
+# Top level modules:
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# 
+# vlib verilog_libs/altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
+# 
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_mf_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_mf.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# 
+# vlib verilog_libs/altera_lnsim_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
+# 
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+# Modifying modelsim.ini
+# vlog -sv -work altera_lnsim_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_lnsim.sv}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling package altera_lnsim_functions
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_lnsim_functions
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module ama_latency_function
+# -- Compiling module altera_pll_reconfig_tasks
+# -- Compiling module altera_syncram
+# -- Compiling module ALTERA_LNSIM_MEMORY_INITIALIZATION
+# -- Compiling module altera_stratixv_pll
+# -- Compiling module altera_arriav_pll
+# -- Compiling module altera_arriavgz_pll
+# -- Compiling module altera_cyclonev_pll
+# -- Compiling module altera_pll
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module pll_dps_lcell_comb
+# -- Compiling module twentynm_iopll_ip
+# 
+# Top level modules:
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# 	altera_syncram
+# 	altera_pll
+# 
+# vlib verilog_libs/cycloneiv_hssi_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_hssi_ver".
+# 
+# vmap cycloneiv_hssi_ver ./verilog_libs/cycloneiv_hssi_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_hssi_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_hssi_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_reg
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_out_block
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_parallel_register
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_ser
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det
+# -- Compiling module cycloneiv_hssi_tx_pma
+# -- Compiling module cycloneiv_hssi_rx_pma_sub_deser
+# -- Compiling module cycloneiv_hssi_rx_pma_sub_clkdiv
+# -- Compiling module cycloneiv_hssi_rx_pma
+# -- Compiling module cycloneiv_hssi_pcs_reset
+# -- Compiling module cycloneiv_hssi_digi_chnl_hip_spt
+# -- Compiling module cycloneiv_hssi_phystatus_generator_fsm
+# -- Compiling module cycloneiv_hssi_phystatus_generator
+# -- Compiling module cycloneiv_hssi_rx_pipe_interface
+# -- Compiling module cycloneiv_hssi_tx_pipe_interface
+# -- Compiling module cycloneiv_hssi_q_pipe_interface_top
+# -- Compiling module cycloneiv_hssi_tx_digis_txclk_gating
+# -- Compiling module cycloneiv_hssi_tx_digi_txclk_ctl
+# -- Compiling module cycloneiv_hssi_tx_digis_ram8x49_syn
+# -- Compiling module cycloneiv_hssi_tx_digis_ph_fifo
+# -- Compiling module cycloneiv_hssi_tx_digi_tx_ctrl
+# -- Compiling module cycloneiv_hssi_tx_digi_bist_gen
+# -- Compiling module cycloneiv_hssi_tx_digi_prbs_gen
+# -- Compiling module cycloneiv_hssi_tx_digi_enc_chnl_top
+# -- Compiling module cycloneiv_hssi_tx_digi_iq_pipe_tx
+# -- Compiling module cycloneiv_hssi_tx_digi
+# -- Compiling module cycloneiv_hssi_tx_pcs
+# -- Compiling module cycloneiv_hssi_cmu_dprio_map
+# -- Compiling module cycloneiv_hssi_cmu_dprio_top
+# -- Compiling module cycloneiv_hssi_rx_digis_ph_fifo
+# -- Compiling module cycloneiv_hssi_rx_digis_ram16x14_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_ram20x16_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_ram8x70_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_rxclk_gating
+# -- Compiling module cycloneiv_hssi_rx_digi_rxclk_ctl
+# -- Compiling module cycloneiv_hssi_rx_digi_auto_speed_neg
+# -- Compiling module cycloneiv_hssi_rx_digi_bist_ver
+# -- Compiling module cycloneiv_hssi_rx_digi_cdr_ctrl
+# -- Compiling module cycloneiv_hssi_rx_digi_comp_chnl_top
+# -- Compiling module cycloneiv_hssi_rx_digi_rx_ctrl
+# -- Compiling module cycloneiv_hssi_rx_digi_dec_chnl_top
+# -- Compiling module cycloneiv_hssi_rx_digi_dskw_fifo
+# -- Compiling module cycloneiv_hssi_rx_digi_freqdet
+# -- Compiling module cycloneiv_hssi_rx_digi_eii_module
+# -- Compiling module cycloneiv_hssi_rx_digi_pcs_channel_testbus
+# -- Compiling module cycloneiv_hssi_rx_digi_iq_pipe_rx
+# -- Compiling module cycloneiv_hssi_rx_digi_prbs_ver
+# -- Compiling module cycloneiv_hssi_rx_digi_wordalign
+# -- Compiling module cycloneiv_hssi_rx_digi
+# -- Compiling module cycloneiv_hssi_rx_pcs
+# -- Compiling module cycloneiv_hssi_dskw_sm
+# -- Compiling module cycloneiv_hssi_tx_sm
+# -- Compiling module cycloneiv_hssi_rcv_sm
+# -- Compiling module cycloneiv_hssi_cmu_chnl_reset
+# -- Compiling module cycloneiv_hssi_cmu_quad_reset
+# -- Compiling module cycloneiv_hssi_cmu_auto_speed_neg
+# -- Compiling module cycloneiv_hssi_cmu_clk_gating
+# -- Compiling module cycloneiv_hssi_cmu_clk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_rx_ctrl
+# -- Compiling module cycloneiv_hssi_cmu_rxclk_gating
+# -- Compiling module cycloneiv_hssi_cmu_rxclk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_tx_ctrl
+# -- Compiling module cycloneiv_hssi_cmu_txclk_gating
+# -- Compiling module cycloneiv_hssi_cmu_txclk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_bit
+# -- Compiling module cycloneiv_hssi_cmu_dprio_bit_pma
+# -- Compiling module cycloneiv_hssi_cmu_dprio_16bit
+# -- Compiling module cycloneiv_hssi_cmu_dprio_16bit_pma
+# -- Compiling module cycloneiv_hssi_cmu_dprio_reg_chnl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_chnl_bus_out_mux
+# -- Compiling module cycloneiv_hssi_cmu_dprio_chnl_top
+# -- Compiling module cycloneiv_hssi_cmu_dprio_status
+# -- Compiling module cycloneiv_hssi_cmu_dprio_addr
+# -- Compiling module cycloneiv_hssi_cmu_dprio_cnt
+# -- Compiling module cycloneiv_hssi_cmu_dprio_ctl_data
+# -- Compiling module cycloneiv_hssi_cmu_dprio_sm
+# -- Compiling module cycloneiv_hssi_cmu_dprio_reg_centrl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_centrl_bus_out_mux
+# -- Compiling module cycloneiv_hssi_cmu_dprio_centrl_top
+# -- Compiling module cycloneiv_hssi_cmu_dprio_map_index
+# -- Compiling module cycloneiv_hssi_cmu
+# -- Compiling module cycloneiv_hssi_calibration_block
+# 
+# Top level modules:
+# 	cycloneiv_hssi_tx_pma
+# 	cycloneiv_hssi_rx_pma
+# 	cycloneiv_hssi_tx_pcs
+# 	cycloneiv_hssi_rx_pcs
+# 	cycloneiv_hssi_cmu_dprio_centrl_top
+# 	cycloneiv_hssi_cmu
+# 	cycloneiv_hssi_calibration_block
+# 
+# vlib verilog_libs/cycloneiv_pcie_hip_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_pcie_hip_ver".
+# 
+# vmap cycloneiv_pcie_hip_ver ./verilog_libs/cycloneiv_pcie_hip_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_pcie_hip_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_pcie_hip_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module cycloneiv_pciehip_param
+# -- Compiling module cycloneiv_pciehip_clkmux
+# -- Compiling module cycloneiv_pciehip_dprio_bit
+# -- Compiling module cycloneiv_pciehip_dprio_16bit
+# -- Compiling module cycloneiv_pciehip_dprio_addr
+# -- Compiling module cycloneiv_pciehip_dprio_cnt
+# -- Compiling module cycloneiv_pciehip_dprio_ctl_data
+# -- Compiling module cycloneiv_pciehip_dprio_sm
+# -- Compiling module cycloneiv_pciehip_dprio_bus_out_mux
+# -- Compiling module cycloneiv_pciehip_dprio_reg
+# -- Compiling module cycloneiv_pciehip_dprio_reg_top
+# -- Compiling module cycloneiv_pciehip_hip_dprio_top
+# -- Compiling module cycloneiv_pciehip_compute_bit
+# -- Compiling module cycloneiv_pciehip_ecc_gen
+# -- Compiling module cycloneiv_pciehip_ecc_chk
+# -- Compiling module cycloneiv_pciehip_ecc_decoder
+# -- Compiling module cycloneiv_pciehip_pulse_ext
+# -- Compiling module cycloneiv_pciehip_hip_mram
+# -- Compiling module cycloneiv_pciehip_mram_top
+# -- Compiling module cycloneiv_pciehip_pciexp_dcfiforam
+# -- Compiling module cycloneiv_pciehip_pciexp_dcram_rtry
+# -- Compiling module cycloneiv_pciehip_pciexp_dcram_rxvc
+# -- Compiling module cycloneiv_pciehip_iei_detect
+# -- Compiling module cycloneiv_pciehip_pciexp_top_hip
+# -- Compiling module cycloneiv_pciehip_hip_top
+# -- Compiling module cycloneiv_hssi_pcie_hip
+# 
+# Top level modules:
+# 	cycloneiv_hssi_pcie_hip
+# 
+# vlib verilog_libs/cycloneiv_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_ver".
+# 
+# vmap cycloneiv_ver ./verilog_libs/cycloneiv_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling UDP CYCLONEIV_PRIM_DFFE
+# -- Compiling UDP CYCLONEIV_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEIV_PRIM_DFFEAS_HIGH
+# -- Compiling module cycloneiv_dffe
+# -- Compiling module cycloneiv_mux21
+# -- Compiling module cycloneiv_mux41
+# -- Compiling module cycloneiv_and1
+# -- Compiling module cycloneiv_and16
+# -- Compiling module cycloneiv_bmux21
+# -- Compiling module cycloneiv_b17mux21
+# -- Compiling module cycloneiv_nmux21
+# -- Compiling module cycloneiv_b5mux21
+# -- Compiling module cycloneiv_latch
+# -- Compiling module cycloneiv_routing_wire
+# -- Compiling module cycloneiv_lcell_comb
+# -- Compiling module cycloneiv_io_ibuf
+# -- Compiling module cycloneiv_io_obuf
+# -- Compiling module cycloneiv_ddio_out
+# -- Compiling module cycloneiv_ddio_oe
+# -- Compiling module cycloneiv_ff
+# -- Compiling module cycloneiv_ram_pulse_generator
+# -- Compiling module cycloneiv_ram_register
+# -- Compiling module cycloneiv_ram_block
+# -- Compiling module cycloneiv_mac_data_reg
+# -- Compiling module cycloneiv_mac_sign_reg
+# -- Compiling module cycloneiv_mac_mult_internal
+# -- Compiling module cycloneiv_mac_mult
+# -- Compiling module cycloneiv_mac_out
+# -- Compiling module cycloneiv_io_pad
+# -- Compiling module cycloneiv_ena_reg
+# -- Compiling module cycloneiv_clkctrl
+# -- Compiling module cycloneiv_pseudo_diff_out
+# -- Compiling module cycloneiv_rublock
+# -- Compiling module cycloneiv_termination_ctrl
+# -- Compiling module cycloneiv_termination_rupdn
+# -- Compiling module cycloneiv_termination
+# -- Compiling module cycloneiv_jtag
+# -- Compiling module cycloneiv_crcblock
+# -- Compiling module cycloneiv_oscillator
+# -- Compiling module cycloneiv_controller
+# -- Compiling module cycloneiv_m_cntr
+# -- Compiling module cycloneiv_n_cntr
+# -- Compiling module cycloneiv_scale_cntr
+# -- Compiling module cycloneiv_post_divider
+# -- Compiling module cycloneiv_pll_reg
+# -- Compiling module cycloneiv_pll
+# 
+# Top level modules:
+# 	cycloneiv_dffe
+# 	cycloneiv_and1
+# 	cycloneiv_and16
+# 	cycloneiv_bmux21
+# 	cycloneiv_b17mux21
+# 	cycloneiv_nmux21
+# 	cycloneiv_b5mux21
+# 	cycloneiv_lcell_comb
+# 	cycloneiv_io_ibuf
+# 	cycloneiv_io_obuf
+# 	cycloneiv_ddio_out
+# 	cycloneiv_ddio_oe
+# 	cycloneiv_ff
+# 	cycloneiv_ram_block
+# 	cycloneiv_mac_mult
+# 	cycloneiv_mac_out
+# 	cycloneiv_io_pad
+# 	cycloneiv_clkctrl
+# 	cycloneiv_pseudo_diff_out
+# 	cycloneiv_rublock
+# 	cycloneiv_termination
+# 	cycloneiv_jtag
+# 	cycloneiv_crcblock
+# 	cycloneiv_oscillator
+# 	cycloneiv_controller
+# 	cycloneiv_pll_reg
+# 	cycloneiv_pll
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/code/workspace_FPGA/simple_fsm/rtl {E:/code/workspace_FPGA/simple_fsm/rtl/simple_fsm.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module simple_fsm
+# 
+# Top level modules:
+# 	simple_fsm
+# 
+# vlog -vlog01compat -work work +incdir+E:/code/workspace_FPGA/simple_fsm/prj/../sim {E:/code/workspace_FPGA/simple_fsm/prj/../sim/tb_simple_fsm.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module tb_simple_fsm
+# 
+# Top level modules:
+# 	tb_simple_fsm
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_simple_fsm
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_simple_fsm 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "simple_fsm(fast)".
+# 
+# Loading work.tb_simple_fsm(fast)
+# Loading work.simple_fsm(fast)
+# 
+# add wave *
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
+# @time    0ns: pi_money=0 state=001, po_cola=0
+# @time   30ns: pi_money=1 state=001, po_cola=0
+# @time   40ns: pi_money=1 state=010, po_cola=0
+# @time   60ns: pi_money=1 state=100, po_cola=0
+# @time   80ns: pi_money=1 state=001, po_cola=1
+# @time   90ns: pi_money=0 state=001, po_cola=1
+# @time  100ns: pi_money=1 state=001, po_cola=0
+# @time  120ns: pi_money=0 state=010, po_cola=0
+# @time  130ns: pi_money=1 state=010, po_cola=0
+# @time  140ns: pi_money=1 state=100, po_cola=0
+# @time  150ns: pi_money=0 state=100, po_cola=0
+# @time  160ns: pi_money=1 state=100, po_cola=0
+# @time  170ns: pi_money=0 state=100, po_cola=0
+# @time  180ns: pi_money=1 state=100, po_cola=0
+# @time  190ns: pi_money=0 state=100, po_cola=0
+# @time  200ns: pi_money=1 state=100, po_cola=0
+# @time  220ns: pi_money=0 state=001, po_cola=1
+# @time  230ns: pi_money=1 state=001, po_cola=1
+# @time  240ns: pi_money=0 state=010, po_cola=0
+# @time  270ns: pi_money=1 state=010, po_cola=0
+# @time  280ns: pi_money=0 state=100, po_cola=0
+# @time  290ns: pi_money=1 state=100, po_cola=0
+# @time  300ns: pi_money=1 state=001, po_cola=1
+# @time  320ns: pi_money=1 state=010, po_cola=0
+# @time  330ns: pi_money=0 state=010, po_cola=0
+# @time  370ns: pi_money=1 state=010, po_cola=0
+# @time  380ns: pi_money=0 state=100, po_cola=0
+# @time  390ns: pi_money=1 state=100, po_cola=0
+# @time  400ns: pi_money=1 state=001, po_cola=1
+# @time  420ns: pi_money=1 state=010, po_cola=0
+# @time  440ns: pi_money=0 state=100, po_cola=0
+# @time  460ns: pi_money=1 state=100, po_cola=0
+# @time  480ns: pi_money=1 state=001, po_cola=1
+# @time  490ns: pi_money=0 state=001, po_cola=1
+# @time  500ns: pi_money=0 state=001, po_cola=0
+# @time  540ns: pi_money=1 state=001, po_cola=0
+# @time  550ns: pi_money=0 state=001, po_cola=0
+# @time  570ns: pi_money=1 state=001, po_cola=0
+# @time  580ns: pi_money=1 state=010, po_cola=0
+# @time  590ns: pi_money=0 state=010, po_cola=0
+# @time  640ns: pi_money=1 state=010, po_cola=0
+# @time  660ns: pi_money=1 state=100, po_cola=0
+# @time  680ns: pi_money=1 state=001, po_cola=1
+# @time  690ns: pi_money=0 state=001, po_cola=1
+# @time  700ns: pi_money=0 state=001, po_cola=0
+# @time  710ns: pi_money=1 state=001, po_cola=0
+# @time  720ns: pi_money=1 state=010, po_cola=0
+# @time  740ns: pi_money=0 state=100, po_cola=0
+# @time  760ns: pi_money=1 state=100, po_cola=0
+# @time  780ns: pi_money=0 state=001, po_cola=1
+# @time  790ns: pi_money=1 state=001, po_cola=1
+# @time  800ns: pi_money=1 state=010, po_cola=0
+# @time  810ns: pi_money=0 state=010, po_cola=0
+# @time  820ns: pi_money=1 state=010, po_cola=0
+# @time  840ns: pi_money=1 state=100, po_cola=0
+# @time  850ns: pi_money=0 state=100, po_cola=0
+# @time  860ns: pi_money=1 state=100, po_cola=0
+# @time  880ns: pi_money=0 state=001, po_cola=1
+# @time  900ns: pi_money=0 state=001, po_cola=0
+# @time  920ns: pi_money=1 state=001, po_cola=0
+# @time  940ns: pi_money=0 state=010, po_cola=0
+# @time  960ns: pi_money=1 state=010, po_cola=0
+# @time  980ns: pi_money=1 state=100, po_cola=0
+add wave -position insertpoint sim:/tb_simple_fsm/simple_fsm_inst/*
+restart
+# Loading work.tb_simple_fsm(fast)
+# Loading work.simple_fsm(fast)
+run
+# @time    0ns: pi_money=0 state=001, po_cola=0
+# @time   30ns: pi_money=1 state=001, po_cola=0
+# @time   40ns: pi_money=1 state=010, po_cola=0
+# @time   60ns: pi_money=1 state=100, po_cola=0
+# @time   80ns: pi_money=1 state=001, po_cola=1
+# @time   90ns: pi_money=0 state=001, po_cola=1
+# @time  100ns: pi_money=1 state=001, po_cola=0
+# @time  120ns: pi_money=0 state=010, po_cola=0
+# @time  130ns: pi_money=1 state=010, po_cola=0
+# @time  140ns: pi_money=1 state=100, po_cola=0
+# @time  150ns: pi_money=0 state=100, po_cola=0
+# @time  160ns: pi_money=1 state=100, po_cola=0
+# @time  170ns: pi_money=0 state=100, po_cola=0
+# @time  180ns: pi_money=1 state=100, po_cola=0
+# @time  190ns: pi_money=0 state=100, po_cola=0
+# @time  200ns: pi_money=1 state=100, po_cola=0
+# @time  220ns: pi_money=0 state=001, po_cola=1
+# @time  230ns: pi_money=1 state=001, po_cola=1
+# @time  240ns: pi_money=0 state=010, po_cola=0
+# @time  270ns: pi_money=1 state=010, po_cola=0
+# @time  280ns: pi_money=0 state=100, po_cola=0
+# @time  290ns: pi_money=1 state=100, po_cola=0
+# @time  300ns: pi_money=1 state=001, po_cola=1
+# @time  320ns: pi_money=1 state=010, po_cola=0
+# @time  330ns: pi_money=0 state=010, po_cola=0
+# @time  370ns: pi_money=1 state=010, po_cola=0
+# @time  380ns: pi_money=0 state=100, po_cola=0
+# @time  390ns: pi_money=1 state=100, po_cola=0
+# @time  400ns: pi_money=1 state=001, po_cola=1
+# @time  420ns: pi_money=1 state=010, po_cola=0
+# @time  440ns: pi_money=0 state=100, po_cola=0
+# @time  460ns: pi_money=1 state=100, po_cola=0
+# @time  480ns: pi_money=1 state=001, po_cola=1
+# @time  490ns: pi_money=0 state=001, po_cola=1
+# @time  500ns: pi_money=0 state=001, po_cola=0
+# @time  540ns: pi_money=1 state=001, po_cola=0
+# @time  550ns: pi_money=0 state=001, po_cola=0
+# @time  570ns: pi_money=1 state=001, po_cola=0
+# @time  580ns: pi_money=1 state=010, po_cola=0
+# @time  590ns: pi_money=0 state=010, po_cola=0
+# @time  640ns: pi_money=1 state=010, po_cola=0
+# @time  660ns: pi_money=1 state=100, po_cola=0
+# @time  680ns: pi_money=1 state=001, po_cola=1
+# @time  690ns: pi_money=0 state=001, po_cola=1
+# @time  700ns: pi_money=0 state=001, po_cola=0
+# @time  710ns: pi_money=1 state=001, po_cola=0
+# @time  720ns: pi_money=1 state=010, po_cola=0
+# @time  740ns: pi_money=0 state=100, po_cola=0
+# @time  760ns: pi_money=1 state=100, po_cola=0
+# @time  780ns: pi_money=0 state=001, po_cola=1
+# @time  790ns: pi_money=1 state=001, po_cola=1
+# @time  800ns: pi_money=1 state=010, po_cola=0
+# @time  810ns: pi_money=0 state=010, po_cola=0
+# @time  820ns: pi_money=1 state=010, po_cola=0
+# @time  840ns: pi_money=1 state=100, po_cola=0
+# @time  850ns: pi_money=0 state=100, po_cola=0
+# @time  860ns: pi_money=1 state=100, po_cola=0
+# @time  880ns: pi_money=0 state=001, po_cola=1
+# @time  900ns: pi_money=0 state=001, po_cola=0
+# @time  920ns: pi_money=1 state=001, po_cola=0
+# @time  940ns: pi_money=0 state=010, po_cola=0
+# @time  960ns: pi_money=1 state=010, po_cola=0
+# @time  980ns: pi_money=1 state=100, po_cola=0
+# @time 1000ns: pi_money=1 state=001, po_cola=1
+# @time 1010ns: pi_money=0 state=001, po_cola=1
+# @time 1020ns: pi_money=1 state=001, po_cola=0
+# @time 1040ns: pi_money=1 state=010, po_cola=0
+# @time 1050ns: pi_money=0 state=010, po_cola=0
+# @time 1120ns: pi_money=1 state=010, po_cola=0
+# @time 1140ns: pi_money=1 state=100, po_cola=0
+# @time 1160ns: pi_money=1 state=001, po_cola=1
+# @time 1170ns: pi_money=0 state=001, po_cola=1
+# @time 1180ns: pi_money=1 state=001, po_cola=0
+# @time 1200ns: pi_money=0 state=010, po_cola=0
+# @time 1220ns: pi_money=1 state=010, po_cola=0
+# @time 1240ns: pi_money=0 state=100, po_cola=0
+# @time 1250ns: pi_money=1 state=100, po_cola=0
+# @time 1260ns: pi_money=1 state=001, po_cola=1
+# @time 1280ns: pi_money=1 state=010, po_cola=0
+# @time 1290ns: pi_money=0 state=010, po_cola=0
+# @time 1320ns: pi_money=1 state=010, po_cola=0
+# @time 1330ns: pi_money=0 state=010, po_cola=0
+# @time 1360ns: pi_money=1 state=010, po_cola=0
+# @time 1380ns: pi_money=0 state=100, po_cola=0
+# @time 1400ns: pi_money=1 state=100, po_cola=0
+# @time 1410ns: pi_money=0 state=100, po_cola=0
+# @time 1440ns: pi_money=1 state=100, po_cola=0
+# @time 1450ns: pi_money=0 state=100, po_cola=0
+# @time 1470ns: pi_money=1 state=100, po_cola=0
+# @time 1480ns: pi_money=0 state=001, po_cola=1
+# @time 1490ns: pi_money=1 state=001, po_cola=1
+# @time 1500ns: pi_money=1 state=010, po_cola=0
+# @time 1520ns: pi_money=1 state=100, po_cola=0
+# @time 1540ns: pi_money=0 state=001, po_cola=1
+# @time 1560ns: pi_money=0 state=001, po_cola=0
+# @time 1570ns: pi_money=1 state=001, po_cola=0
+# @time 1580ns: pi_money=0 state=010, po_cola=0
+# @time 1600ns: pi_money=1 state=010, po_cola=0
+# @time 1620ns: pi_money=0 state=100, po_cola=0
+# @time 1650ns: pi_money=1 state=100, po_cola=0
+# @time 1660ns: pi_money=1 state=001, po_cola=1
+# @time 1670ns: pi_money=0 state=001, po_cola=1
+# @time 1680ns: pi_money=0 state=001, po_cola=0
+# @time 1700ns: pi_money=1 state=001, po_cola=0
+# @time 1720ns: pi_money=0 state=010, po_cola=0
+# @time 1750ns: pi_money=1 state=010, po_cola=0
+# @time 1760ns: pi_money=0 state=100, po_cola=0
+# @time 1780ns: pi_money=1 state=100, po_cola=0
+# @time 1790ns: pi_money=0 state=100, po_cola=0
+# @time 1820ns: pi_money=1 state=100, po_cola=0
+# @time 1830ns: pi_money=0 state=100, po_cola=0
+# @time 1840ns: pi_money=1 state=100, po_cola=0
+# @time 1860ns: pi_money=0 state=001, po_cola=1
+# @time 1880ns: pi_money=0 state=001, po_cola=0
+# @time 1900ns: pi_money=1 state=001, po_cola=0
+# @time 1910ns: pi_money=0 state=001, po_cola=0
+# @time 1950ns: pi_money=1 state=001, po_cola=0
+# @time 1960ns: pi_money=1 state=010, po_cola=0
+# @time 1980ns: pi_money=0 state=100, po_cola=0
+# @time 1990ns: pi_money=1 state=100, po_cola=0
+# @time 2000ns: pi_money=1 state=001, po_cola=1
+# @time 2020ns: pi_money=0 state=010, po_cola=0
+# @time 2040ns: pi_money=1 state=010, po_cola=0
+# @time 2060ns: pi_money=1 state=100, po_cola=0
+# @time 2080ns: pi_money=1 state=001, po_cola=1
+# @time 2090ns: pi_money=0 state=001, po_cola=1
+# @time 2100ns: pi_money=1 state=001, po_cola=0
+# @time 2120ns: pi_money=0 state=010, po_cola=0
+# @time 2160ns: pi_money=1 state=010, po_cola=0
+# @time 2180ns: pi_money=0 state=100, po_cola=0
+# @time 2200ns: pi_money=1 state=100, po_cola=0
+# @time 2210ns: pi_money=0 state=100, po_cola=0
+# @time 2230ns: pi_money=1 state=100, po_cola=0
+# @time 2240ns: pi_money=0 state=001, po_cola=1
+# @time 2260ns: pi_money=1 state=001, po_cola=0
+# @time 2270ns: pi_money=0 state=001, po_cola=0
+# @time 2290ns: pi_money=1 state=001, po_cola=0
+# @time 2300ns: pi_money=1 state=010, po_cola=0
+# @time 2320ns: pi_money=0 state=100, po_cola=0
+# @time 2350ns: pi_money=1 state=100, po_cola=0
+# @time 2360ns: pi_money=0 state=001, po_cola=1
+# @time 2380ns: pi_money=1 state=001, po_cola=0
+# @time 2390ns: pi_money=0 state=001, po_cola=0
+# @time 2430ns: pi_money=1 state=001, po_cola=0
+# @time 2440ns: pi_money=0 state=010, po_cola=0
+# @time 2470ns: pi_money=1 state=010, po_cola=0
+# @time 2480ns: pi_money=1 state=100, po_cola=0
+# @time 2490ns: pi_money=0 state=100, po_cola=0
+# @time 2500ns: pi_money=1 state=100, po_cola=0
+# @time 2520ns: pi_money=1 state=001, po_cola=1
+# @time 2540ns: pi_money=0 state=010, po_cola=0
+# @time 2550ns: pi_money=1 state=010, po_cola=0
+# @time 2560ns: pi_money=1 state=100, po_cola=0
+# @time 2580ns: pi_money=0 state=001, po_cola=1
+# @time 2600ns: pi_money=1 state=001, po_cola=0
+# @time 2610ns: pi_money=0 state=001, po_cola=0
+# @time 2630ns: pi_money=1 state=001, po_cola=0
+# @time 2640ns: pi_money=1 state=010, po_cola=0
+# @time 2650ns: pi_money=0 state=010, po_cola=0
+# @time 2670ns: pi_money=1 state=010, po_cola=0
+# @time 2680ns: pi_money=0 state=100, po_cola=0
+# @time 2700ns: pi_money=1 state=100, po_cola=0
+# @time 2710ns: pi_money=0 state=100, po_cola=0
+# @time 2720ns: pi_money=1 state=100, po_cola=0
+# @time 2740ns: pi_money=0 state=001, po_cola=1
+# @time 2750ns: pi_money=1 state=001, po_cola=1
+# @time 2760ns: pi_money=0 state=010, po_cola=0
+# @time 2770ns: pi_money=1 state=010, po_cola=0
+# @time 2780ns: pi_money=0 state=100, po_cola=0
+# @time 2800ns: pi_money=1 state=100, po_cola=0
+# @time 2810ns: pi_money=0 state=100, po_cola=0
+# @time 2840ns: pi_money=1 state=100, po_cola=0
+# @time 2860ns: pi_money=1 state=001, po_cola=1
+# @time 2880ns: pi_money=1 state=010, po_cola=0
+# @time 2890ns: pi_money=0 state=010, po_cola=0
+# @time 2900ns: pi_money=1 state=010, po_cola=0
+# @time 2920ns: pi_money=1 state=100, po_cola=0
+# @time 2930ns: pi_money=0 state=100, po_cola=0
+# @time 2990ns: pi_money=1 state=100, po_cola=0
+# @time 3000ns: pi_money=1 state=001, po_cola=1
+# @time 3020ns: pi_money=1 state=010, po_cola=0
+# @time 3040ns: pi_money=1 state=100, po_cola=0
+# @time 3060ns: pi_money=0 state=001, po_cola=1
+# @time 3070ns: pi_money=1 state=001, po_cola=1
+# @time 3080ns: pi_money=1 state=010, po_cola=0
+# @time 3100ns: pi_money=1 state=100, po_cola=0
+# @time 3120ns: pi_money=1 state=001, po_cola=1
+# @time 3140ns: pi_money=1 state=010, po_cola=0
+# @time 3150ns: pi_money=0 state=010, po_cola=0
+# @time 3170ns: pi_money=1 state=010, po_cola=0
+# @time 3180ns: pi_money=1 state=100, po_cola=0
+# @time 3190ns: pi_money=0 state=100, po_cola=0
+# @time 3230ns: pi_money=1 state=100, po_cola=0
+# @time 3240ns: pi_money=0 state=001, po_cola=1
+# @time 3260ns: pi_money=0 state=001, po_cola=0
+# @time 3300ns: pi_money=1 state=001, po_cola=0
+# @time 3310ns: pi_money=0 state=001, po_cola=0
+# @time 3330ns: pi_money=1 state=001, po_cola=0
+# @time 3340ns: pi_money=0 state=010, po_cola=0
+# @time 3380ns: pi_money=1 state=010, po_cola=0
+# @time 3400ns: pi_money=1 state=100, po_cola=0
+# @time 3420ns: pi_money=1 state=001, po_cola=1
+# @time 3430ns: pi_money=0 state=001, po_cola=1
+# @time 3440ns: pi_money=1 state=001, po_cola=0
+# @time 3460ns: pi_money=1 state=010, po_cola=0
+# @time 3470ns: pi_money=0 state=010, po_cola=0
+# @time 3480ns: pi_money=1 state=010, po_cola=0
+# @time 3490ns: pi_money=0 state=010, po_cola=0
+# @time 3510ns: pi_money=1 state=010, po_cola=0
+# @time 3520ns: pi_money=1 state=100, po_cola=0
+# @time 3530ns: pi_money=0 state=100, po_cola=0
+# @time 3540ns: pi_money=1 state=100, po_cola=0
+# @time 3550ns: pi_money=0 state=100, po_cola=0
+# @time 3570ns: pi_money=1 state=100, po_cola=0
+# @time 3580ns: pi_money=0 state=001, po_cola=1
+# @time 3600ns: pi_money=0 state=001, po_cola=0
+# @time 3620ns: pi_money=1 state=001, po_cola=0
+# @time 3640ns: pi_money=1 state=010, po_cola=0
+# @time 3660ns: pi_money=0 state=100, po_cola=0
+# @time 3670ns: pi_money=1 state=100, po_cola=0
+# @time 3680ns: pi_money=1 state=001, po_cola=1
+# @time 3700ns: pi_money=1 state=010, po_cola=0
+# @time 3720ns: pi_money=1 state=100, po_cola=0
+# @time 3740ns: pi_money=0 state=001, po_cola=1
+# @time 3750ns: pi_money=1 state=001, po_cola=1
+# @time 3760ns: pi_money=0 state=010, po_cola=0
+# @time 3770ns: pi_money=1 state=010, po_cola=0
+# @time 3780ns: pi_money=0 state=100, po_cola=0
+# @time 3800ns: pi_money=1 state=100, po_cola=0
+# @time 3810ns: pi_money=0 state=100, po_cola=0
+# @time 3860ns: pi_money=1 state=100, po_cola=0
+# @time 3870ns: pi_money=0 state=100, po_cola=0
+# @time 3930ns: pi_money=1 state=100, po_cola=0
+# @time 3940ns: pi_money=0 state=001, po_cola=1
+# @time 3950ns: pi_money=1 state=001, po_cola=1
+# @time 3960ns: pi_money=0 state=010, po_cola=0
+# @time 3980ns: pi_money=1 state=010, po_cola=0
+# @time 3990ns: pi_money=0 state=010, po_cola=0
+# @time 4000ns: pi_money=1 state=010, po_cola=0
+# @time 4020ns: pi_money=0 state=100, po_cola=0
+# @time 4030ns: pi_money=1 state=100, po_cola=0
+# @time 4040ns: pi_money=0 state=001, po_cola=1
+# @time 4050ns: pi_money=1 state=001, po_cola=1
+# @time 4060ns: pi_money=0 state=010, po_cola=0
+# @time 4100ns: pi_money=1 state=010, po_cola=0
+# @time 4110ns: pi_money=0 state=010, po_cola=0
+# @time 4120ns: pi_money=1 state=010, po_cola=0
+# @time 4130ns: pi_money=0 state=010, po_cola=0
+# @time 4140ns: pi_money=1 state=010, po_cola=0
+# @time 4160ns: pi_money=0 state=100, po_cola=0
+# @time 4170ns: pi_money=1 state=100, po_cola=0
+# @time 4180ns: pi_money=0 state=001, po_cola=1
+# @time 4190ns: pi_money=1 state=001, po_cola=1
+# @time 4200ns: pi_money=1 state=010, po_cola=0
+# @time 4220ns: pi_money=0 state=100, po_cola=0
+# @time 4230ns: pi_money=1 state=100, po_cola=0
+# @time 4240ns: pi_money=1 state=001, po_cola=1
+# @time 4250ns: pi_money=0 state=001, po_cola=1
+# @time 4260ns: pi_money=0 state=001, po_cola=0
+# @time 4270ns: pi_money=1 state=001, po_cola=0
+# @time 4280ns: pi_money=1 state=010, po_cola=0
+# @time 4290ns: pi_money=0 state=010, po_cola=0
+# @time 4310ns: pi_money=1 state=010, po_cola=0
+# @time 4320ns: pi_money=1 state=100, po_cola=0
+# @time 4330ns: pi_money=0 state=100, po_cola=0
+# @time 4350ns: pi_money=1 state=100, po_cola=0
+# @time 4360ns: pi_money=0 state=001, po_cola=1
+# @time 4380ns: pi_money=1 state=001, po_cola=0
+# @time 4400ns: pi_money=0 state=010, po_cola=0
+# @time 4420ns: pi_money=1 state=010, po_cola=0
+# @time 4430ns: pi_money=0 state=010, po_cola=0
+# @time 4450ns: pi_money=1 state=010, po_cola=0
+# @time 4460ns: pi_money=1 state=100, po_cola=0
+# @time 4470ns: pi_money=0 state=100, po_cola=0
+# @time 4480ns: pi_money=1 state=100, po_cola=0
+# @time 4490ns: pi_money=0 state=100, po_cola=0
+# @time 4500ns: pi_money=1 state=100, po_cola=0
+# @time 4520ns: pi_money=0 state=001, po_cola=1
+# @time 4530ns: pi_money=1 state=001, po_cola=1
+# @time 4540ns: pi_money=1 state=010, po_cola=0
+# @time 4560ns: pi_money=0 state=100, po_cola=0
+# @time 4570ns: pi_money=1 state=100, po_cola=0
+# @time 4580ns: pi_money=1 state=001, po_cola=1
+# @time 4600ns: pi_money=0 state=010, po_cola=0
+# @time 4620ns: pi_money=1 state=010, po_cola=0
+# @time 4630ns: pi_money=0 state=010, po_cola=0
+# @time 4650ns: pi_money=1 state=010, po_cola=0
+# @time 4660ns: pi_money=0 state=100, po_cola=0
+# @time 4680ns: pi_money=1 state=100, po_cola=0
+# @time 4700ns: pi_money=0 state=001, po_cola=1
+# @time 4710ns: pi_money=1 state=001, po_cola=1
+# @time 4720ns: pi_money=0 state=010, po_cola=0
+# @time 4730ns: pi_money=1 state=010, po_cola=0
+# @time 4740ns: pi_money=1 state=100, po_cola=0
+# @time 4760ns: pi_money=1 state=001, po_cola=1
+# @time 4770ns: pi_money=0 state=001, po_cola=1
+# @time 4780ns: pi_money=0 state=001, po_cola=0
+# @time 4790ns: pi_money=1 state=001, po_cola=0
+# @time 4800ns: pi_money=0 state=010, po_cola=0
+# @time 4810ns: pi_money=1 state=010, po_cola=0
+# @time 4820ns: pi_money=0 state=100, po_cola=0
+# @time 4830ns: pi_money=1 state=100, po_cola=0
+# @time 4840ns: pi_money=1 state=001, po_cola=1
+# @time 4850ns: pi_money=0 state=001, po_cola=1
+# @time 4860ns: pi_money=0 state=001, po_cola=0
+# @time 4870ns: pi_money=1 state=001, po_cola=0
+# @time 4880ns: pi_money=1 state=010, po_cola=0
+# @time 4900ns: pi_money=0 state=100, po_cola=0
+# @time 4920ns: pi_money=1 state=100, po_cola=0
+# @time 4930ns: pi_money=0 state=100, po_cola=0
+# @time 4950ns: pi_money=1 state=100, po_cola=0
+# @time 4960ns: pi_money=1 state=001, po_cola=1
+# @time 4980ns: pi_money=0 state=010, po_cola=0
+# @time 4990ns: pi_money=1 state=010, po_cola=0
+# @time 5000ns: pi_money=1 state=100, po_cola=0
+# @time 5010ns: pi_money=0 state=100, po_cola=0
+# @time 5040ns: pi_money=1 state=100, po_cola=0
+# @time 5060ns: pi_money=1 state=001, po_cola=1
+# @time 5070ns: pi_money=0 state=001, po_cola=1
+# @time 5080ns: pi_money=0 state=001, po_cola=0
+# @time 5100ns: pi_money=1 state=001, po_cola=0
+# @time 5120ns: pi_money=1 state=010, po_cola=0
+# @time 5140ns: pi_money=0 state=100, po_cola=0
+# @time 5150ns: pi_money=1 state=100, po_cola=0
+# @time 5160ns: pi_money=1 state=001, po_cola=1
+# @time 5180ns: pi_money=1 state=010, po_cola=0
+# @time 5200ns: pi_money=1 state=100, po_cola=0
+# @time 5220ns: pi_money=0 state=001, po_cola=1
+# @time 5230ns: pi_money=1 state=001, po_cola=1
+# @time 5240ns: pi_money=0 state=010, po_cola=0
+# @time 5270ns: pi_money=1 state=010, po_cola=0
+# @time 5280ns: pi_money=1 state=100, po_cola=0
+# @time 5300ns: pi_money=1 state=001, po_cola=1
+# @time 5320ns: pi_money=1 state=010, po_cola=0
+# @time 5340ns: pi_money=1 state=100, po_cola=0
+# @time 5360ns: pi_money=0 state=001, po_cola=1
+# @time 5380ns: pi_money=0 state=001, po_cola=0
+# @time 5390ns: pi_money=1 state=001, po_cola=0
+# @time 5400ns: pi_money=0 state=010, po_cola=0
+# @time 5430ns: pi_money=1 state=010, po_cola=0
+# @time 5440ns: pi_money=1 state=100, po_cola=0
+# @time 5450ns: pi_money=0 state=100, po_cola=0
+# @time 5480ns: pi_money=1 state=100, po_cola=0
+# @time 5500ns: pi_money=0 state=001, po_cola=1
+# @time 5510ns: pi_money=1 state=001, po_cola=1
+# @time 5520ns: pi_money=0 state=010, po_cola=0
+# @time 5530ns: pi_money=1 state=010, po_cola=0
+# @time 5540ns: pi_money=0 state=100, po_cola=0
+# @time 5570ns: pi_money=1 state=100, po_cola=0
+# @time 5580ns: pi_money=1 state=001, po_cola=1
+# @time 5600ns: pi_money=0 state=010, po_cola=0
+# @time 5610ns: pi_money=1 state=010, po_cola=0
+# @time 5620ns: pi_money=0 state=100, po_cola=0
+# @time 5630ns: pi_money=1 state=100, po_cola=0
+# @time 5640ns: pi_money=0 state=001, po_cola=1
+# @time 5650ns: pi_money=1 state=001, po_cola=1
+# @time 5660ns: pi_money=1 state=010, po_cola=0
+# @time 5670ns: pi_money=0 state=010, po_cola=0
+# @time 5710ns: pi_money=1 state=010, po_cola=0
+# @time 5720ns: pi_money=1 state=100, po_cola=0
+# @time 5730ns: pi_money=0 state=100, po_cola=0
+# @time 5750ns: pi_money=1 state=100, po_cola=0
+# @time 5760ns: pi_money=0 state=001, po_cola=1
+# @time 5770ns: pi_money=1 state=001, po_cola=1
+# @time 5780ns: pi_money=0 state=010, po_cola=0
+# @time 5790ns: pi_money=1 state=010, po_cola=0
+# @time 5800ns: pi_money=1 state=100, po_cola=0
+# @time 5810ns: pi_money=0 state=100, po_cola=0
+# @time 5820ns: pi_money=1 state=100, po_cola=0
+# @time 5840ns: pi_money=0 state=001, po_cola=1
+# @time 5860ns: pi_money=0 state=001, po_cola=0
+# @time 5880ns: pi_money=1 state=001, po_cola=0
+# @time 5900ns: pi_money=1 state=010, po_cola=0
+# @time 5920ns: pi_money=1 state=100, po_cola=0
+# @time 5930ns: pi_money=0 state=100, po_cola=0
+# @time 6000ns: pi_money=1 state=100, po_cola=0
+# @time 6020ns: pi_money=1 state=001, po_cola=1
+# @time 6040ns: pi_money=1 state=010, po_cola=0
+# @time 6060ns: pi_money=1 state=100, po_cola=0
+# @time 6070ns: pi_money=0 state=100, po_cola=0
+# @time 6130ns: pi_money=1 state=100, po_cola=0
+# @time 6140ns: pi_money=1 state=001, po_cola=1
+# @time 6150ns: pi_money=0 state=001, po_cola=1
+# @time 6160ns: pi_money=1 state=001, po_cola=0
+# @time 6170ns: pi_money=0 state=001, po_cola=0
+# @time 6180ns: pi_money=1 state=001, po_cola=0
+# @time 6200ns: pi_money=1 state=010, po_cola=0
+# @time 6210ns: pi_money=0 state=010, po_cola=0
+# @time 6240ns: pi_money=1 state=010, po_cola=0
+# @time 6260ns: pi_money=0 state=100, po_cola=0
+# @time 6270ns: pi_money=1 state=100, po_cola=0
+# @time 6280ns: pi_money=0 state=001, po_cola=1
+# @time 6300ns: pi_money=0 state=001, po_cola=0
+# @time 6340ns: pi_money=1 state=001, po_cola=0
+# @time 6350ns: pi_money=0 state=001, po_cola=0
+# @time 6370ns: pi_money=1 state=001, po_cola=0
+# @time 6380ns: pi_money=0 state=010, po_cola=0
+# @time 6400ns: pi_money=1 state=010, po_cola=0
+# @time 6420ns: pi_money=1 state=100, po_cola=0
+# @time 6430ns: pi_money=0 state=100, po_cola=0
+# @time 6450ns: pi_money=1 state=100, po_cola=0
+# @time 6460ns: pi_money=1 state=001, po_cola=1
+# @time 6480ns: pi_money=1 state=010, po_cola=0
+# @time 6490ns: pi_money=0 state=010, po_cola=0
+# @time 6500ns: pi_money=1 state=010, po_cola=0
+# @time 6520ns: pi_money=1 state=100, po_cola=0
+# @time 6540ns: pi_money=0 state=001, po_cola=1
+# @time 6550ns: pi_money=1 state=001, po_cola=1
+# @time 6560ns: pi_money=0 state=010, po_cola=0
+# @time 6580ns: pi_money=1 state=010, po_cola=0
+# @time 6590ns: pi_money=0 state=010, po_cola=0
+# @time 6610ns: pi_money=1 state=010, po_cola=0
+# @time 6620ns: pi_money=0 state=100, po_cola=0
+# @time 6680ns: pi_money=1 state=100, po_cola=0
+# @time 6700ns: pi_money=0 state=001, po_cola=1
+# @time 6720ns: pi_money=1 state=001, po_cola=0
+# @time 6740ns: pi_money=1 state=010, po_cola=0
+# @time 6760ns: pi_money=1 state=100, po_cola=0
+# @time 6780ns: pi_money=1 state=001, po_cola=1
+# @time 6790ns: pi_money=0 state=001, po_cola=1
+# @time 6800ns: pi_money=1 state=001, po_cola=0
+# @time 6810ns: pi_money=0 state=001, po_cola=0
+# @time 6840ns: pi_money=1 state=001, po_cola=0
+# @time 6860ns: pi_money=0 state=010, po_cola=0
+# @time 6870ns: pi_money=1 state=010, po_cola=0
+# @time 6880ns: pi_money=1 state=100, po_cola=0
+# @time 6900ns: pi_money=0 state=001, po_cola=1
+# @time 6920ns: pi_money=0 state=001, po_cola=0
+# @time 6940ns: pi_money=1 state=001, po_cola=0
+# @time 6960ns: pi_money=1 state=010, po_cola=0
+# @time 6970ns: pi_money=0 state=010, po_cola=0
+# @time 6980ns: pi_money=1 state=010, po_cola=0
+# @time 6990ns: pi_money=0 state=010, po_cola=0
+# @time 7060ns: pi_money=1 state=010, po_cola=0
+# @time 7070ns: pi_money=0 state=010, po_cola=0
+# @time 7090ns: pi_money=1 state=010, po_cola=0
+# @time 7100ns: pi_money=1 state=100, po_cola=0
+# @time 7120ns: pi_money=1 state=001, po_cola=1
+# @time 7140ns: pi_money=0 state=010, po_cola=0
+# @time 7180ns: pi_money=1 state=010, po_cola=0
+# @time 7200ns: pi_money=0 state=100, po_cola=0
+# @time 7220ns: pi_money=1 state=100, po_cola=0
+# @time 7240ns: pi_money=1 state=001, po_cola=1
+# @time 7260ns: pi_money=1 state=010, po_cola=0
+# @time 7270ns: pi_money=0 state=010, po_cola=0
+# @time 7300ns: pi_money=1 state=010, po_cola=0
+# @time 7310ns: pi_money=0 state=010, po_cola=0
+# @time 7320ns: pi_money=1 state=010, po_cola=0
+# @time 7330ns: pi_money=0 state=010, po_cola=0
+# @time 7380ns: pi_money=1 state=010, po_cola=0
+# @time 7390ns: pi_money=0 state=010, po_cola=0
+# @time 7400ns: pi_money=1 state=010, po_cola=0
+# @time 7420ns: pi_money=0 state=100, po_cola=0
+# @time 7430ns: pi_money=1 state=100, po_cola=0
+# @time 7440ns: pi_money=1 state=001, po_cola=1
+# @time 7450ns: pi_money=0 state=001, po_cola=1
+# @time 7460ns: pi_money=1 state=001, po_cola=0
+# @time 7470ns: pi_money=0 state=001, po_cola=0
+# @time 7480ns: pi_money=1 state=001, po_cola=0
+# @time 7500ns: pi_money=0 state=010, po_cola=0
+# @time 7520ns: pi_money=1 state=010, po_cola=0
+# @time 7540ns: pi_money=0 state=100, po_cola=0
+# @time 7580ns: pi_money=1 state=100, po_cola=0
+# @time 7600ns: pi_money=1 state=001, po_cola=1
+# @time 7610ns: pi_money=0 state=001, po_cola=1
+# @time 7620ns: pi_money=0 state=001, po_cola=0
+# @time 7630ns: pi_money=1 state=001, po_cola=0
+# @time 7640ns: pi_money=1 state=010, po_cola=0
+# @time 7660ns: pi_money=1 state=100, po_cola=0
+# @time 7670ns: pi_money=0 state=100, po_cola=0
+# @time 7690ns: pi_money=1 state=100, po_cola=0
+# @time 7700ns: pi_money=1 state=001, po_cola=1
+# @time 7710ns: pi_money=0 state=001, po_cola=1
+# @time 7720ns: pi_money=0 state=001, po_cola=0
+# @time 7730ns: pi_money=1 state=001, po_cola=0
+# @time 7740ns: pi_money=0 state=010, po_cola=0
+# @time 7750ns: pi_money=1 state=010, po_cola=0
+# @time 7760ns: pi_money=0 state=100, po_cola=0
+# @time 7770ns: pi_money=1 state=100, po_cola=0
+# @time 7780ns: pi_money=1 state=001, po_cola=1
+# @time 7790ns: pi_money=0 state=001, po_cola=1
+# @time 7800ns: pi_money=0 state=001, po_cola=0
+# @time 7840ns: pi_money=1 state=001, po_cola=0
+# @time 7850ns: pi_money=0 state=001, po_cola=0
+# @time 7860ns: pi_money=1 state=001, po_cola=0
+# @time 7870ns: pi_money=0 state=001, po_cola=0
+# @time 7900ns: pi_money=1 state=001, po_cola=0
+# @time 7910ns: pi_money=0 state=001, po_cola=0
+# @time 7930ns: pi_money=1 state=001, po_cola=0
+# @time 7940ns: pi_money=0 state=010, po_cola=0
+# @time 7950ns: pi_money=1 state=010, po_cola=0
+# @time 7960ns: pi_money=1 state=100, po_cola=0
+# @time 7980ns: pi_money=1 state=001, po_cola=1
+# @time 8000ns: pi_money=0 state=010, po_cola=0
+# @time 8010ns: pi_money=1 state=010, po_cola=0
+# @time 8020ns: pi_money=1 state=100, po_cola=0
+# @time 8030ns: pi_money=0 state=100, po_cola=0
+# @time 8050ns: pi_money=1 state=100, po_cola=0
+# @time 8060ns: pi_money=0 state=001, po_cola=1
+# @time 8070ns: pi_money=1 state=001, po_cola=1
+# @time 8080ns: pi_money=1 state=010, po_cola=0
+# @time 8100ns: pi_money=1 state=100, po_cola=0
+# @time 8120ns: pi_money=0 state=001, po_cola=1
+# @time 8130ns: pi_money=1 state=001, po_cola=1
+# @time 8140ns: pi_money=0 state=010, po_cola=0
+# @time 8150ns: pi_money=1 state=010, po_cola=0
+# @time 8160ns: pi_money=0 state=100, po_cola=0
+# @time 8170ns: pi_money=1 state=100, po_cola=0
+# @time 8180ns: pi_money=1 state=001, po_cola=1
+# @time 8190ns: pi_money=0 state=001, po_cola=1
+# @time 8200ns: pi_money=0 state=001, po_cola=0
+# @time 8230ns: pi_money=1 state=001, po_cola=0
+# @time 8240ns: pi_money=1 state=010, po_cola=0
+# @time 8250ns: pi_money=0 state=010, po_cola=0
+# @time 8270ns: pi_money=1 state=010, po_cola=0
+# @time 8280ns: pi_money=1 state=100, po_cola=0
+# @time 8300ns: pi_money=1 state=001, po_cola=1
+# @time 8320ns: pi_money=0 state=010, po_cola=0
+# @time 8360ns: pi_money=1 state=010, po_cola=0
+# @time 8370ns: pi_money=0 state=010, po_cola=0
+# @time 8390ns: pi_money=1 state=010, po_cola=0
+# @time 8400ns: pi_money=0 state=100, po_cola=0
+# @time 8410ns: pi_money=1 state=100, po_cola=0
+# @time 8420ns: pi_money=0 state=001, po_cola=1
+# @time 8440ns: pi_money=1 state=001, po_cola=0
+# @time 8450ns: pi_money=0 state=001, po_cola=0
+# @time 8490ns: pi_money=1 state=001, po_cola=0
+# @time 8500ns: pi_money=0 state=010, po_cola=0
+# @time 8510ns: pi_money=1 state=010, po_cola=0
+# @time 8520ns: pi_money=1 state=100, po_cola=0
+# @time 8530ns: pi_money=0 state=100, po_cola=0
+# @time 8550ns: pi_money=1 state=100, po_cola=0
+# @time 8560ns: pi_money=0 state=001, po_cola=1
+# @time 8570ns: pi_money=1 state=001, po_cola=1
+# @time 8580ns: pi_money=1 state=010, po_cola=0
+# @time 8600ns: pi_money=1 state=100, po_cola=0
+# @time 8610ns: pi_money=0 state=100, po_cola=0
+# @time 8620ns: pi_money=1 state=100, po_cola=0
+# @time 8630ns: pi_money=0 state=100, po_cola=0
+# @time 8650ns: pi_money=1 state=100, po_cola=0
+# @time 8660ns: pi_money=1 state=001, po_cola=1
+# @time 8680ns: pi_money=0 state=010, po_cola=0
+# @time 8690ns: pi_money=1 state=010, po_cola=0
+# @time 8700ns: pi_money=1 state=100, po_cola=0
+# @time 8720ns: pi_money=1 state=001, po_cola=1
+# @time 8740ns: pi_money=1 state=010, po_cola=0
+# @time 8750ns: pi_money=0 state=010, po_cola=0
+# @time 8760ns: pi_money=1 state=010, po_cola=0
+# @time 8770ns: pi_money=0 state=010, po_cola=0
+# @time 8800ns: pi_money=1 state=010, po_cola=0
+# @time 8810ns: pi_money=0 state=010, po_cola=0
+# @time 8820ns: pi_money=1 state=010, po_cola=0
+# @time 8830ns: pi_money=0 state=010, po_cola=0
+# @time 8840ns: pi_money=1 state=010, po_cola=0
+# @time 8850ns: pi_money=0 state=010, po_cola=0
+# @time 8890ns: pi_money=1 state=010, po_cola=0
+# @time 8900ns: pi_money=0 state=100, po_cola=0
+# @time 8920ns: pi_money=1 state=100, po_cola=0
+# @time 8930ns: pi_money=0 state=100, po_cola=0
+# @time 8940ns: pi_money=1 state=100, po_cola=0
+# @time 8950ns: pi_money=0 state=100, po_cola=0
+# @time 8970ns: pi_money=1 state=100, po_cola=0
+# @time 8980ns: pi_money=1 state=001, po_cola=1
+# @time 8990ns: pi_money=0 state=001, po_cola=1
+# @time 9000ns: pi_money=0 state=001, po_cola=0
+# @time 9010ns: pi_money=1 state=001, po_cola=0
+# @time 9020ns: pi_money=1 state=010, po_cola=0
+# @time 9030ns: pi_money=0 state=010, po_cola=0
+# @time 9040ns: pi_money=1 state=010, po_cola=0
+# @time 9060ns: pi_money=1 state=100, po_cola=0
+# @time 9080ns: pi_money=0 state=001, po_cola=1
+# @time 9090ns: pi_money=1 state=001, po_cola=1
+# @time 9100ns: pi_money=0 state=010, po_cola=0
+# @time 9120ns: pi_money=1 state=010, po_cola=0
+# @time 9140ns: pi_money=0 state=100, po_cola=0
+# @time 9150ns: pi_money=1 state=100, po_cola=0
+# @time 9160ns: pi_money=1 state=001, po_cola=1
+# @time 9170ns: pi_money=0 state=001, po_cola=1
+# @time 9180ns: pi_money=1 state=001, po_cola=0
+# @time 9200ns: pi_money=1 state=010, po_cola=0
+# @time 9210ns: pi_money=0 state=010, po_cola=0
+# @time 9220ns: pi_money=1 state=010, po_cola=0
+# @time 9230ns: pi_money=0 state=010, po_cola=0
+# @time 9240ns: pi_money=1 state=010, po_cola=0
+# @time 9250ns: pi_money=0 state=010, po_cola=0
+# @time 9340ns: pi_money=1 state=010, po_cola=0
+# @time 9360ns: pi_money=1 state=100, po_cola=0
+# @time 9370ns: pi_money=0 state=100, po_cola=0
+# @time 9400ns: pi_money=1 state=100, po_cola=0
+# @time 9420ns: pi_money=0 state=001, po_cola=1
+# @time 9430ns: pi_money=1 state=001, po_cola=1
+# @time 9440ns: pi_money=1 state=010, po_cola=0
+# @time 9460ns: pi_money=0 state=100, po_cola=0
+# @time 9480ns: pi_money=1 state=100, po_cola=0
+# @time 9500ns: pi_money=0 state=001, po_cola=1
+# @time 9520ns: pi_money=0 state=001, po_cola=0
+# @time 9540ns: pi_money=1 state=001, po_cola=0
+# @time 9550ns: pi_money=0 state=001, po_cola=0
+# @time 9560ns: pi_money=1 state=001, po_cola=0
+# @time 9580ns: pi_money=0 state=010, po_cola=0
+# @time 9590ns: pi_money=1 state=010, po_cola=0
+# @time 9600ns: pi_money=0 state=100, po_cola=0
+# @time 9610ns: pi_money=1 state=100, po_cola=0
+# @time 9620ns: pi_money=1 state=001, po_cola=1
+# @time 9630ns: pi_money=0 state=001, po_cola=1
+# @time 9640ns: pi_money=1 state=001, po_cola=0
+# @time 9660ns: pi_money=1 state=010, po_cola=0
+# @time 9680ns: pi_money=0 state=100, po_cola=0
+# @time 9690ns: pi_money=1 state=100, po_cola=0
+# @time 9700ns: pi_money=0 state=001, po_cola=1
+# @time 9710ns: pi_money=1 state=001, po_cola=1
+# @time 9720ns: pi_money=0 state=010, po_cola=0
+# @time 9760ns: pi_money=1 state=010, po_cola=0
+# @time 9770ns: pi_money=0 state=010, po_cola=0
+# @time 9780ns: pi_money=1 state=010, po_cola=0
+# @time 9790ns: pi_money=0 state=010, po_cola=0
+# @time 9810ns: pi_money=1 state=010, po_cola=0
+# @time 9820ns: pi_money=1 state=100, po_cola=0
+# @time 9840ns: pi_money=1 state=001, po_cola=1
+# @time 9850ns: pi_money=0 state=001, po_cola=1
+# @time 9860ns: pi_money=1 state=001, po_cola=0
+# @time 9880ns: pi_money=1 state=010, po_cola=0
+# @time 9890ns: pi_money=0 state=010, po_cola=0
+# @time 9910ns: pi_money=1 state=010, po_cola=0
+# @time 9920ns: pi_money=1 state=100, po_cola=0
+# @time 9940ns: pi_money=0 state=001, po_cola=1
+# @time 9950ns: pi_money=1 state=001, po_cola=1
+# @time 9960ns: pi_money=1 state=010, po_cola=0
+# @time 9970ns: pi_money=0 state=010, po_cola=0
+# @time 9990ns: pi_money=1 state=010, po_cola=0
+# Causality operation skipped due to absence of debug database file
+do simple_fsm_run_msim_rtl_verilog.do
+# transcript on
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+# 
+# vmap altera_ver ./verilog_libs/altera_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_primitives.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_HIGH
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# 
+# vlib verilog_libs/lpm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
+# 
+# vmap lpm_ver ./verilog_libs/lpm_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work lpm_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/220model.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_mux
+# 	lpm_decode
+# 	lpm_clshift
+# 	lpm_add_sub
+# 	lpm_compare
+# 	lpm_mult
+# 	lpm_divide
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# 
+# vlib verilog_libs/sgate_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
+# 
+# vmap sgate_ver ./verilog_libs/sgate_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work sgate_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/sgate.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# 
+# Top level modules:
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# 
+# vlib verilog_libs/altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
+# 
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_mf_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_mf.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# 
+# vlib verilog_libs/altera_lnsim_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
+# 
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+# Modifying modelsim.ini
+# vlog -sv -work altera_lnsim_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_lnsim.sv}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling package altera_lnsim_functions
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_lnsim_functions
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module ama_latency_function
+# -- Compiling module altera_pll_reconfig_tasks
+# -- Compiling module altera_syncram
+# -- Compiling module ALTERA_LNSIM_MEMORY_INITIALIZATION
+# -- Compiling module altera_stratixv_pll
+# -- Compiling module altera_arriav_pll
+# -- Compiling module altera_arriavgz_pll
+# -- Compiling module altera_cyclonev_pll
+# -- Compiling module altera_pll
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module pll_dps_lcell_comb
+# -- Compiling module twentynm_iopll_ip
+# 
+# Top level modules:
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# 	altera_syncram
+# 	altera_pll
+# 
+# vlib verilog_libs/cycloneiv_hssi_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_hssi_ver".
+# 
+# vmap cycloneiv_hssi_ver ./verilog_libs/cycloneiv_hssi_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_hssi_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_hssi_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_reg
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_out_block
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_parallel_register
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_ser
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det
+# -- Compiling module cycloneiv_hssi_tx_pma
+# -- Compiling module cycloneiv_hssi_rx_pma_sub_deser
+# -- Compiling module cycloneiv_hssi_rx_pma_sub_clkdiv
+# -- Compiling module cycloneiv_hssi_rx_pma
+# -- Compiling module cycloneiv_hssi_pcs_reset
+# -- Compiling module cycloneiv_hssi_digi_chnl_hip_spt
+# -- Compiling module cycloneiv_hssi_phystatus_generator_fsm
+# -- Compiling module cycloneiv_hssi_phystatus_generator
+# -- Compiling module cycloneiv_hssi_rx_pipe_interface
+# -- Compiling module cycloneiv_hssi_tx_pipe_interface
+# -- Compiling module cycloneiv_hssi_q_pipe_interface_top
+# -- Compiling module cycloneiv_hssi_tx_digis_txclk_gating
+# -- Compiling module cycloneiv_hssi_tx_digi_txclk_ctl
+# -- Compiling module cycloneiv_hssi_tx_digis_ram8x49_syn
+# -- Compiling module cycloneiv_hssi_tx_digis_ph_fifo
+# -- Compiling module cycloneiv_hssi_tx_digi_tx_ctrl
+# -- Compiling module cycloneiv_hssi_tx_digi_bist_gen
+# -- Compiling module cycloneiv_hssi_tx_digi_prbs_gen
+# -- Compiling module cycloneiv_hssi_tx_digi_enc_chnl_top
+# -- Compiling module cycloneiv_hssi_tx_digi_iq_pipe_tx
+# -- Compiling module cycloneiv_hssi_tx_digi
+# -- Compiling module cycloneiv_hssi_tx_pcs
+# -- Compiling module cycloneiv_hssi_cmu_dprio_map
+# -- Compiling module cycloneiv_hssi_cmu_dprio_top
+# -- Compiling module cycloneiv_hssi_rx_digis_ph_fifo
+# -- Compiling module cycloneiv_hssi_rx_digis_ram16x14_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_ram20x16_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_ram8x70_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_rxclk_gating
+# -- Compiling module cycloneiv_hssi_rx_digi_rxclk_ctl
+# -- Compiling module cycloneiv_hssi_rx_digi_auto_speed_neg
+# -- Compiling module cycloneiv_hssi_rx_digi_bist_ver
+# -- Compiling module cycloneiv_hssi_rx_digi_cdr_ctrl
+# -- Compiling module cycloneiv_hssi_rx_digi_comp_chnl_top
+# -- Compiling module cycloneiv_hssi_rx_digi_rx_ctrl
+# -- Compiling module cycloneiv_hssi_rx_digi_dec_chnl_top
+# -- Compiling module cycloneiv_hssi_rx_digi_dskw_fifo
+# -- Compiling module cycloneiv_hssi_rx_digi_freqdet
+# -- Compiling module cycloneiv_hssi_rx_digi_eii_module
+# -- Compiling module cycloneiv_hssi_rx_digi_pcs_channel_testbus
+# -- Compiling module cycloneiv_hssi_rx_digi_iq_pipe_rx
+# -- Compiling module cycloneiv_hssi_rx_digi_prbs_ver
+# -- Compiling module cycloneiv_hssi_rx_digi_wordalign
+# -- Compiling module cycloneiv_hssi_rx_digi
+# -- Compiling module cycloneiv_hssi_rx_pcs
+# -- Compiling module cycloneiv_hssi_dskw_sm
+# -- Compiling module cycloneiv_hssi_tx_sm
+# -- Compiling module cycloneiv_hssi_rcv_sm
+# -- Compiling module cycloneiv_hssi_cmu_chnl_reset
+# -- Compiling module cycloneiv_hssi_cmu_quad_reset
+# -- Compiling module cycloneiv_hssi_cmu_auto_speed_neg
+# -- Compiling module cycloneiv_hssi_cmu_clk_gating
+# -- Compiling module cycloneiv_hssi_cmu_clk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_rx_ctrl
+# -- Compiling module cycloneiv_hssi_cmu_rxclk_gating
+# -- Compiling module cycloneiv_hssi_cmu_rxclk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_tx_ctrl
+# -- Compiling module cycloneiv_hssi_cmu_txclk_gating
+# -- Compiling module cycloneiv_hssi_cmu_txclk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_bit
+# -- Compiling module cycloneiv_hssi_cmu_dprio_bit_pma
+# -- Compiling module cycloneiv_hssi_cmu_dprio_16bit
+# -- Compiling module cycloneiv_hssi_cmu_dprio_16bit_pma
+# -- Compiling module cycloneiv_hssi_cmu_dprio_reg_chnl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_chnl_bus_out_mux
+# -- Compiling module cycloneiv_hssi_cmu_dprio_chnl_top
+# -- Compiling module cycloneiv_hssi_cmu_dprio_status
+# -- Compiling module cycloneiv_hssi_cmu_dprio_addr
+# -- Compiling module cycloneiv_hssi_cmu_dprio_cnt
+# -- Compiling module cycloneiv_hssi_cmu_dprio_ctl_data
+# -- Compiling module cycloneiv_hssi_cmu_dprio_sm
+# -- Compiling module cycloneiv_hssi_cmu_dprio_reg_centrl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_centrl_bus_out_mux
+# -- Compiling module cycloneiv_hssi_cmu_dprio_centrl_top
+# -- Compiling module cycloneiv_hssi_cmu_dprio_map_index
+# -- Compiling module cycloneiv_hssi_cmu
+# -- Compiling module cycloneiv_hssi_calibration_block
+# 
+# Top level modules:
+# 	cycloneiv_hssi_tx_pma
+# 	cycloneiv_hssi_rx_pma
+# 	cycloneiv_hssi_tx_pcs
+# 	cycloneiv_hssi_rx_pcs
+# 	cycloneiv_hssi_cmu_dprio_centrl_top
+# 	cycloneiv_hssi_cmu
+# 	cycloneiv_hssi_calibration_block
+# 
+# vlib verilog_libs/cycloneiv_pcie_hip_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_pcie_hip_ver".
+# 
+# vmap cycloneiv_pcie_hip_ver ./verilog_libs/cycloneiv_pcie_hip_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_pcie_hip_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_pcie_hip_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module cycloneiv_pciehip_param
+# -- Compiling module cycloneiv_pciehip_clkmux
+# -- Compiling module cycloneiv_pciehip_dprio_bit
+# -- Compiling module cycloneiv_pciehip_dprio_16bit
+# -- Compiling module cycloneiv_pciehip_dprio_addr
+# -- Compiling module cycloneiv_pciehip_dprio_cnt
+# -- Compiling module cycloneiv_pciehip_dprio_ctl_data
+# -- Compiling module cycloneiv_pciehip_dprio_sm
+# -- Compiling module cycloneiv_pciehip_dprio_bus_out_mux
+# -- Compiling module cycloneiv_pciehip_dprio_reg
+# -- Compiling module cycloneiv_pciehip_dprio_reg_top
+# -- Compiling module cycloneiv_pciehip_hip_dprio_top
+# -- Compiling module cycloneiv_pciehip_compute_bit
+# -- Compiling module cycloneiv_pciehip_ecc_gen
+# -- Compiling module cycloneiv_pciehip_ecc_chk
+# -- Compiling module cycloneiv_pciehip_ecc_decoder
+# -- Compiling module cycloneiv_pciehip_pulse_ext
+# -- Compiling module cycloneiv_pciehip_hip_mram
+# -- Compiling module cycloneiv_pciehip_mram_top
+# -- Compiling module cycloneiv_pciehip_pciexp_dcfiforam
+# -- Compiling module cycloneiv_pciehip_pciexp_dcram_rtry
+# -- Compiling module cycloneiv_pciehip_pciexp_dcram_rxvc
+# -- Compiling module cycloneiv_pciehip_iei_detect
+# -- Compiling module cycloneiv_pciehip_pciexp_top_hip
+# -- Compiling module cycloneiv_pciehip_hip_top
+# -- Compiling module cycloneiv_hssi_pcie_hip
+# 
+# Top level modules:
+# 	cycloneiv_hssi_pcie_hip
+# 
+# vlib verilog_libs/cycloneiv_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_ver".
+# 
+# vmap cycloneiv_ver ./verilog_libs/cycloneiv_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling UDP CYCLONEIV_PRIM_DFFE
+# -- Compiling UDP CYCLONEIV_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEIV_PRIM_DFFEAS_HIGH
+# -- Compiling module cycloneiv_dffe
+# -- Compiling module cycloneiv_mux21
+# -- Compiling module cycloneiv_mux41
+# -- Compiling module cycloneiv_and1
+# -- Compiling module cycloneiv_and16
+# -- Compiling module cycloneiv_bmux21
+# -- Compiling module cycloneiv_b17mux21
+# -- Compiling module cycloneiv_nmux21
+# -- Compiling module cycloneiv_b5mux21
+# -- Compiling module cycloneiv_latch
+# -- Compiling module cycloneiv_routing_wire
+# -- Compiling module cycloneiv_lcell_comb
+# -- Compiling module cycloneiv_io_ibuf
+# -- Compiling module cycloneiv_io_obuf
+# -- Compiling module cycloneiv_ddio_out
+# -- Compiling module cycloneiv_ddio_oe
+# -- Compiling module cycloneiv_ff
+# -- Compiling module cycloneiv_ram_pulse_generator
+# -- Compiling module cycloneiv_ram_register
+# -- Compiling module cycloneiv_ram_block
+# -- Compiling module cycloneiv_mac_data_reg
+# -- Compiling module cycloneiv_mac_sign_reg
+# -- Compiling module cycloneiv_mac_mult_internal
+# -- Compiling module cycloneiv_mac_mult
+# -- Compiling module cycloneiv_mac_out
+# -- Compiling module cycloneiv_io_pad
+# -- Compiling module cycloneiv_ena_reg
+# -- Compiling module cycloneiv_clkctrl
+# -- Compiling module cycloneiv_pseudo_diff_out
+# -- Compiling module cycloneiv_rublock
+# -- Compiling module cycloneiv_termination_ctrl
+# -- Compiling module cycloneiv_termination_rupdn
+# -- Compiling module cycloneiv_termination
+# -- Compiling module cycloneiv_jtag
+# -- Compiling module cycloneiv_crcblock
+# -- Compiling module cycloneiv_oscillator
+# -- Compiling module cycloneiv_controller
+# -- Compiling module cycloneiv_m_cntr
+# -- Compiling module cycloneiv_n_cntr
+# -- Compiling module cycloneiv_scale_cntr
+# -- Compiling module cycloneiv_post_divider
+# -- Compiling module cycloneiv_pll_reg
+# -- Compiling module cycloneiv_pll
+# 
+# Top level modules:
+# 	cycloneiv_dffe
+# 	cycloneiv_and1
+# 	cycloneiv_and16
+# 	cycloneiv_bmux21
+# 	cycloneiv_b17mux21
+# 	cycloneiv_nmux21
+# 	cycloneiv_b5mux21
+# 	cycloneiv_lcell_comb
+# 	cycloneiv_io_ibuf
+# 	cycloneiv_io_obuf
+# 	cycloneiv_ddio_out
+# 	cycloneiv_ddio_oe
+# 	cycloneiv_ff
+# 	cycloneiv_ram_block
+# 	cycloneiv_mac_mult
+# 	cycloneiv_mac_out
+# 	cycloneiv_io_pad
+# 	cycloneiv_clkctrl
+# 	cycloneiv_pseudo_diff_out
+# 	cycloneiv_rublock
+# 	cycloneiv_termination
+# 	cycloneiv_jtag
+# 	cycloneiv_crcblock
+# 	cycloneiv_oscillator
+# 	cycloneiv_controller
+# 	cycloneiv_pll_reg
+# 	cycloneiv_pll
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is –œ∫„Õÿ±æµÿ@Õÿ.
+# 
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# 
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/code/workspace_FPGA/simple_fsm/rtl {E:/code/workspace_FPGA/simple_fsm/rtl/simple_fsm.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module simple_fsm
+# 
+# Top level modules:
+# 	simple_fsm
+# 
+# vlog -vlog01compat -work work +incdir+E:/code/workspace_FPGA/simple_fsm/prj/../sim {E:/code/workspace_FPGA/simple_fsm/prj/../sim/tb_simple_fsm.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module tb_simple_fsm
+# 
+# Top level modules:
+# 	tb_simple_fsm
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_simple_fsm
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_simple_fsm 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading work.tb_simple_fsm(fast)
+# Loading work.simple_fsm(fast)
+# 
+# add wave *
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
+# @time    0ns: pi_money=0 state=001, po_cola=0
+# @time   40ns: pi_money=1 state=001, po_cola=0
+# @time   60ns: pi_money=1 state=010, po_cola=0
+# @time   80ns: pi_money=1 state=100, po_cola=0
+# @time  100ns: pi_money=1 state=001, po_cola=1
+# @time  120ns: pi_money=1 state=010, po_cola=0
+# @time  140ns: pi_money=1 state=100, po_cola=0
+# @time  160ns: pi_money=0 state=001, po_cola=1
+# @time  180ns: pi_money=1 state=001, po_cola=0
+# @time  200ns: pi_money=1 state=010, po_cola=0
+# @time  220ns: pi_money=0 state=100, po_cola=0
+# @time  240ns: pi_money=1 state=100, po_cola=0
+# @time  260ns: pi_money=1 state=001, po_cola=1
+# @time  280ns: pi_money=0 state=010, po_cola=0
+# @time  300ns: pi_money=1 state=010, po_cola=0
+# @time  320ns: pi_money=0 state=100, po_cola=0
+# @time  340ns: pi_money=1 state=100, po_cola=0
+# @time  360ns: pi_money=0 state=001, po_cola=1
+# @time  380ns: pi_money=1 state=001, po_cola=0
+# @time  400ns: pi_money=1 state=010, po_cola=0
+# @time  420ns: pi_money=0 state=100, po_cola=0
+# @time  440ns: pi_money=1 state=100, po_cola=0
+# @time  460ns: pi_money=0 state=001, po_cola=1
+# @time  480ns: pi_money=0 state=001, po_cola=0
+# @time  520ns: pi_money=1 state=001, po_cola=0
+# @time  540ns: pi_money=0 state=010, po_cola=0
+# @time  560ns: pi_money=1 state=010, po_cola=0
+# @time  580ns: pi_money=1 state=100, po_cola=0
+# @time  600ns: pi_money=1 state=001, po_cola=1
+# @time  620ns: pi_money=1 state=010, po_cola=0
+# @time  640ns: pi_money=0 state=100, po_cola=0
+# @time  720ns: pi_money=1 state=100, po_cola=0
+# @time  740ns: pi_money=0 state=001, po_cola=1
+# @time  760ns: pi_money=1 state=001, po_cola=0
+# @time  780ns: pi_money=1 state=010, po_cola=0
+# @time  800ns: pi_money=1 state=100, po_cola=0
+# @time  820ns: pi_money=1 state=001, po_cola=1
+# @time  840ns: pi_money=1 state=010, po_cola=0
+# @time  860ns: pi_money=0 state=100, po_cola=0
+# @time  900ns: pi_money=1 state=100, po_cola=0
+# @time  920ns: pi_money=1 state=001, po_cola=1
+# @time  940ns: pi_money=1 state=010, po_cola=0
+# @time  960ns: pi_money=0 state=100, po_cola=0
+restart
+# Loading work.tb_simple_fsm(fast)
+# Loading work.simple_fsm(fast)
+add wave -position insertpoint sim:/tb_simple_fsm/simple_fsm_inst/*
+run
+# @time    0ns: pi_money=0 state=001, po_cola=0
+# @time   40ns: pi_money=1 state=001, po_cola=0
+# @time   60ns: pi_money=1 state=010, po_cola=0
+# @time   80ns: pi_money=1 state=100, po_cola=0
+# @time  100ns: pi_money=1 state=001, po_cola=1
+# @time  120ns: pi_money=1 state=010, po_cola=0
+# @time  140ns: pi_money=1 state=100, po_cola=0
+# @time  160ns: pi_money=0 state=001, po_cola=1
+# @time  180ns: pi_money=1 state=001, po_cola=0
+# @time  200ns: pi_money=1 state=010, po_cola=0
+# @time  220ns: pi_money=0 state=100, po_cola=0
+# @time  240ns: pi_money=1 state=100, po_cola=0
+# @time  260ns: pi_money=1 state=001, po_cola=1
+# @time  280ns: pi_money=0 state=010, po_cola=0
+# @time  300ns: pi_money=1 state=010, po_cola=0
+# @time  320ns: pi_money=0 state=100, po_cola=0
+# @time  340ns: pi_money=1 state=100, po_cola=0
+# @time  360ns: pi_money=0 state=001, po_cola=1
+# @time  380ns: pi_money=1 state=001, po_cola=0
+# @time  400ns: pi_money=1 state=010, po_cola=0
+# @time  420ns: pi_money=0 state=100, po_cola=0
+# @time  440ns: pi_money=1 state=100, po_cola=0
+# @time  460ns: pi_money=0 state=001, po_cola=1
+# @time  480ns: pi_money=0 state=001, po_cola=0
+# @time  520ns: pi_money=1 state=001, po_cola=0
+# @time  540ns: pi_money=0 state=010, po_cola=0
+# @time  560ns: pi_money=1 state=010, po_cola=0
+# @time  580ns: pi_money=1 state=100, po_cola=0
+# @time  600ns: pi_money=1 state=001, po_cola=1
+# @time  620ns: pi_money=1 state=010, po_cola=0
+# @time  640ns: pi_money=0 state=100, po_cola=0
+# @time  720ns: pi_money=1 state=100, po_cola=0
+# @time  740ns: pi_money=0 state=001, po_cola=1
+# @time  760ns: pi_money=1 state=001, po_cola=0
+# @time  780ns: pi_money=1 state=010, po_cola=0
+# @time  800ns: pi_money=1 state=100, po_cola=0
+# @time  820ns: pi_money=1 state=001, po_cola=1
+# @time  840ns: pi_money=1 state=010, po_cola=0
+# @time  860ns: pi_money=0 state=100, po_cola=0
+# @time  900ns: pi_money=1 state=100, po_cola=0
+# @time  920ns: pi_money=1 state=001, po_cola=1
+# @time  940ns: pi_money=1 state=010, po_cola=0
+# @time  960ns: pi_money=0 state=100, po_cola=0
+# @time 1060ns: pi_money=1 state=100, po_cola=0
+# @time 1080ns: pi_money=0 state=001, po_cola=1
+# @time 1100ns: pi_money=0 state=001, po_cola=0
+# @time 1120ns: pi_money=1 state=001, po_cola=0
+# @time 1140ns: pi_money=1 state=010, po_cola=0
+# @time 1160ns: pi_money=0 state=100, po_cola=0
+# @time 1260ns: pi_money=1 state=100, po_cola=0
+# @time 1280ns: pi_money=1 state=001, po_cola=1
+# @time 1300ns: pi_money=1 state=010, po_cola=0
+# @time 1320ns: pi_money=1 state=100, po_cola=0
+# @time 1340ns: pi_money=1 state=001, po_cola=1
+# @time 1360ns: pi_money=0 state=010, po_cola=0
+# @time 1400ns: pi_money=1 state=010, po_cola=0
+# @time 1420ns: pi_money=1 state=100, po_cola=0
+# @time 1440ns: pi_money=1 state=001, po_cola=1
+# @time 1460ns: pi_money=0 state=010, po_cola=0
+# @time 1500ns: pi_money=1 state=010, po_cola=0
+# @time 1520ns: pi_money=1 state=100, po_cola=0
+# @time 1540ns: pi_money=0 state=001, po_cola=1
+# @time 1560ns: pi_money=1 state=001, po_cola=0
+# @time 1580ns: pi_money=1 state=010, po_cola=0
+# @time 1600ns: pi_money=0 state=100, po_cola=0
+# @time 1620ns: pi_money=1 state=100, po_cola=0
+# @time 1640ns: pi_money=1 state=001, po_cola=1
+# @time 1660ns: pi_money=1 state=010, po_cola=0
+# @time 1680ns: pi_money=0 state=100, po_cola=0
+# @time 1700ns: pi_money=1 state=100, po_cola=0
+# @time 1720ns: pi_money=1 state=001, po_cola=1
+# @time 1740ns: pi_money=0 state=010, po_cola=0
+# @time 1820ns: pi_money=1 state=010, po_cola=0
+# @time 1840ns: pi_money=1 state=100, po_cola=0
+# @time 1860ns: pi_money=0 state=001, po_cola=1
+# @time 1880ns: pi_money=0 state=001, po_cola=0
+# @time 1900ns: pi_money=1 state=001, po_cola=0
+# @time 1920ns: pi_money=1 state=010, po_cola=0
+# @time 1940ns: pi_money=1 state=100, po_cola=0
+# @time 1960ns: pi_money=1 state=001, po_cola=1
+# @time 1980ns: pi_money=1 state=010, po_cola=0
+# @time 2000ns: pi_money=0 state=100, po_cola=0
+# @time 2020ns: pi_money=1 state=100, po_cola=0
+# @time 2040ns: pi_money=1 state=001, po_cola=1
+# @time 2060ns: pi_money=1 state=010, po_cola=0
+# @time 2080ns: pi_money=0 state=100, po_cola=0
+# @time 2220ns: pi_money=1 state=100, po_cola=0
+# @time 2240ns: pi_money=1 state=001, po_cola=1
+# @time 2260ns: pi_money=1 state=010, po_cola=0
+# @time 2280ns: pi_money=1 state=100, po_cola=0
+# @time 2300ns: pi_money=1 state=001, po_cola=1
+# @time 2320ns: pi_money=0 state=010, po_cola=0
+# @time 2340ns: pi_money=1 state=010, po_cola=0
+# @time 2360ns: pi_money=1 state=100, po_cola=0
+# @time 2380ns: pi_money=0 state=001, po_cola=1
+# @time 2400ns: pi_money=0 state=001, po_cola=0
+# @time 2420ns: pi_money=1 state=001, po_cola=0
+# @time 2440ns: pi_money=1 state=010, po_cola=0
+# @time 2460ns: pi_money=0 state=100, po_cola=0
+# @time 2480ns: pi_money=1 state=100, po_cola=0
+# @time 2500ns: pi_money=1 state=001, po_cola=1
+# @time 2520ns: pi_money=1 state=010, po_cola=0
+# @time 2540ns: pi_money=1 state=100, po_cola=0
+# @time 2560ns: pi_money=0 state=001, po_cola=1
+# @time 2580ns: pi_money=0 state=001, po_cola=0
+# @time 2620ns: pi_money=1 state=001, po_cola=0
+# @time 2640ns: pi_money=0 state=010, po_cola=0
+# @time 2700ns: pi_money=1 state=010, po_cola=0
+# @time 2720ns: pi_money=1 state=100, po_cola=0
+# @time 2740ns: pi_money=0 state=001, po_cola=1
+# @time 2760ns: pi_money=0 state=001, po_cola=0
+# @time 2780ns: pi_money=1 state=001, po_cola=0
+# @time 2800ns: pi_money=0 state=010, po_cola=0
+# @time 2860ns: pi_money=1 state=010, po_cola=0
+# @time 2880ns: pi_money=0 state=100, po_cola=0
+# @time 2920ns: pi_money=1 state=100, po_cola=0
+# @time 2940ns: pi_money=0 state=001, po_cola=1
+# @time 2960ns: pi_money=1 state=001, po_cola=0
+# @time 2980ns: pi_money=1 state=010, po_cola=0
+# @time 3000ns: pi_money=1 state=100, po_cola=0
+# @time 3020ns: pi_money=1 state=001, po_cola=1
+# @time 3040ns: pi_money=1 state=010, po_cola=0
+# @time 3060ns: pi_money=0 state=100, po_cola=0
+# @time 3120ns: pi_money=1 state=100, po_cola=0
+# @time 3140ns: pi_money=0 state=001, po_cola=1
+# @time 3160ns: pi_money=0 state=001, po_cola=0
+# @time 3180ns: pi_money=1 state=001, po_cola=0
+# @time 3200ns: pi_money=1 state=010, po_cola=0
+# @time 3220ns: pi_money=0 state=100, po_cola=0
+# @time 3280ns: pi_money=1 state=100, po_cola=0
+# @time 3300ns: pi_money=1 state=001, po_cola=1
+# @time 3320ns: pi_money=0 state=010, po_cola=0
+# @time 3380ns: pi_money=1 state=010, po_cola=0
+# @time 3400ns: pi_money=1 state=100, po_cola=0
+# @time 3420ns: pi_money=0 state=001, po_cola=1
+# @time 3440ns: pi_money=0 state=001, po_cola=0
+# @time 3480ns: pi_money=1 state=001, po_cola=0
+# @time 3500ns: pi_money=0 state=010, po_cola=0
+# @time 3540ns: pi_money=1 state=010, po_cola=0
+# @time 3560ns: pi_money=0 state=100, po_cola=0
+# @time 3620ns: pi_money=1 state=100, po_cola=0
+# @time 3640ns: pi_money=0 state=001, po_cola=1
+# @time 3660ns: pi_money=1 state=001, po_cola=0
+# @time 3680ns: pi_money=1 state=010, po_cola=0
+# @time 3700ns: pi_money=0 state=100, po_cola=0
+# @time 3780ns: pi_money=1 state=100, po_cola=0
+# @time 3800ns: pi_money=0 state=001, po_cola=1
+# @time 3820ns: pi_money=0 state=001, po_cola=0
+# @time 3880ns: pi_money=1 state=001, po_cola=0
+# @time 3900ns: pi_money=1 state=010, po_cola=0
+# @time 3920ns: pi_money=1 state=100, po_cola=0
+# @time 3940ns: pi_money=0 state=001, po_cola=1
+# @time 3960ns: pi_money=1 state=001, po_cola=0
+# @time 3980ns: pi_money=1 state=010, po_cola=0
+# @time 4000ns: pi_money=1 state=100, po_cola=0
+# @time 4020ns: pi_money=0 state=001, po_cola=1
+# @time 4040ns: pi_money=0 state=001, po_cola=0
+# @time 4060ns: pi_money=1 state=001, po_cola=0
+# @time 4080ns: pi_money=1 state=010, po_cola=0
+# @time 4100ns: pi_money=1 state=100, po_cola=0
+# @time 4120ns: pi_money=1 state=001, po_cola=1
+# @time 4140ns: pi_money=1 state=010, po_cola=0
+# @time 4160ns: pi_money=0 state=100, po_cola=0
+# @time 4180ns: pi_money=1 state=100, po_cola=0
+# @time 4200ns: pi_money=1 state=001, po_cola=1
+# @time 4220ns: pi_money=0 state=010, po_cola=0
+# @time 4300ns: pi_money=1 state=010, po_cola=0
+# @time 4320ns: pi_money=1 state=100, po_cola=0
+# @time 4340ns: pi_money=0 state=001, po_cola=1
+# @time 4360ns: pi_money=0 state=001, po_cola=0
+# @time 4380ns: pi_money=1 state=001, po_cola=0
+# @time 4400ns: pi_money=0 state=010, po_cola=0
+# @time 4440ns: pi_money=1 state=010, po_cola=0
+# @time 4460ns: pi_money=0 state=100, po_cola=0
+# @time 4500ns: pi_money=1 state=100, po_cola=0
+# @time 4520ns: pi_money=0 state=001, po_cola=1
+# @time 4540ns: pi_money=0 state=001, po_cola=0
+# @time 4560ns: pi_money=1 state=001, po_cola=0
+# @time 4580ns: pi_money=1 state=010, po_cola=0
+# @time 4600ns: pi_money=1 state=100, po_cola=0
+# @time 4620ns: pi_money=0 state=001, po_cola=1
+# @time 4640ns: pi_money=0 state=001, po_cola=0
+# @time 4680ns: pi_money=1 state=001, po_cola=0
+# @time 4700ns: pi_money=0 state=010, po_cola=0
+# @time 4740ns: pi_money=1 state=010, po_cola=0
+# @time 4760ns: pi_money=0 state=100, po_cola=0
+# @time 4840ns: pi_money=1 state=100, po_cola=0
+# @time 4860ns: pi_money=0 state=001, po_cola=1
+# @time 4880ns: pi_money=0 state=001, po_cola=0
+# @time 4920ns: pi_money=1 state=001, po_cola=0
+# @time 4940ns: pi_money=1 state=010, po_cola=0
+# @time 4960ns: pi_money=0 state=100, po_cola=0
+# @time 4980ns: pi_money=1 state=100, po_cola=0
+# @time 5000ns: pi_money=1 state=001, po_cola=1
+# @time 5020ns: pi_money=1 state=010, po_cola=0
+# @time 5040ns: pi_money=1 state=100, po_cola=0
+# @time 5060ns: pi_money=0 state=001, po_cola=1
+# @time 5080ns: pi_money=1 state=001, po_cola=0
+# @time 5100ns: pi_money=1 state=010, po_cola=0
+# @time 5120ns: pi_money=1 state=100, po_cola=0
+# @time 5140ns: pi_money=0 state=001, po_cola=1
+# @time 5160ns: pi_money=0 state=001, po_cola=0
+# @time 5180ns: pi_money=1 state=001, po_cola=0
+# @time 5200ns: pi_money=0 state=010, po_cola=0
+# @time 5240ns: pi_money=1 state=010, po_cola=0
+# @time 5260ns: pi_money=1 state=100, po_cola=0
+# @time 5280ns: pi_money=0 state=001, po_cola=1
+# @time 5300ns: pi_money=0 state=001, po_cola=0
+# @time 5320ns: pi_money=1 state=001, po_cola=0
+# @time 5340ns: pi_money=0 state=010, po_cola=0
+# @time 5380ns: pi_money=1 state=010, po_cola=0
+# @time 5400ns: pi_money=0 state=100, po_cola=0
+# @time 5420ns: pi_money=1 state=100, po_cola=0
+# @time 5440ns: pi_money=1 state=001, po_cola=1
+# @time 5460ns: pi_money=0 state=010, po_cola=0
+# @time 5480ns: pi_money=1 state=010, po_cola=0
+# @time 5500ns: pi_money=0 state=100, po_cola=0
+# @time 5520ns: pi_money=1 state=100, po_cola=0
+# @time 5540ns: pi_money=0 state=001, po_cola=1
+# @time 5560ns: pi_money=0 state=001, po_cola=0
+# @time 5580ns: pi_money=1 state=001, po_cola=0
+# @time 5600ns: pi_money=0 state=010, po_cola=0
+# @time 5660ns: pi_money=1 state=010, po_cola=0
+# @time 5680ns: pi_money=1 state=100, po_cola=0
+# @time 5700ns: pi_money=1 state=001, po_cola=1
+# @time 5720ns: pi_money=1 state=010, po_cola=0
+# @time 5740ns: pi_money=1 state=100, po_cola=0
+# @time 5760ns: pi_money=0 state=001, po_cola=1
+# @time 5780ns: pi_money=1 state=001, po_cola=0
+# @time 5800ns: pi_money=1 state=010, po_cola=0
+# @time 5820ns: pi_money=1 state=100, po_cola=0
+# @time 5840ns: pi_money=0 state=001, po_cola=1
+# @time 5860ns: pi_money=0 state=001, po_cola=0
+# @time 5960ns: pi_money=1 state=001, po_cola=0
+# @time 5980ns: pi_money=1 state=010, po_cola=0
+# @time 6000ns: pi_money=1 state=100, po_cola=0
+# @time 6020ns: pi_money=1 state=001, po_cola=1
+# @time 6040ns: pi_money=1 state=010, po_cola=0
+# @time 6060ns: pi_money=1 state=100, po_cola=0
+# @time 6080ns: pi_money=1 state=001, po_cola=1
+# @time 6100ns: pi_money=0 state=010, po_cola=0
+# @time 6120ns: pi_money=1 state=010, po_cola=0
+# @time 6140ns: pi_money=1 state=100, po_cola=0
+# @time 6160ns: pi_money=1 state=001, po_cola=1
+# @time 6180ns: pi_money=1 state=010, po_cola=0
+# @time 6200ns: pi_money=1 state=100, po_cola=0
+# @time 6220ns: pi_money=1 state=001, po_cola=1
+# @time 6240ns: pi_money=1 state=010, po_cola=0
+# @time 6260ns: pi_money=1 state=100, po_cola=0
+# @time 6280ns: pi_money=0 state=001, po_cola=1
+# @time 6300ns: pi_money=0 state=001, po_cola=0
+# @time 6320ns: pi_money=1 state=001, po_cola=0
+# @time 6340ns: pi_money=1 state=010, po_cola=0
+# @time 6360ns: pi_money=0 state=100, po_cola=0
+# @time 6440ns: pi_money=1 state=100, po_cola=0
+# @time 6460ns: pi_money=0 state=001, po_cola=1
+# @time 6480ns: pi_money=0 state=001, po_cola=0
+# @time 6580ns: pi_money=1 state=001, po_cola=0
+# @time 6600ns: pi_money=0 state=010, po_cola=0
+# @time 6640ns: pi_money=1 state=010, po_cola=0
+# @time 6660ns: pi_money=0 state=100, po_cola=0
+# @time 6740ns: pi_money=1 state=100, po_cola=0
+# @time 6760ns: pi_money=1 state=001, po_cola=1
+# @time 6780ns: pi_money=1 state=010, po_cola=0
+# @time 6800ns: pi_money=1 state=100, po_cola=0
+# @time 6820ns: pi_money=1 state=001, po_cola=1
+# @time 6840ns: pi_money=0 state=010, po_cola=0
+# @time 6860ns: pi_money=1 state=010, po_cola=0
+# @time 6880ns: pi_money=1 state=100, po_cola=0
+# @time 6900ns: pi_money=1 state=001, po_cola=1
+# @time 6920ns: pi_money=0 state=010, po_cola=0
+# @time 6940ns: pi_money=1 state=010, po_cola=0
+# @time 6960ns: pi_money=0 state=100, po_cola=0
+# @time 7000ns: pi_money=1 state=100, po_cola=0
+# @time 7020ns: pi_money=1 state=001, po_cola=1
+# @time 7040ns: pi_money=0 state=010, po_cola=0
+# @time 7060ns: pi_money=1 state=010, po_cola=0
+# @time 7080ns: pi_money=0 state=100, po_cola=0
+# @time 7120ns: pi_money=1 state=100, po_cola=0
+# @time 7140ns: pi_money=0 state=001, po_cola=1
+# @time 7160ns: pi_money=0 state=001, po_cola=0
+# @time 7220ns: pi_money=1 state=001, po_cola=0
+# @time 7240ns: pi_money=1 state=010, po_cola=0
+# @time 7260ns: pi_money=1 state=100, po_cola=0
+# @time 7280ns: pi_money=1 state=001, po_cola=1
+# @time 7300ns: pi_money=0 state=010, po_cola=0
+# @time 7320ns: pi_money=1 state=010, po_cola=0
+# @time 7340ns: pi_money=1 state=100, po_cola=0
+# @time 7360ns: pi_money=1 state=001, po_cola=1
+# @time 7380ns: pi_money=1 state=010, po_cola=0
+# @time 7400ns: pi_money=1 state=100, po_cola=0
+# @time 7420ns: pi_money=1 state=001, po_cola=1
+# @time 7440ns: pi_money=1 state=010, po_cola=0
+# @time 7460ns: pi_money=0 state=100, po_cola=0
+# @time 7480ns: pi_money=1 state=100, po_cola=0
+# @time 7500ns: pi_money=0 state=001, po_cola=1
+# @time 7520ns: pi_money=1 state=001, po_cola=0
+# @time 7540ns: pi_money=0 state=010, po_cola=0
+# @time 7580ns: pi_money=1 state=010, po_cola=0
+# @time 7600ns: pi_money=0 state=100, po_cola=0
+# @time 7700ns: pi_money=1 state=100, po_cola=0
+# @time 7720ns: pi_money=0 state=001, po_cola=1
+# @time 7740ns: pi_money=0 state=001, po_cola=0
+# @time 7840ns: pi_money=1 state=001, po_cola=0
+# @time 7860ns: pi_money=0 state=010, po_cola=0
+# @time 7880ns: pi_money=1 state=010, po_cola=0
+# @time 7900ns: pi_money=0 state=100, po_cola=0
+# @time 7940ns: pi_money=1 state=100, po_cola=0
+# @time 7960ns: pi_money=0 state=001, po_cola=1
+# @time 7980ns: pi_money=1 state=001, po_cola=0
+# @time 8000ns: pi_money=1 state=010, po_cola=0
+# @time 8020ns: pi_money=0 state=100, po_cola=0
+# @time 8040ns: pi_money=1 state=100, po_cola=0
+# @time 8060ns: pi_money=0 state=001, po_cola=1
+# @time 8080ns: pi_money=1 state=001, po_cola=0
+# @time 8100ns: pi_money=0 state=010, po_cola=0
+# @time 8180ns: pi_money=1 state=010, po_cola=0
+# @time 8200ns: pi_money=0 state=100, po_cola=0
+# @time 8220ns: pi_money=1 state=100, po_cola=0
+# @time 8240ns: pi_money=0 state=001, po_cola=1
+# @time 8260ns: pi_money=1 state=001, po_cola=0
+# @time 8280ns: pi_money=1 state=010, po_cola=0
+# @time 8300ns: pi_money=0 state=100, po_cola=0
+# @time 8320ns: pi_money=1 state=100, po_cola=0
+# @time 8340ns: pi_money=0 state=001, po_cola=1
+# @time 8360ns: pi_money=1 state=001, po_cola=0
+# @time 8380ns: pi_money=1 state=010, po_cola=0
+# @time 8400ns: pi_money=1 state=100, po_cola=0
+# @time 8420ns: pi_money=0 state=001, po_cola=1
+# @time 8440ns: pi_money=1 state=001, po_cola=0
+# @time 8460ns: pi_money=1 state=010, po_cola=0
+# @time 8480ns: pi_money=0 state=100, po_cola=0
+# @time 8520ns: pi_money=1 state=100, po_cola=0
+# @time 8540ns: pi_money=1 state=001, po_cola=1
+# @time 8560ns: pi_money=0 state=010, po_cola=0
+# @time 8600ns: pi_money=1 state=010, po_cola=0
+# @time 8620ns: pi_money=1 state=100, po_cola=0
+# @time 8640ns: pi_money=0 state=001, po_cola=1
+# @time 8660ns: pi_money=0 state=001, po_cola=0
+# @time 8680ns: pi_money=1 state=001, po_cola=0
+# @time 8700ns: pi_money=0 state=010, po_cola=0
+# @time 8740ns: pi_money=1 state=010, po_cola=0
+# @time 8760ns: pi_money=1 state=100, po_cola=0
+# @time 8780ns: pi_money=0 state=001, po_cola=1
+# @time 8800ns: pi_money=0 state=001, po_cola=0
+# @time 8820ns: pi_money=1 state=001, po_cola=0
+# @time 8840ns: pi_money=0 state=010, po_cola=0
+# @time 8880ns: pi_money=1 state=010, po_cola=0
+# @time 8900ns: pi_money=1 state=100, po_cola=0
+# @time 8920ns: pi_money=0 state=001, po_cola=1
+# @time 8940ns: pi_money=1 state=001, po_cola=0
+# @time 8960ns: pi_money=0 state=010, po_cola=0
+# @time 8980ns: pi_money=1 state=010, po_cola=0
+# @time 9000ns: pi_money=1 state=100, po_cola=0
+# @time 9020ns: pi_money=0 state=001, po_cola=1
+# @time 9040ns: pi_money=1 state=001, po_cola=0
+# @time 9060ns: pi_money=1 state=010, po_cola=0
+# @time 9080ns: pi_money=1 state=100, po_cola=0
+# @time 9100ns: pi_money=0 state=001, po_cola=1
+# @time 9120ns: pi_money=1 state=001, po_cola=0
+# @time 9140ns: pi_money=1 state=010, po_cola=0
+# @time 9160ns: pi_money=1 state=100, po_cola=0
+# @time 9180ns: pi_money=0 state=001, po_cola=1
+# @time 9200ns: pi_money=0 state=001, po_cola=0
+# @time 9220ns: pi_money=1 state=001, po_cola=0
+# @time 9240ns: pi_money=0 state=010, po_cola=0
+# @time 9280ns: pi_money=1 state=010, po_cola=0
+# @time 9300ns: pi_money=0 state=100, po_cola=0
+# @time 9340ns: pi_money=1 state=100, po_cola=0
+# @time 9360ns: pi_money=1 state=001, po_cola=1
+# @time 9380ns: pi_money=0 state=010, po_cola=0
+# @time 9400ns: pi_money=1 state=010, po_cola=0
+# @time 9420ns: pi_money=0 state=100, po_cola=0
+# @time 9440ns: pi_money=1 state=100, po_cola=0
+# @time 9460ns: pi_money=1 state=001, po_cola=1
+# @time 9480ns: pi_money=1 state=010, po_cola=0
+# @time 9500ns: pi_money=1 state=100, po_cola=0
+# @time 9520ns: pi_money=0 state=001, po_cola=1
+# @time 9540ns: pi_money=0 state=001, po_cola=0
+# @time 9560ns: pi_money=1 state=001, po_cola=0
+# @time 9580ns: pi_money=0 state=010, po_cola=0
+# @time 9600ns: pi_money=1 state=010, po_cola=0
+# @time 9620ns: pi_money=0 state=100, po_cola=0
+# @time 9640ns: pi_money=1 state=100, po_cola=0
+# @time 9660ns: pi_money=1 state=001, po_cola=1
+# @time 9680ns: pi_money=0 state=010, po_cola=0
+# @time 9720ns: pi_money=1 state=010, po_cola=0
+# @time 9740ns: pi_money=1 state=100, po_cola=0
+# @time 9760ns: pi_money=1 state=001, po_cola=1
+# @time 9780ns: pi_money=0 state=010, po_cola=0
+# @time 9820ns: pi_money=1 state=010, po_cola=0
+# @time 9840ns: pi_money=0 state=100, po_cola=0
+# @time 9880ns: pi_money=1 state=100, po_cola=0
+# @time 9900ns: pi_money=1 state=001, po_cola=1
+# @time 9920ns: pi_money=1 state=010, po_cola=0
+# @time 9940ns: pi_money=0 state=100, po_cola=0
+# @time 9960ns: pi_money=1 state=100, po_cola=0
+# @time 9980ns: pi_money=1 state=001, po_cola=1
+do simple_fsm_run_msim_rtl_verilog.do
+# transcript on
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+# 
+# vmap altera_ver ./verilog_libs/altera_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_primitives.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_HIGH
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# 
+# vlib verilog_libs/lpm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
+# 
+# vmap lpm_ver ./verilog_libs/lpm_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work lpm_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/220model.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_mux
+# 	lpm_decode
+# 	lpm_clshift
+# 	lpm_add_sub
+# 	lpm_compare
+# 	lpm_mult
+# 	lpm_divide
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# 
+# vlib verilog_libs/sgate_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
+# 
+# vmap sgate_ver ./verilog_libs/sgate_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work sgate_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/sgate.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# 
+# Top level modules:
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# 
+# vlib verilog_libs/altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
+# 
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_mf_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_mf.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# 
+# vlib verilog_libs/altera_lnsim_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
+# 
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+# Modifying modelsim.ini
+# vlog -sv -work altera_lnsim_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/altera_lnsim.sv}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling package altera_lnsim_functions
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_lnsim_functions
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module ama_latency_function
+# -- Compiling module altera_pll_reconfig_tasks
+# -- Compiling module altera_syncram
+# -- Compiling module ALTERA_LNSIM_MEMORY_INITIALIZATION
+# -- Compiling module altera_stratixv_pll
+# -- Compiling module altera_arriav_pll
+# -- Compiling module altera_arriavgz_pll
+# -- Compiling module altera_cyclonev_pll
+# -- Compiling module altera_pll
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module pll_dps_lcell_comb
+# -- Compiling module twentynm_iopll_ip
+# 
+# Top level modules:
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# 	altera_syncram
+# 	altera_pll
+# 
+# vlib verilog_libs/cycloneiv_hssi_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_hssi_ver".
+# 
+# vmap cycloneiv_hssi_ver ./verilog_libs/cycloneiv_hssi_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_hssi_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_hssi_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_reg
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_out_block
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_parallel_register
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_ser
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital
+# -- Compiling module cycloneiv_hssi_tx_pma_sub_tx_rx_det
+# -- Compiling module cycloneiv_hssi_tx_pma
+# -- Compiling module cycloneiv_hssi_rx_pma_sub_deser
+# -- Compiling module cycloneiv_hssi_rx_pma_sub_clkdiv
+# -- Compiling module cycloneiv_hssi_rx_pma
+# -- Compiling module cycloneiv_hssi_pcs_reset
+# -- Compiling module cycloneiv_hssi_digi_chnl_hip_spt
+# -- Compiling module cycloneiv_hssi_phystatus_generator_fsm
+# -- Compiling module cycloneiv_hssi_phystatus_generator
+# -- Compiling module cycloneiv_hssi_rx_pipe_interface
+# -- Compiling module cycloneiv_hssi_tx_pipe_interface
+# -- Compiling module cycloneiv_hssi_q_pipe_interface_top
+# -- Compiling module cycloneiv_hssi_tx_digis_txclk_gating
+# -- Compiling module cycloneiv_hssi_tx_digi_txclk_ctl
+# -- Compiling module cycloneiv_hssi_tx_digis_ram8x49_syn
+# -- Compiling module cycloneiv_hssi_tx_digis_ph_fifo
+# -- Compiling module cycloneiv_hssi_tx_digi_tx_ctrl
+# -- Compiling module cycloneiv_hssi_tx_digi_bist_gen
+# -- Compiling module cycloneiv_hssi_tx_digi_prbs_gen
+# -- Compiling module cycloneiv_hssi_tx_digi_enc_chnl_top
+# -- Compiling module cycloneiv_hssi_tx_digi_iq_pipe_tx
+# -- Compiling module cycloneiv_hssi_tx_digi
+# -- Compiling module cycloneiv_hssi_tx_pcs
+# -- Compiling module cycloneiv_hssi_cmu_dprio_map
+# -- Compiling module cycloneiv_hssi_cmu_dprio_top
+# -- Compiling module cycloneiv_hssi_rx_digis_ph_fifo
+# -- Compiling module cycloneiv_hssi_rx_digis_ram16x14_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_ram20x16_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_ram8x70_syn
+# -- Compiling module cycloneiv_hssi_rx_digis_rxclk_gating
+# -- Compiling module cycloneiv_hssi_rx_digi_rxclk_ctl
+# -- Compiling module cycloneiv_hssi_rx_digi_auto_speed_neg
+# -- Compiling module cycloneiv_hssi_rx_digi_bist_ver
+# -- Compiling module cycloneiv_hssi_rx_digi_cdr_ctrl
+# -- Compiling module cycloneiv_hssi_rx_digi_comp_chnl_top
+# -- Compiling module cycloneiv_hssi_rx_digi_rx_ctrl
+# -- Compiling module cycloneiv_hssi_rx_digi_dec_chnl_top
+# -- Compiling module cycloneiv_hssi_rx_digi_dskw_fifo
+# -- Compiling module cycloneiv_hssi_rx_digi_freqdet
+# -- Compiling module cycloneiv_hssi_rx_digi_eii_module
+# -- Compiling module cycloneiv_hssi_rx_digi_pcs_channel_testbus
+# -- Compiling module cycloneiv_hssi_rx_digi_iq_pipe_rx
+# -- Compiling module cycloneiv_hssi_rx_digi_prbs_ver
+# -- Compiling module cycloneiv_hssi_rx_digi_wordalign
+# -- Compiling module cycloneiv_hssi_rx_digi
+# -- Compiling module cycloneiv_hssi_rx_pcs
+# -- Compiling module cycloneiv_hssi_dskw_sm
+# -- Compiling module cycloneiv_hssi_tx_sm
+# -- Compiling module cycloneiv_hssi_rcv_sm
+# -- Compiling module cycloneiv_hssi_cmu_chnl_reset
+# -- Compiling module cycloneiv_hssi_cmu_quad_reset
+# -- Compiling module cycloneiv_hssi_cmu_auto_speed_neg
+# -- Compiling module cycloneiv_hssi_cmu_clk_gating
+# -- Compiling module cycloneiv_hssi_cmu_clk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_rx_ctrl
+# -- Compiling module cycloneiv_hssi_cmu_rxclk_gating
+# -- Compiling module cycloneiv_hssi_cmu_rxclk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_tx_ctrl
+# -- Compiling module cycloneiv_hssi_cmu_txclk_gating
+# -- Compiling module cycloneiv_hssi_cmu_txclk_ctl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_bit
+# -- Compiling module cycloneiv_hssi_cmu_dprio_bit_pma
+# -- Compiling module cycloneiv_hssi_cmu_dprio_16bit
+# -- Compiling module cycloneiv_hssi_cmu_dprio_16bit_pma
+# -- Compiling module cycloneiv_hssi_cmu_dprio_reg_chnl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_chnl_bus_out_mux
+# -- Compiling module cycloneiv_hssi_cmu_dprio_chnl_top
+# -- Compiling module cycloneiv_hssi_cmu_dprio_status
+# -- Compiling module cycloneiv_hssi_cmu_dprio_addr
+# -- Compiling module cycloneiv_hssi_cmu_dprio_cnt
+# -- Compiling module cycloneiv_hssi_cmu_dprio_ctl_data
+# -- Compiling module cycloneiv_hssi_cmu_dprio_sm
+# -- Compiling module cycloneiv_hssi_cmu_dprio_reg_centrl
+# -- Compiling module cycloneiv_hssi_cmu_dprio_centrl_bus_out_mux
+# -- Compiling module cycloneiv_hssi_cmu_dprio_centrl_top
+# -- Compiling module cycloneiv_hssi_cmu_dprio_map_index
+# -- Compiling module cycloneiv_hssi_cmu
+# -- Compiling module cycloneiv_hssi_calibration_block
+# 
+# Top level modules:
+# 	cycloneiv_hssi_tx_pma
+# 	cycloneiv_hssi_rx_pma
+# 	cycloneiv_hssi_tx_pcs
+# 	cycloneiv_hssi_rx_pcs
+# 	cycloneiv_hssi_cmu_dprio_centrl_top
+# 	cycloneiv_hssi_cmu
+# 	cycloneiv_hssi_calibration_block
+# 
+# vlib verilog_libs/cycloneiv_pcie_hip_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_pcie_hip_ver".
+# 
+# vmap cycloneiv_pcie_hip_ver ./verilog_libs/cycloneiv_pcie_hip_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_pcie_hip_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_pcie_hip_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module cycloneiv_pciehip_param
+# -- Compiling module cycloneiv_pciehip_clkmux
+# -- Compiling module cycloneiv_pciehip_dprio_bit
+# -- Compiling module cycloneiv_pciehip_dprio_16bit
+# -- Compiling module cycloneiv_pciehip_dprio_addr
+# -- Compiling module cycloneiv_pciehip_dprio_cnt
+# -- Compiling module cycloneiv_pciehip_dprio_ctl_data
+# -- Compiling module cycloneiv_pciehip_dprio_sm
+# -- Compiling module cycloneiv_pciehip_dprio_bus_out_mux
+# -- Compiling module cycloneiv_pciehip_dprio_reg
+# -- Compiling module cycloneiv_pciehip_dprio_reg_top
+# -- Compiling module cycloneiv_pciehip_hip_dprio_top
+# -- Compiling module cycloneiv_pciehip_compute_bit
+# -- Compiling module cycloneiv_pciehip_ecc_gen
+# -- Compiling module cycloneiv_pciehip_ecc_chk
+# -- Compiling module cycloneiv_pciehip_ecc_decoder
+# -- Compiling module cycloneiv_pciehip_pulse_ext
+# -- Compiling module cycloneiv_pciehip_hip_mram
+# -- Compiling module cycloneiv_pciehip_mram_top
+# -- Compiling module cycloneiv_pciehip_pciexp_dcfiforam
+# -- Compiling module cycloneiv_pciehip_pciexp_dcram_rtry
+# -- Compiling module cycloneiv_pciehip_pciexp_dcram_rxvc
+# -- Compiling module cycloneiv_pciehip_iei_detect
+# -- Compiling module cycloneiv_pciehip_pciexp_top_hip
+# -- Compiling module cycloneiv_pciehip_hip_top
+# -- Compiling module cycloneiv_hssi_pcie_hip
+# 
+# Top level modules:
+# 	cycloneiv_hssi_pcie_hip
+# 
+# vlib verilog_libs/cycloneiv_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneiv_ver".
+# 
+# vmap cycloneiv_ver ./verilog_libs/cycloneiv_ver
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneiv_ver {d:/develop_tools/quartus13.1/quartus/eda/sim_lib/cycloneiv_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling UDP CYCLONEIV_PRIM_DFFE
+# -- Compiling UDP CYCLONEIV_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEIV_PRIM_DFFEAS_HIGH
+# -- Compiling module cycloneiv_dffe
+# -- Compiling module cycloneiv_mux21
+# -- Compiling module cycloneiv_mux41
+# -- Compiling module cycloneiv_and1
+# -- Compiling module cycloneiv_and16
+# -- Compiling module cycloneiv_bmux21
+# -- Compiling module cycloneiv_b17mux21
+# -- Compiling module cycloneiv_nmux21
+# -- Compiling module cycloneiv_b5mux21
+# -- Compiling module cycloneiv_latch
+# -- Compiling module cycloneiv_routing_wire
+# -- Compiling module cycloneiv_lcell_comb
+# -- Compiling module cycloneiv_io_ibuf
+# -- Compiling module cycloneiv_io_obuf
+# -- Compiling module cycloneiv_ddio_out
+# -- Compiling module cycloneiv_ddio_oe
+# -- Compiling module cycloneiv_ff
+# -- Compiling module cycloneiv_ram_pulse_generator
+# -- Compiling module cycloneiv_ram_register
+# -- Compiling module cycloneiv_ram_block
+# -- Compiling module cycloneiv_mac_data_reg
+# -- Compiling module cycloneiv_mac_sign_reg
+# -- Compiling module cycloneiv_mac_mult_internal
+# -- Compiling module cycloneiv_mac_mult
+# -- Compiling module cycloneiv_mac_out
+# -- Compiling module cycloneiv_io_pad
+# -- Compiling module cycloneiv_ena_reg
+# -- Compiling module cycloneiv_clkctrl
+# -- Compiling module cycloneiv_pseudo_diff_out
+# -- Compiling module cycloneiv_rublock
+# -- Compiling module cycloneiv_termination_ctrl
+# -- Compiling module cycloneiv_termination_rupdn
+# -- Compiling module cycloneiv_termination
+# -- Compiling module cycloneiv_jtag
+# -- Compiling module cycloneiv_crcblock
+# -- Compiling module cycloneiv_oscillator
+# -- Compiling module cycloneiv_controller
+# -- Compiling module cycloneiv_m_cntr
+# -- Compiling module cycloneiv_n_cntr
+# -- Compiling module cycloneiv_scale_cntr
+# -- Compiling module cycloneiv_post_divider
+# -- Compiling module cycloneiv_pll_reg
+# -- Compiling module cycloneiv_pll
+# 
+# Top level modules:
+# 	cycloneiv_dffe
+# 	cycloneiv_and1
+# 	cycloneiv_and16
+# 	cycloneiv_bmux21
+# 	cycloneiv_b17mux21
+# 	cycloneiv_nmux21
+# 	cycloneiv_b5mux21
+# 	cycloneiv_lcell_comb
+# 	cycloneiv_io_ibuf
+# 	cycloneiv_io_obuf
+# 	cycloneiv_ddio_out
+# 	cycloneiv_ddio_oe
+# 	cycloneiv_ff
+# 	cycloneiv_ram_block
+# 	cycloneiv_mac_mult
+# 	cycloneiv_mac_out
+# 	cycloneiv_io_pad
+# 	cycloneiv_clkctrl
+# 	cycloneiv_pseudo_diff_out
+# 	cycloneiv_rublock
+# 	cycloneiv_termination
+# 	cycloneiv_jtag
+# 	cycloneiv_crcblock
+# 	cycloneiv_oscillator
+# 	cycloneiv_controller
+# 	cycloneiv_pll_reg
+# 	cycloneiv_pll
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is –œ∫„Õÿ±æµÿ@Õÿ.
+# 
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# 
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/code/workspace_FPGA/simple_fsm/rtl {E:/code/workspace_FPGA/simple_fsm/rtl/simple_fsm.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module simple_fsm
+# 
+# Top level modules:
+# 	simple_fsm
+# 
+# vlog -vlog01compat -work work +incdir+E:/code/workspace_FPGA/simple_fsm/prj/../sim {E:/code/workspace_FPGA/simple_fsm/prj/../sim/tb_simple_fsm.v}
+# Model Technology ModelSim SE-64 vlog 10.2 Compiler 2013.02 Feb  2 2013
+# -- Compiling module tb_simple_fsm
+# 
+# Top level modules:
+# 	tb_simple_fsm
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_simple_fsm
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_simple_fsm 
+# Loading work.tb_simple_fsm(fast)
+# Loading work.simple_fsm(fast)
+# 
+# add wave *
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
+# @time    0ns: pi_money=0 state=001, po_cola=0
+# @time   40ns: pi_money=1 state=001, po_cola=0
+# @time   60ns: pi_money=1 state=010, po_cola=0
+# @time   80ns: pi_money=1 state=100, po_cola=0
+# @time  100ns: pi_money=1 state=001, po_cola=1
+# @time  120ns: pi_money=1 state=010, po_cola=0
+# @time  140ns: pi_money=1 state=100, po_cola=0
+# @time  160ns: pi_money=0 state=001, po_cola=1
+# @time  180ns: pi_money=1 state=001, po_cola=0
+# @time  200ns: pi_money=1 state=010, po_cola=0
+# @time  220ns: pi_money=0 state=100, po_cola=0
+# @time  240ns: pi_money=1 state=100, po_cola=0
+# @time  260ns: pi_money=1 state=001, po_cola=1
+# @time  280ns: pi_money=0 state=010, po_cola=0
+# @time  300ns: pi_money=1 state=010, po_cola=0
+# @time  320ns: pi_money=0 state=100, po_cola=0
+# @time  340ns: pi_money=1 state=100, po_cola=0
+# @time  360ns: pi_money=0 state=001, po_cola=1
+# @time  380ns: pi_money=1 state=001, po_cola=0
+# @time  400ns: pi_money=1 state=010, po_cola=0
+# @time  420ns: pi_money=0 state=100, po_cola=0
+# @time  440ns: pi_money=1 state=100, po_cola=0
+# @time  460ns: pi_money=0 state=001, po_cola=1
+# @time  480ns: pi_money=0 state=001, po_cola=0
+# @time  520ns: pi_money=1 state=001, po_cola=0
+# @time  540ns: pi_money=0 state=010, po_cola=0
+# @time  560ns: pi_money=1 state=010, po_cola=0
+# @time  580ns: pi_money=1 state=100, po_cola=0
+# @time  600ns: pi_money=1 state=001, po_cola=1
+# @time  620ns: pi_money=1 state=010, po_cola=0
+# @time  640ns: pi_money=0 state=100, po_cola=0
+# @time  720ns: pi_money=1 state=100, po_cola=0
+# @time  740ns: pi_money=0 state=001, po_cola=1
+# @time  760ns: pi_money=1 state=001, po_cola=0
+# @time  780ns: pi_money=1 state=010, po_cola=0
+# @time  800ns: pi_money=1 state=100, po_cola=0
+# @time  820ns: pi_money=1 state=001, po_cola=1
+# @time  840ns: pi_money=1 state=010, po_cola=0
+# @time  860ns: pi_money=0 state=100, po_cola=0
+# @time  900ns: pi_money=1 state=100, po_cola=0
+# @time  920ns: pi_money=1 state=001, po_cola=1
+# @time  940ns: pi_money=1 state=010, po_cola=0
+# @time  960ns: pi_money=0 state=100, po_cola=0

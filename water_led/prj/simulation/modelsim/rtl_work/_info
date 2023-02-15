@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\water_led\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1655035117
+VZH__jD6mA:EAb0F_HKi5L0
+04 12 4 work tb_water_led fast 0
+=1-48ba4e63e9b7-62a5d4ed-167-e68
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vtb_water_led
+Z1 !s110 1655035114
+I>YibC<CR316=SP=OYHLnX0
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\water_led\prj\simulation\modelsim
+w1655035063
+8E:/code/workspace_FPGA/water_led/prj/../sim/tb_water_led.v
+FE:/code/workspace_FPGA/water_led/prj/../sim/tb_water_led.v
+L0 2
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 ]ZFL]Om@gdPKP2ED=zS9>2
+!s85 0
+!s108 1655035114.688000
+!s107 E:/code/workspace_FPGA/water_led/prj/../sim/tb_water_led.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/water_led/prj/../sim|E:/code/workspace_FPGA/water_led/prj/../sim/tb_water_led.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/water_led/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vwater_led
+IcH2NLaF7H0P=R6o_>D^XN3
+R2
+R3
+w1655034922
+8E:/code/workspace_FPGA/water_led/rtl/water_led.v
+FE:/code/workspace_FPGA/water_led/rtl/water_led.v
+L0 1
+R4
+r1
+31
+R5
+R1
+!i10b 1
+!s100 4N2CO`]okXQ`J8?UXRDXR3
+!s85 0
+!s108 1655035114.495000
+!s107 E:/code/workspace_FPGA/water_led/rtl/water_led.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/water_led/rtl|E:/code/workspace_FPGA/water_led/rtl/water_led.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/water_led/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

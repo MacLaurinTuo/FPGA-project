@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Dec 24 23:33:02 2022
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : pingpang
+Top-level Entity Name : pingpang
+Family : Cyclone IV E
+Total logic elements : 1,069
+    Total combinational functions : 643
+    Dedicated logic registers : 815
+Total registers : 815
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 29,696
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

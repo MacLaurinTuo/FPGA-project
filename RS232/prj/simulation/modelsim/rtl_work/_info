@@ -1,0 +1,97 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\RS232\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+Z1 !s110 1670393705
+VHTjm04g^TOP<a[L^8e<im0
+04 8 4 work tb_rs232 fast 0
+=1-48ba4e63e9b7-63902f69-2b1-8ba8
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vrs232
+IZlNB5nSH<PbMGObfXIO=33
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\RS232\prj\simulation\modelsim
+w1657774179
+8E:/code/workspace_FPGA/RS232/rtl/rs232.v
+FE:/code/workspace_FPGA/RS232/rtl/rs232.v
+L0 1
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z6 !s110 1670393704
+Z7 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/RS232/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 39IT3;7noSTPnK5L@kXca0
+!s85 0
+!s108 1670393704.464000
+!s107 E:/code/workspace_FPGA/RS232/rtl/rs232.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/RS232/rtl|E:/code/workspace_FPGA/RS232/rtl/rs232.v|
+vtb_rs232
+IfoeIll7e_YN1gHBO5SjFM2
+R2
+R3
+w1657775722
+8E:/code/workspace_FPGA/RS232/prj/../sim/tb_rs232.v
+FE:/code/workspace_FPGA/RS232/prj/../sim/tb_rs232.v
+L0 3
+R4
+r1
+31
+R5
+R1
+!i10b 1
+!s100 K@H<aNzo8XL_1;F36YhAW2
+!s85 0
+!s108 1670393705.094000
+!s107 E:/code/workspace_FPGA/RS232/prj/../sim/tb_rs232.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/RS232/prj/../sim|E:/code/workspace_FPGA/RS232/prj/../sim/tb_rs232.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/RS232/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vuart_rx
+R6
+I7PGF^SHFcfm<_39AB<C710
+R2
+R3
+w1657727310
+8E:/code/workspace_FPGA/RS232/rtl/uart_rx.v
+FE:/code/workspace_FPGA/RS232/rtl/uart_rx.v
+L0 1
+R4
+r1
+31
+R5
+R7
+!i10b 1
+!s100 ePae^Iz06Qj_h>cnB3H_i2
+!s85 0
+!s108 1670393704.885000
+!s107 E:/code/workspace_FPGA/RS232/rtl/uart_rx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/RS232/rtl|E:/code/workspace_FPGA/RS232/rtl/uart_rx.v|
+vuart_tx
+R6
+IAU829K^@6:>VY7FalW2TU0
+R2
+R3
+w1657762260
+8E:/code/workspace_FPGA/RS232/rtl/uart_tx.v
+FE:/code/workspace_FPGA/RS232/rtl/uart_tx.v
+L0 1
+R4
+r1
+31
+R5
+R7
+!i10b 1
+!s100 @ZS2@9IRDhUJVnXK=d0_;3
+!s85 0
+!s108 1670393704.684000
+!s107 E:/code/workspace_FPGA/RS232/rtl/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/RS232/rtl|E:/code/workspace_FPGA/RS232/rtl/uart_tx.v|

@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Jul 02 15:11:38 2022
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : fifo
+Top-level Entity Name : fifo
+Family : Cyclone IV GX
+Device : EP4CGX22CF19C6
+Timing Models : Final
+Total logic elements : 138 / 21,280 ( < 1 % )
+    Total combinational functions : 99 / 21,280 ( < 1 % )
+    Dedicated logic registers : 111 / 21,280 ( < 1 % )
+Total registers : 111
+Total pins : 51 / 167 ( 31 % )
+Total virtual pins : 0
+Total memory bits : 2,048 / 774,144 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 80 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 4 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 4 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\top_seg_595\1prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1669186138
+VJA2d__eY6L]6ZG6iAa?a53
+04 14 4 work tb_top_seg_595 fast 0
+=1-48ba4e63e9b7-637dc257-c4-45fc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vbcd_8421
+Z1 !s110 1669186132
+IV7F=8[?VJHDmBIDQ213cZ2
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\top_seg_595\1prj\simulation\modelsim
+w1669004061
+8E:/code/workspace_FPGA/top_seg_595/1rtl/bcd_8421.v
+FE:/code/workspace_FPGA/top_seg_595/1rtl/bcd_8421.v
+L0 1
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z6 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/top_seg_595/1rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 HDh?YoWhff9^;8ncH=<A^2
+!s85 0
+!s108 1669186132.730000
+!s107 E:/code/workspace_FPGA/top_seg_595/1rtl/bcd_8421.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/top_seg_595/1rtl|E:/code/workspace_FPGA/top_seg_595/1rtl/bcd_8421.v|
+vdata_gen
+R1
+IT9aUP1nZf1>XGH`>P4_7@3
+R2
+R3
+w1668999698
+8E:/code/workspace_FPGA/top_seg_595/1rtl/data_gen.v
+FE:/code/workspace_FPGA/top_seg_595/1rtl/data_gen.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 7CQ=RN@mUoAoX??Z6E^co3
+!s85 0
+!s108 1669186132.536000
+!s107 E:/code/workspace_FPGA/top_seg_595/1rtl/data_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/top_seg_595/1rtl|E:/code/workspace_FPGA/top_seg_595/1rtl/data_gen.v|
+vhc595_ctrl
+R1
+I61?Za2C;5X:EBWz3CS9gJ2
+R2
+R3
+w1655457693
+8E:/code/workspace_FPGA/top_seg_595/1rtl/hc595_ctrl.v
+FE:/code/workspace_FPGA/top_seg_595/1rtl/hc595_ctrl.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 D<hz:1WE=[_8S0_jk<l]C3
+!s85 0
+!s108 1669186132.348000
+!s107 E:/code/workspace_FPGA/top_seg_595/1rtl/hc595_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/top_seg_595/1rtl|E:/code/workspace_FPGA/top_seg_595/1rtl/hc595_ctrl.v|
+vseg_595_dynamic
+IzX8iKh]cQ^IQEZP7I3P`h3
+R2
+R3
+w1655711036
+8E:/code/workspace_FPGA/top_seg_595/1rtl/seg_595_dynamic.v
+FE:/code/workspace_FPGA/top_seg_595/1rtl/seg_595_dynamic.v
+L0 1
+R4
+r1
+31
+R5
+R6
+R1
+!i10b 1
+!s100 ?TVVc>?@C2P90LblAj@4I0
+!s85 0
+!s108 1669186132.154000
+!s107 E:/code/workspace_FPGA/top_seg_595/1rtl/seg_595_dynamic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/top_seg_595/1rtl|E:/code/workspace_FPGA/top_seg_595/1rtl/seg_595_dynamic.v|
+vseg_dynamic
+Z7 !s110 1669186131
+Im;j;XFO;hh`bi2M>P8aRF3
+R2
+R3
+w1668999747
+8E:/code/workspace_FPGA/top_seg_595/1rtl/seg_dynamic.v
+FE:/code/workspace_FPGA/top_seg_595/1rtl/seg_dynamic.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 SRTJ05XG:0ff5[R^@RW0K1
+!s85 0
+!s108 1669186131.956000
+!s107 E:/code/workspace_FPGA/top_seg_595/1rtl/seg_dynamic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/top_seg_595/1rtl|E:/code/workspace_FPGA/top_seg_595/1rtl/seg_dynamic.v|
+vtb_top_seg_595
+R1
+I392_8ITb[792njU0@bP6V0
+R2
+R3
+w1669027613
+8E:/code/workspace_FPGA/top_seg_595/1prj/../1sim/tb_top_seg_595.v
+FE:/code/workspace_FPGA/top_seg_595/1prj/../1sim/tb_top_seg_595.v
+L0 2
+R4
+r1
+31
+R5
+!i10b 1
+!s100 4MZ<XaJZLJoBPfCb@i5JF2
+!s85 0
+!s108 1669186132.932000
+!s107 E:/code/workspace_FPGA/top_seg_595/1prj/../1sim/tb_top_seg_595.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/top_seg_595/1prj/../1sim|E:/code/workspace_FPGA/top_seg_595/1prj/../1sim/tb_top_seg_595.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/top_seg_595/1prj/../1sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtop_seg_595
+Ie0V^jTQKA;mfeWAKmB^0_2
+R2
+R3
+w1655913366
+8E:/code/workspace_FPGA/top_seg_595/1rtl/top_seg_595.v
+FE:/code/workspace_FPGA/top_seg_595/1rtl/top_seg_595.v
+L0 1
+R4
+r1
+31
+R5
+R7
+R6
+!i10b 1
+!s100 :cjYOjLD15hz:ikd7OnPc2
+!s85 0
+!s108 1669186131.710000
+!s107 E:/code/workspace_FPGA/top_seg_595/1rtl/top_seg_595.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/top_seg_595/1rtl|E:/code/workspace_FPGA/top_seg_595/1rtl/top_seg_595.v|

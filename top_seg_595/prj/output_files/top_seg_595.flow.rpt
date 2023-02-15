@@ -1,0 +1,152 @@
+Flow report for top_seg_595
+Thu Jun 23 00:14:04 2022
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Thu Jun 23 00:14:04 2022       ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                      ; top_seg_595                                 ;
+; Top-level Entity Name              ; top_seg_595                                 ;
+; Family                             ; Cyclone IV GX                               ;
+; Total logic elements               ; 284 / 14,400 ( 2 % )                        ;
+;     Total combinational functions  ; 261 / 14,400 ( 2 % )                        ;
+;     Dedicated logic registers      ; 188 / 14,400 ( 1 % )                        ;
+; Total registers                    ; 188                                         ;
+; Total pins                         ; 6 / 81 ( 7 % )                              ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 552,960 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total GXB Receiver Channel PCS     ; 0 / 2 ( 0 % )                               ;
+; Total GXB Receiver Channel PMA     ; 0 / 2 ( 0 % )                               ;
+; Total GXB Transmitter Channel PCS  ; 0 / 2 ( 0 % )                               ;
+; Total GXB Transmitter Channel PMA  ; 0 / 2 ( 0 % )                               ;
+; Total PLLs                         ; 0 / 3 ( 0 % )                               ;
+; Device                             ; EP4CGX15BF14C6                              ;
+; Timing Models                      ; Final                                       ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 06/23/2022 00:13:36 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; top_seg_595         ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++--------------------------------------+--------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                          ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+--------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 79965016287671.165591441619216 ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                             ; --            ; --          ; tb_data_gen    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                             ; --            ; --          ; tb_bcd_8421    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                             ; --            ; --          ; tb_seg_dynamic ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                             ; --            ; --          ; tb_top_seg_595 ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_top_seg_595                 ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                    ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim (Verilog)             ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; ../sim/tb_data_gen.v           ; --            ; --          ; tb_data_gen    ;
+; EDA_TEST_BENCH_FILE                  ; ../sim/tb_bcd_8421.v           ; --            ; --          ; tb_bcd_8421    ;
+; EDA_TEST_BENCH_FILE                  ; ../sim/tb_seg_dynamic.v        ; --            ; --          ; tb_seg_dynamic ;
+; EDA_TEST_BENCH_FILE                  ; ../sim/tb_top_seg_595.v        ; --            ; --          ; tb_top_seg_595 ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_data_gen                    ; --            ; --          ; tb_data_gen    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_bcd_8421                    ; --            ; --          ; tb_bcd_8421    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_seg_dynamic                 ; --            ; --          ; tb_seg_dynamic ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_top_seg_595                 ; --            ; --          ; tb_top_seg_595 ;
+; EDA_TEST_BENCH_NAME                  ; tb_data_gen                    ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; tb_bcd_8421                    ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; tb_seg_dynamic                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; tb_top_seg_595                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 us                           ; --            ; --          ; tb_data_gen    ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 us                           ; --            ; --          ; tb_bcd_8421    ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 us                           ; --            ; --          ; tb_seg_dynamic ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 us                           ; --            ; --          ; tb_top_seg_595 ;
+; EDA_TIME_SCALE                       ; 1 ps                           ; --            ; --          ; eda_simulation ;
+; PARTITION_COLOR                      ; 16764057                       ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING          ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                         ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                   ; --            ; --          ; --             ;
++--------------------------------------+--------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4693 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:11     ; 1.3                     ; 5437 MB             ; 00:00:12                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4645 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4671 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4601 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:22     ; --                      ; --                  ; 00:00:23                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; อุ               ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; อุ               ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; อุ               ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; อุ               ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; อุ               ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off top_seg_595 -c top_seg_595
+quartus_fit --read_settings_files=off --write_settings_files=off top_seg_595 -c top_seg_595
+quartus_asm --read_settings_files=off --write_settings_files=off top_seg_595 -c top_seg_595
+quartus_sta top_seg_595 -c top_seg_595
+quartus_eda --read_settings_files=off --write_settings_files=off top_seg_595 -c top_seg_595
+
+
+

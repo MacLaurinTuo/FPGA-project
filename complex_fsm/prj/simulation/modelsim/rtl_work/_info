@@ -1,0 +1,38 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\complex_fsm\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+VWnizoY6F_=87^i>FFPe6R3
+04 14 4 work tb_complex_fsm fast 0
+=1-48ba4e63e9b7-62a84703-e3-1648
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+Z1 dE:\code\workspace_FPGA\complex_fsm\prj\simulation\modelsim
+!s110 1655195395
+vcomplex_fsm
+!s110 1655196872
+!i10b 1
+!s100 V;a8]f0:QLM`RATPGUkzB3
+I7SHVZ3U:2iQh66og9lni53
+V`JN@9S9cnhjKRR_L]QIcM3
+R1
+w1655195221
+8E:/code/workspace_FPGA/complex_fsm/rtl/complex_fsm.v
+FE:/code/workspace_FPGA/complex_fsm/rtl/complex_fsm.v
+L0 1
+Z2 OL;L;10.2;57
+r1
+!s85 0
+31
+!s108 1655196872.228000
+!s107 E:/code/workspace_FPGA/complex_fsm/rtl/complex_fsm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/complex_fsm/rtl|E:/code/workspace_FPGA/complex_fsm/rtl/complex_fsm.v|
+o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/complex_fsm/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

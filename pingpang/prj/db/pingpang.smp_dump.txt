@@ -1,0 +1,7 @@
+
+State Machine - |pingpang|ram_ctrl:ram_ctrl_inst|state
+Name state.WRAM1_RRAM2 state.WRAM2_RRAM1 state.WRAM1 state.IDEL 
+state.IDEL 0 0 0 0 
+state.WRAM1 0 0 1 1 
+state.WRAM2_RRAM1 0 1 0 1 
+state.WRAM1_RRAM2 1 0 0 1 

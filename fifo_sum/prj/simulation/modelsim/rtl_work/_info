@@ -1,0 +1,137 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\fifo_sum\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1670390780
+V0=>8F5IZhUW<Po]I1I`Z:1
+04 11 4 work tb_fifo_sum fast 0
+=1-48ba4e63e9b7-639023fc-32-4e34
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vfifi_sum_ctrl
+Z1 !s110 1670390778
+I^6hiFhVig:<Zm]]ebjOL?1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\fifo_sum\prj\simulation\modelsim
+w1670327564
+8E:/code/workspace_FPGA/fifo_sum/rtl/fifo_sum_ctrl.v
+FE:/code/workspace_FPGA/fifo_sum/rtl/fifo_sum_ctrl.v
+L0 1
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z6 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/fifo_sum/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 i]VB7A7K^mzKDUSPGc6le3
+!s85 0
+!s108 1670390778.754000
+!s107 E:/code/workspace_FPGA/fifo_sum/rtl/fifo_sum_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/fifo_sum/rtl|E:/code/workspace_FPGA/fifo_sum/rtl/fifo_sum_ctrl.v|
+vfifo1
+Ia6@T[NK5B:2Na3`91mkFn0
+R2
+R3
+w1670293196
+8E:/code/workspace_FPGA/fifo_sum/prj/ip_core/fifo1/fifo1.v
+FE:/code/workspace_FPGA/fifo_sum/prj/ip_core/fifo1/fifo1.v
+L0 39
+R4
+r1
+31
+R5
+Z7 !s110 1670390779
+!i10b 1
+!s100 XI:;cRmKdlP]_2S^>iYfY1
+!s85 0
+!s108 1670390779.073000
+!s107 E:/code/workspace_FPGA/fifo_sum/prj/ip_core/fifo1/fifo1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/fifo_sum/prj/ip_core/fifo1|E:/code/workspace_FPGA/fifo_sum/prj/ip_core/fifo1/fifo1.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/fifo_sum/prj/ip_core/fifo1 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vfifo_sum
+R1
+IIdHYjmj0bH`0_6MjCT[Ud0
+R2
+R3
+w1670333866
+8E:/code/workspace_FPGA/fifo_sum/rtl/fifo_sum.v
+FE:/code/workspace_FPGA/fifo_sum/rtl/fifo_sum.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 hDm9WFE5A9D@W3XW2eIXo3
+!s85 0
+!s108 1670390778.913000
+!s107 E:/code/workspace_FPGA/fifo_sum/rtl/fifo_sum.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/fifo_sum/rtl|E:/code/workspace_FPGA/fifo_sum/rtl/fifo_sum.v|
+vtb_fifo_sum
+R7
+IIGmddn^kT4T:4hgUecGS?1
+R2
+R3
+w1670332086
+8E:/code/workspace_FPGA/fifo_sum/prj/../sim/tb_fifo_sum.v
+FE:/code/workspace_FPGA/fifo_sum/prj/../sim/tb_fifo_sum.v
+L0 2
+R4
+r1
+31
+R5
+!i10b 1
+!s100 LNi8`L;oMO>^2HKEf?Okn0
+!s85 0
+!s108 1670390779.254000
+!s107 E:/code/workspace_FPGA/fifo_sum/prj/../sim/tb_fifo_sum.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/fifo_sum/prj/../sim|E:/code/workspace_FPGA/fifo_sum/prj/../sim/tb_fifo_sum.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/fifo_sum/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vuart_rx
+R1
+IJOhiQc1Z0VBfTRDdLOYC:0
+R2
+R3
+w1670333863
+8E:/code/workspace_FPGA/fifo_sum/rtl/uart_rx.v
+FE:/code/workspace_FPGA/fifo_sum/rtl/uart_rx.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 ePae^Iz06Qj_h>cnB3H_i2
+!s85 0
+!s108 1670390778.588000
+!s107 E:/code/workspace_FPGA/fifo_sum/rtl/uart_rx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/fifo_sum/rtl|E:/code/workspace_FPGA/fifo_sum/rtl/uart_rx.v|
+vuart_tx
+I3i?zYOCAb;>S4Gfli1E0>3
+R2
+R3
+w1670333865
+8E:/code/workspace_FPGA/fifo_sum/rtl/uart_tx.v
+FE:/code/workspace_FPGA/fifo_sum/rtl/uart_tx.v
+L0 1
+R4
+r1
+31
+R5
+R1
+R6
+!i10b 1
+!s100 @ZS2@9IRDhUJVnXK=d0_;3
+!s85 0
+!s108 1670390778.136000
+!s107 E:/code/workspace_FPGA/fifo_sum/rtl/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/fifo_sum/rtl|E:/code/workspace_FPGA/fifo_sum/rtl/uart_tx.v|

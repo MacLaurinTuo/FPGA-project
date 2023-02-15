@@ -1,0 +1,77 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\full_adder\quartus_prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1654701796
+VWfSL@;FnP_fMSb13^8OC80
+04 13 4 work tb_full_adder fast 0
+=1-48ba4e63e9b7-62a0bee4-2ac-5234
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vfull_adder
+Z1 !s110 1654701795
+IIzzm=6;2`Q=nPY@g1fn@i0
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\full_adder\quartus_prj\simulation\modelsim
+w1654694406
+8E:/code/workspace_FPGA/full_adder/rtl/full_adder.v
+FE:/code/workspace_FPGA/full_adder/rtl/full_adder.v
+L0 1
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 OD7XS_LZlWJk8Jc:lG=aI0
+!s85 0
+!s108 1654701795.712000
+!s107 E:/code/workspace_FPGA/full_adder/rtl/full_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/full_adder/rtl|E:/code/workspace_FPGA/full_adder/rtl/full_adder.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/full_adder/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vhalf_adder
+I^l6Jf5Ff[N`WK>lU;]=X60
+R2
+R3
+w1654681956
+8E:/code/workspace_FPGA/half_adder/rtl/half_adder.v
+FE:/code/workspace_FPGA/half_adder/rtl/half_adder.v
+L0 1
+R4
+r1
+31
+R5
+R1
+!i10b 1
+!s100 3=]A2Sak1I0iJ>FcA3ZTj2
+!s85 0
+!s108 1654701795.215000
+!s107 E:/code/workspace_FPGA/half_adder/rtl/half_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/half_adder/rtl|E:/code/workspace_FPGA/half_adder/rtl/half_adder.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/half_adder/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_full_adder
+R1
+I^C?Bcio^[Gk2khLJ@DeUA0
+R2
+R3
+w1654701422
+8E:/code/workspace_FPGA/full_adder/quartus_prj/../sim/tb_full_adder.v
+FE:/code/workspace_FPGA/full_adder/quartus_prj/../sim/tb_full_adder.v
+L0 2
+R4
+r1
+31
+R5
+!i10b 1
+!s100 z[a_lYehDcioJ==Z4JGk62
+!s85 0
+!s108 1654701795.931000
+!s107 E:/code/workspace_FPGA/full_adder/quartus_prj/../sim/tb_full_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/full_adder/quartus_prj/../sim|E:/code/workspace_FPGA/full_adder/quartus_prj/../sim/tb_full_adder.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/full_adder/quartus_prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

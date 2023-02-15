@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Sat Jul 02 15:11:20 2022
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : fifo
+Top-level Entity Name : fifo
+Family : Cyclone IV GX
+Total logic elements : 154
+    Total combinational functions : 98
+    Dedicated logic registers : 111
+Total registers : 111
+Total pins : 51
+Total virtual pins : 0
+Total memory bits : 2,048
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

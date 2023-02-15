@@ -1,0 +1,1844 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
+
+// DATE "07/02/2022 14:28:12"
+
+// 
+// Device: Altera EP4CE10F17C8 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module fifo (
+	sys_clk,
+	wr_reg,
+	rd_reg,
+	pi_data,
+	full,
+	empty,
+	usedw,
+	po_data);
+input 	sys_clk;
+input 	wr_reg;
+input 	rd_reg;
+input 	[7:0] pi_data;
+output 	full;
+output 	empty;
+output 	[7:0] usedw;
+output 	[7:0] po_data;
+
+// Design Ports Information
+// full	=>  Location: PIN_L8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// empty	=>  Location: PIN_T5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// usedw[0]	=>  Location: PIN_R5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// usedw[1]	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// usedw[2]	=>  Location: PIN_N5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// usedw[3]	=>  Location: PIN_M9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// usedw[4]	=>  Location: PIN_K8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// usedw[5]	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// usedw[6]	=>  Location: PIN_R7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// usedw[7]	=>  Location: PIN_L7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// po_data[0]	=>  Location: PIN_T10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// po_data[1]	=>  Location: PIN_P6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// po_data[2]	=>  Location: PIN_T6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// po_data[3]	=>  Location: PIN_R6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// po_data[4]	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// po_data[5]	=>  Location: PIN_N8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// po_data[6]	=>  Location: PIN_T9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// po_data[7]	=>  Location: PIN_R9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// wr_reg	=>  Location: PIN_T7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// rd_reg	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sys_clk	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pi_data[0]	=>  Location: PIN_T8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pi_data[1]	=>  Location: PIN_N6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pi_data[2]	=>  Location: PIN_K9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pi_data[3]	=>  Location: PIN_L9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pi_data[4]	=>  Location: PIN_N9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pi_data[5]	=>  Location: PIN_P8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pi_data[6]	=>  Location: PIN_R8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pi_data[7]	=>  Location: PIN_R10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("fifo_8_1200mv_85c_v_slow.sdo");
+// synopsys translate_on
+
+wire \full~output_o ;
+wire \empty~output_o ;
+wire \usedw[0]~output_o ;
+wire \usedw[1]~output_o ;
+wire \usedw[2]~output_o ;
+wire \usedw[3]~output_o ;
+wire \usedw[4]~output_o ;
+wire \usedw[5]~output_o ;
+wire \usedw[6]~output_o ;
+wire \usedw[7]~output_o ;
+wire \po_data[0]~output_o ;
+wire \po_data[1]~output_o ;
+wire \po_data[2]~output_o ;
+wire \po_data[3]~output_o ;
+wire \po_data[4]~output_o ;
+wire \po_data[5]~output_o ;
+wire \po_data[6]~output_o ;
+wire \po_data[7]~output_o ;
+wire \sys_clk~input_o ;
+wire \sys_clk~inputclkctrl_outclk ;
+wire \rd_reg~input_o ;
+wire \wr_reg~input_o ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita7~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~0_combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~1_combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~2_combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~3_combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~1_combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2_combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~0_combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~3_combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ;
+wire \pi_data[0]~input_o ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita7~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6~combout ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6~COUT ;
+wire \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita7~combout ;
+wire \pi_data[1]~input_o ;
+wire \pi_data[2]~input_o ;
+wire \pi_data[3]~input_o ;
+wire \pi_data[4]~input_o ;
+wire \pi_data[5]~input_o ;
+wire \pi_data[6]~input_o ;
+wire \pi_data[7]~input_o ;
+wire [7:0] \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit ;
+wire [7:0] \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit ;
+wire [7:0] \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit ;
+wire [7:0] \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b ;
+
+wire [35:0] \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus ;
+
+assign \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [0] = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus [0];
+assign \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [1] = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus [1];
+assign \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [2] = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus [2];
+assign \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [3] = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus [3];
+assign \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [4] = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus [4];
+assign \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [5] = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus [5];
+assign \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [6] = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus [6];
+assign \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [7] = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus [7];
+
+// Location: IOOBUF_X13_Y0_N16
+cycloneive_io_obuf \full~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\full~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \full~output .bus_hold = "false";
+defparam \full~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X9_Y0_N2
+cycloneive_io_obuf \empty~output (
+	.i(!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\empty~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \empty~output .bus_hold = "false";
+defparam \empty~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X9_Y0_N9
+cycloneive_io_obuf \usedw[0]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\usedw[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \usedw[0]~output .bus_hold = "false";
+defparam \usedw[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X9_Y0_N23
+cycloneive_io_obuf \usedw[1]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\usedw[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \usedw[1]~output .bus_hold = "false";
+defparam \usedw[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X7_Y0_N23
+cycloneive_io_obuf \usedw[2]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\usedw[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \usedw[2]~output .bus_hold = "false";
+defparam \usedw[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X21_Y0_N23
+cycloneive_io_obuf \usedw[3]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\usedw[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \usedw[3]~output .bus_hold = "false";
+defparam \usedw[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X9_Y0_N16
+cycloneive_io_obuf \usedw[4]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [4]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\usedw[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \usedw[4]~output .bus_hold = "false";
+defparam \usedw[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X7_Y0_N9
+cycloneive_io_obuf \usedw[5]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [5]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\usedw[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \usedw[5]~output .bus_hold = "false";
+defparam \usedw[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y0_N2
+cycloneive_io_obuf \usedw[6]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [6]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\usedw[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \usedw[6]~output .bus_hold = "false";
+defparam \usedw[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y0_N9
+cycloneive_io_obuf \usedw[7]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [7]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\usedw[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \usedw[7]~output .bus_hold = "false";
+defparam \usedw[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X21_Y0_N2
+cycloneive_io_obuf \po_data[0]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [0]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\po_data[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \po_data[0]~output .bus_hold = "false";
+defparam \po_data[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X7_Y0_N2
+cycloneive_io_obuf \po_data[1]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [1]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\po_data[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \po_data[1]~output .bus_hold = "false";
+defparam \po_data[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y0_N16
+cycloneive_io_obuf \po_data[2]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [2]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\po_data[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \po_data[2]~output .bus_hold = "false";
+defparam \po_data[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y0_N23
+cycloneive_io_obuf \po_data[3]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [3]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\po_data[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \po_data[3]~output .bus_hold = "false";
+defparam \po_data[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y24_N16
+cycloneive_io_obuf \po_data[4]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [4]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\po_data[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \po_data[4]~output .bus_hold = "false";
+defparam \po_data[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y0_N23
+cycloneive_io_obuf \po_data[5]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [5]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\po_data[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \po_data[5]~output .bus_hold = "false";
+defparam \po_data[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y0_N16
+cycloneive_io_obuf \po_data[6]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [6]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\po_data[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \po_data[6]~output .bus_hold = "false";
+defparam \po_data[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y0_N23
+cycloneive_io_obuf \po_data[7]~output (
+	.i(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b [7]),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\po_data[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \po_data[7]~output .bus_hold = "false";
+defparam \po_data[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y11_N8
+cycloneive_io_ibuf \sys_clk~input (
+	.i(sys_clk),
+	.ibar(gnd),
+	.o(\sys_clk~input_o ));
+// synopsys translate_off
+defparam \sys_clk~input .bus_hold = "false";
+defparam \sys_clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G2
+cycloneive_clkctrl \sys_clk~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\sys_clk~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\sys_clk~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \sys_clk~inputclkctrl .clock_type = "global clock";
+defparam \sys_clk~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: IOIBUF_X13_Y0_N1
+cycloneive_io_ibuf \rd_reg~input (
+	.i(rd_reg),
+	.ibar(gnd),
+	.o(\rd_reg~input_o ));
+// synopsys translate_off
+defparam \rd_reg~input .bus_hold = "false";
+defparam \rd_reg~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X13_Y0_N22
+cycloneive_io_ibuf \wr_reg~input (
+	.i(wr_reg),
+	.ibar(gnd),
+	.o(\wr_reg~input_o ));
+// synopsys translate_off
+defparam \wr_reg~input .bus_hold = "false";
+defparam \wr_reg~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y2_N2
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout  = (\wr_reg~input_o  & !\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q )
+
+	.dataa(gnd),
+	.datab(\wr_reg~input_o ),
+	.datac(gnd),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q ),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq .lut_mask = 16'h00CC;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N4
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~combout  = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0] $ (((VCC) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout )))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~COUT  = CARRY(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout  $ 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0]))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0 .lut_mask = 16'h3399;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N6
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~COUT  & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1] $ (((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ) # (VCC))))) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~COUT  & (((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1]) # (GND))))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~COUT  = CARRY((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout  $ 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1])) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~COUT ))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1 .lut_mask = 16'h3C6F;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N8
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~COUT  & 
+// (((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2] & VCC)))) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~COUT  & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2] $ (((VCC) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout )))))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~COUT  = CARRY((!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~COUT  & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout  $ (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2]))))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2 .lut_mask = 16'hC309;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X13_Y2_N9
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[2] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[2] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N10
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~COUT  & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3] $ (((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ) # (VCC))))) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~COUT  & (((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3]) # (GND))))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~COUT  = CARRY((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout  $ 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3])) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~COUT ))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3 .lut_mask = 16'h3C6F;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X13_Y2_N11
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[3] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[3] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N12
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~COUT  & 
+// (((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [4] & VCC)))) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~COUT  & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [4] $ (((VCC) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout )))))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~COUT  = CARRY((!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~COUT  & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout  $ (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [4]))))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [4]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4 .lut_mask = 16'hC309;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X13_Y2_N13
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[4] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[4] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[4] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N14
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~COUT  & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [5] $ (((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ) # (VCC))))) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~COUT  & (((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [5]) # (GND))))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~COUT  = CARRY((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout  $ 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [5])) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~COUT ))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [5]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita4~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5 .lut_mask = 16'h3C6F;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X13_Y2_N15
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[5] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[5] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[5] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N16
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~COUT  & 
+// (((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [6] & VCC)))) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~COUT  & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [6] $ (((VCC) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout )))))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6~COUT  = CARRY((!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~COUT  & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout  $ (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [6]))))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [6]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita5~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6 .lut_mask = 16'hC309;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X13_Y2_N17
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[6] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[6] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N18
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita7 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita7~combout  = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [7] $ 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6~COUT )
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [7]),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita6~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita7~combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita7 .lut_mask = 16'h3C3C;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita7 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X13_Y2_N19
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[7] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita7~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[7] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[7] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N30
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~0 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~0_combout  = ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [6]) # 
+// ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [5]) # (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [7]))) # (!\rd_reg~input_o )
+
+	.dataa(\rd_reg~input_o ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [6]),
+	.datac(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [5]),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [7]),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~0 .lut_mask = 16'hFFFD;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N28
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~1 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~1_combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1]) # 
+// ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2]) # ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [4]) # 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3])))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1]),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2]),
+	.datac(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [4]),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3]),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~1 .lut_mask = 16'hFFFE;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N22
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~2 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~2_combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q  & 
+// (((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~0_combout ) # (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~1_combout )) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0])))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0]),
+	.datac(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~0_combout ),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~1_combout ),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~2 .lut_mask = 16'hAAA2;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X16_Y2_N28
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~3 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~3_combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q ) # ((\wr_reg~input_o ) # 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~2_combout ))
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q ),
+	.datac(\wr_reg~input_o ),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~2_combout ),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~3 .lut_mask = 16'hFFFC;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X16_Y2_N29
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~3_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N0
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout  = (\rd_reg~input_o  & (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q  $ 
+// (((!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q  & \wr_reg~input_o ))))) # (!\rd_reg~input_o  & (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q  & (\wr_reg~input_o )))
+
+	.dataa(\rd_reg~input_o ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q ),
+	.datac(\wr_reg~input_o ),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q ),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0 .lut_mask = 16'h9A30;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X13_Y2_N5
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[0] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[0] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X13_Y2_N7
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[1] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[1] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N2
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~1 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~1_combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [4] & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [6] & (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [5] & 
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3])))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [4]),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [6]),
+	.datac(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [5]),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3]),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~1 .lut_mask = 16'h8000;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N20
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2_combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1] & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2] & (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0] & 
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~1_combout )))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1]),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2]),
+	.datac(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0]),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~1_combout ),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2 .lut_mask = 16'h8000;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y2_N24
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~0 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~0_combout  = (!\rd_reg~input_o  & (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [7] & (\wr_reg~input_o  & 
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q )))
+
+	.dataa(\rd_reg~input_o ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [7]),
+	.datac(\wr_reg~input_o ),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q ),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~0 .lut_mask = 16'h4000;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y2_N28
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~3 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~3_combout  = (\rd_reg~input_o  & (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2_combout  & 
+// ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~0_combout )))) # (!\rd_reg~input_o  & ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q ) # 
+// ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2_combout  & \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~0_combout ))))
+
+	.dataa(\rd_reg~input_o ),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2_combout ),
+	.datac(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q ),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~0_combout ),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~3 .lut_mask = 16'hDC50;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X14_Y2_N29
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~3_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_full .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X16_Y2_N2
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout  = (\rd_reg~input_o  & \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\rd_reg~input_o ),
+	.datad(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~q ),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq .lut_mask = 16'hF000;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X16_Y0_N1
+cycloneive_io_ibuf \pi_data[0]~input (
+	.i(pi_data[0]),
+	.ibar(gnd),
+	.o(\pi_data[0]~input_o ));
+// synopsys translate_off
+defparam \pi_data[0]~input .bus_hold = "false";
+defparam \pi_data[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y2_N12
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~combout  = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [0] $ (VCC)
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~COUT  = CARRY(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [0])
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [0]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0 .lut_mask = 16'h55AA;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X14_Y2_N13
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[0] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[0] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y2_N14
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [1] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~COUT )) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [1] & 
+// ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~COUT ) # (GND)))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~COUT  = CARRY((!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~COUT ) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [1]))
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [1]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1 .lut_mask = 16'h3C3F;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X14_Y2_N15
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[1] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[1] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y2_N16
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [2] & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~COUT  $ (GND))) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [2] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~COUT  & VCC))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~COUT  = CARRY((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [2] & 
+// !\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~COUT ))
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [2]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2 .lut_mask = 16'hC30C;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X14_Y2_N17
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[2] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[2] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y2_N18
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [3] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~COUT )) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [3] & 
+// ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~COUT ) # (GND)))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~COUT  = CARRY((!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~COUT ) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [3]))
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [3]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3 .lut_mask = 16'h3C3F;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X14_Y2_N19
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[3] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[3] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y2_N20
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [4] & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~COUT  $ (GND))) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [4] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~COUT  & VCC))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~COUT  = CARRY((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [4] & 
+// !\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~COUT ))
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [4]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4 .lut_mask = 16'hC30C;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X14_Y2_N21
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[4] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[4] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[4] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y2_N22
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [5] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~COUT )) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [5] & 
+// ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~COUT ) # (GND)))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~COUT  = CARRY((!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~COUT ) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [5]))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [5]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita4~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5 .lut_mask = 16'h5A5F;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X14_Y2_N23
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[5] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[5] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[5] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y2_N24
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [6] & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~COUT  $ (GND))) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [6] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~COUT  & VCC))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6~COUT  = CARRY((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [6] & 
+// !\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~COUT ))
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [6]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita5~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6 .lut_mask = 16'hC30C;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X14_Y2_N25
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[6] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[6] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y2_N26
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita7 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita7~combout  = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [7] $ 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6~COUT )
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [7]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita6~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita7~combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita7 .lut_mask = 16'h5A5A;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita7 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X14_Y2_N27
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[7] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita7~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[7] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit[7] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X16_Y2_N10
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~combout  = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [0] $ (VCC)
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~COUT  = CARRY(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [0])
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [0]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0 .lut_mask = 16'h55AA;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X16_Y2_N11
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[0] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[0] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X16_Y2_N12
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [1] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~COUT )) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [1] & 
+// ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~COUT ) # (GND)))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~COUT  = CARRY((!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~COUT ) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [1]))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [1]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1 .lut_mask = 16'h5A5F;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X16_Y2_N13
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[1] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[1] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X16_Y2_N14
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [2] & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~COUT  $ (GND))) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [2] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~COUT  & VCC))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~COUT  = CARRY((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [2] & 
+// !\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~COUT ))
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [2]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2 .lut_mask = 16'hC30C;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X16_Y2_N15
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[2] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[2] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X16_Y2_N16
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [3] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~COUT )) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [3] & 
+// ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~COUT ) # (GND)))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~COUT  = CARRY((!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~COUT ) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [3]))
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [3]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3 .lut_mask = 16'h3C3F;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X16_Y2_N17
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[3] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[3] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X16_Y2_N18
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [4] & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~COUT  $ (GND))) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [4] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~COUT  & VCC))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~COUT  = CARRY((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [4] & 
+// !\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~COUT ))
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [4]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4 .lut_mask = 16'hC30C;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X16_Y2_N19
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[4] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[4] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[4] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X16_Y2_N20
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [5] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~COUT )) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [5] & 
+// ((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~COUT ) # (GND)))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~COUT  = CARRY((!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~COUT ) # 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [5]))
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [5]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita4~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5 .lut_mask = 16'h3C3F;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X16_Y2_N21
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[5] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[5] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[5] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X16_Y2_N22
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6~combout  = (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [6] & 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~COUT  $ (GND))) # (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [6] & 
+// (!\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~COUT  & VCC))
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6~COUT  = CARRY((\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [6] & 
+// !\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~COUT ))
+
+	.dataa(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [6]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita5~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6~combout ),
+	.cout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6~COUT ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6 .lut_mask = 16'hA50A;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X16_Y2_N23
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[6] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[6] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X16_Y2_N24
+cycloneive_lcell_comb \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita7 (
+// Equation(s):
+// \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita7~combout  = \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [7] $ 
+// (\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6~COUT )
+
+	.dataa(gnd),
+	.datab(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [7]),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita6~COUT ),
+	.combout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita7~combout ),
+	.cout());
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita7 .lut_mask = 16'h3C3C;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita7 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X16_Y2_N25
+dffeas \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[7] (
+	.clk(\sys_clk~inputclkctrl_outclk ),
+	.d(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita7~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[7] .is_wysiwyg = "true";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit[7] .power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y0_N15
+cycloneive_io_ibuf \pi_data[1]~input (
+	.i(pi_data[1]),
+	.ibar(gnd),
+	.o(\pi_data[1]~input_o ));
+// synopsys translate_off
+defparam \pi_data[1]~input .bus_hold = "false";
+defparam \pi_data[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X18_Y0_N8
+cycloneive_io_ibuf \pi_data[2]~input (
+	.i(pi_data[2]),
+	.ibar(gnd),
+	.o(\pi_data[2]~input_o ));
+// synopsys translate_off
+defparam \pi_data[2]~input .bus_hold = "false";
+defparam \pi_data[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X18_Y0_N1
+cycloneive_io_ibuf \pi_data[3]~input (
+	.i(pi_data[3]),
+	.ibar(gnd),
+	.o(\pi_data[3]~input_o ));
+// synopsys translate_off
+defparam \pi_data[3]~input .bus_hold = "false";
+defparam \pi_data[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X21_Y0_N15
+cycloneive_io_ibuf \pi_data[4]~input (
+	.i(pi_data[4]),
+	.ibar(gnd),
+	.o(\pi_data[4]~input_o ));
+// synopsys translate_off
+defparam \pi_data[4]~input .bus_hold = "false";
+defparam \pi_data[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X16_Y0_N15
+cycloneive_io_ibuf \pi_data[5]~input (
+	.i(pi_data[5]),
+	.ibar(gnd),
+	.o(\pi_data[5]~input_o ));
+// synopsys translate_off
+defparam \pi_data[5]~input .bus_hold = "false";
+defparam \pi_data[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X16_Y0_N8
+cycloneive_io_ibuf \pi_data[6]~input (
+	.i(pi_data[6]),
+	.ibar(gnd),
+	.o(\pi_data[6]~input_o ));
+// synopsys translate_off
+defparam \pi_data[6]~input .bus_hold = "false";
+defparam \pi_data[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X21_Y0_N8
+cycloneive_io_ibuf \pi_data[7]~input (
+	.i(pi_data[7]),
+	.ibar(gnd),
+	.o(\pi_data[7]~input_o ));
+// synopsys translate_off
+defparam \pi_data[7]~input .bus_hold = "false";
+defparam \pi_data[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: M9K_X15_Y2_N0
+cycloneive_ram_block \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 (
+	.portawe(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.portare(vcc),
+	.portaaddrstall(gnd),
+	.portbwe(gnd),
+	.portbre(vcc),
+	.portbaddrstall(gnd),
+	.clk0(\sys_clk~inputclkctrl_outclk ),
+	.clk1(\sys_clk~inputclkctrl_outclk ),
+	.ena0(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_wreq~combout ),
+	.ena1(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|valid_rreq~combout ),
+	.ena2(vcc),
+	.ena3(vcc),
+	.clr0(gnd),
+	.clr1(gnd),
+	.portadatain({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,\pi_data[7]~input_o ,\pi_data[6]~input_o ,\pi_data[5]~input_o ,\pi_data[4]~input_o ,\pi_data[3]~input_o ,\pi_data[2]~input_o ,\pi_data[1]~input_o ,\pi_data[0]~input_o }),
+	.portaaddr({\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [7],\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [6],\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [5],
+\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [4],\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [3],\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [2],
+\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [1],\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit [0]}),
+	.portabyteenamasks(1'b1),
+	.portbdatain(36'b000000000000000000000000000000000000),
+	.portbaddr({\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [7],\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [6],
+\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [5],\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [4],
+\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [3],\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [2],
+\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [1],\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [0]}),
+	.portbbyteenamasks(1'b1),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.portadataout(),
+	.portbdataout(\scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus ));
+// synopsys translate_off
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .clk0_core_clock_enable = "ena0";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .clk1_core_clock_enable = "ena1";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .clk1_input_clock_enable = "ena1";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .data_interleave_offset_in_bits = 1;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .data_interleave_width_in_bits = 1;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .logical_ram_name = "scfifo_8x256:scfifo_8x256_inst|scfifo:scfifo_component|scfifo_dm31:auto_generated|a_dpfifo_ks31:dpfifo|dpram_4711:FIFOram|altsyncram_q0k1:altsyncram1|ALTSYNCRAM";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .mixed_port_feed_through_mode = "dont_care";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .operation_mode = "dual_port";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_address_clear = "none";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_address_width = 8;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_byte_enable_clock = "none";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_data_out_clear = "none";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_data_out_clock = "none";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_data_width = 36;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_first_address = 0;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_first_bit_number = 0;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_last_address = 255;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_logical_ram_depth = 256;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_logical_ram_width = 8;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_a_read_during_write_mode = "new_data_with_nbe_read";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_address_clear = "none";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_address_clock = "clock1";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_address_width = 8;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_data_out_clear = "none";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_data_out_clock = "none";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_data_width = 36;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_first_address = 0;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_first_bit_number = 0;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_last_address = 255;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_logical_ram_depth = 256;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_logical_ram_width = 8;
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_read_during_write_mode = "new_data_with_nbe_read";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .port_b_read_enable_clock = "clock1";
+defparam \scfifo_8x256_inst|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0 .ram_block_type = "M9K";
+// synopsys translate_on
+
+assign full = \full~output_o ;
+
+assign empty = \empty~output_o ;
+
+assign usedw[0] = \usedw[0]~output_o ;
+
+assign usedw[1] = \usedw[1]~output_o ;
+
+assign usedw[2] = \usedw[2]~output_o ;
+
+assign usedw[3] = \usedw[3]~output_o ;
+
+assign usedw[4] = \usedw[4]~output_o ;
+
+assign usedw[5] = \usedw[5]~output_o ;
+
+assign usedw[6] = \usedw[6]~output_o ;
+
+assign usedw[7] = \usedw[7]~output_o ;
+
+assign po_data[0] = \po_data[0]~output_o ;
+
+assign po_data[1] = \po_data[1]~output_o ;
+
+assign po_data[2] = \po_data[2]~output_o ;
+
+assign po_data[3] = \po_data[3]~output_o ;
+
+assign po_data[4] = \po_data[4]~output_o ;
+
+assign po_data[5] = \po_data[5]~output_o ;
+
+assign po_data[6] = \po_data[6]~output_o ;
+
+assign po_data[7] = \po_data[7]~output_o ;
+
+endmodule

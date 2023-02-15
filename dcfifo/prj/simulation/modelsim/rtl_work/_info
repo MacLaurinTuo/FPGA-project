@@ -1,0 +1,77 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\dcfifo\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1656749198
+V4?bLzzheLkVVIfg[:kH@?2
+04 7 4 work tb_fifo fast 0
+=1-48ba4e63e9b7-62bffc8e-27f-5278
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vdcfifo_8x256to16x128
+Z1 !s110 1656749197
+I8aKlc^_N_BeY0LY8UQWXF1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\dcfifo\prj\simulation\modelsim
+w1656745848
+8E:/code/workspace_FPGA/dcfifo/prj/dcfifo_8x256to16x128/dcfifo_8x256to16x128.v
+FE:/code/workspace_FPGA/dcfifo/prj/dcfifo_8x256to16x128/dcfifo_8x256to16x128.v
+L0 39
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 Vd;A8ZYbIFC@4M<ZH][zX0
+!s85 0
+!s108 1656749197.736000
+!s107 E:/code/workspace_FPGA/dcfifo/prj/dcfifo_8x256to16x128/dcfifo_8x256to16x128.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/dcfifo/prj/dcfifo_8x256to16x128|E:/code/workspace_FPGA/dcfifo/prj/dcfifo_8x256to16x128/dcfifo_8x256to16x128.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/dcfifo/prj/dcfifo_8x256to16x128 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vfifo
+Iej9FTl1QW[gf?URf@@miP2
+R2
+R3
+w1656744448
+8E:/code/workspace_FPGA/dcfifo/rtl/fifo.v
+FE:/code/workspace_FPGA/dcfifo/rtl/fifo.v
+L0 1
+R4
+r1
+31
+R5
+R1
+!i10b 1
+!s100 I[MnB1hQkY489kl>_[YA40
+!s85 0
+!s108 1656749197.545000
+!s107 E:/code/workspace_FPGA/dcfifo/rtl/fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/dcfifo/rtl|E:/code/workspace_FPGA/dcfifo/rtl/fifo.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/dcfifo/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_fifo
+R1
+IIa[4bIm@gFf@U:CAGdX0Q3
+R2
+R3
+w1656749161
+8E:/code/workspace_FPGA/dcfifo/prj/../sim/tb_fifo.v
+FE:/code/workspace_FPGA/dcfifo/prj/../sim/tb_fifo.v
+L0 2
+R4
+r1
+31
+R5
+!i10b 1
+!s100 f1D7HWY3LPY^8m?142=<[2
+!s85 0
+!s108 1656749197.930000
+!s107 E:/code/workspace_FPGA/dcfifo/prj/../sim/tb_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/dcfifo/prj/../sim|E:/code/workspace_FPGA/dcfifo/prj/../sim/tb_fifo.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/dcfifo/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

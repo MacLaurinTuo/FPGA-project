@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'vga_clk_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 29.697
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'vga_clk_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sys_clk'
+Slack : 9.934
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga_clk_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.722
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'vga_clk_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 30.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'vga_clk_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sys_clk'
+Slack : 9.943
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga_clk_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.720
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'vga_clk_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 35.430
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'vga_clk_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sys_clk'
+Slack : 9.594
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga_clk_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.732
+TNS   : 0.000
+
+------------------------------------------------------------

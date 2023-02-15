@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Dec 13 19:40:57 2022
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : hdmi_rom_pic
+Top-level Entity Name : hdmi_rom_pic
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 503 / 10,320 ( 5 % )
+    Total combinational functions : 482 / 10,320 ( 5 % )
+    Dedicated logic registers : 195 / 10,320 ( 2 % )
+Total registers : 211
+Total pins : 12 / 180 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 262,144 / 423,936 ( 62 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

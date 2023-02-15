@@ -1,0 +1,137 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\spi_flash\spi_flash_be\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1662611450
+V=YA0ACel;P>eH=QkQJ]m41
+04 16 4 work tb_flash_be_ctrl fast 0
+=1-48ba4e63e9b7-63196ffa-118-4ed8
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vacdc_check
+Z1 !s110 1662611443
+IN1dU1JE>AkAgg9TH9jcG=3
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\spi_flash\spi_flash_be\prj\simulation\modelsim
+w1086255684
+8E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/acdc_check.v
+FE:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/acdc_check.v
+L0 20
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z6 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 dAX[XSkf6z[HeD=kORS120
+!s85 0
+!s108 1662611443.657000
+!s107 E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/parameter.v|E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/acdc_check.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12|E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/acdc_check.v|
+vflash_be_ctrl
+ILOIU>j4AlTk06FAP`<b4X0
+R2
+R3
+w1660101571
+8E:/code/workspace_FPGA/spi_flash/spi_flash_be/rtl/flash_be_ctrl.v
+FE:/code/workspace_FPGA/spi_flash/spi_flash_be/rtl/flash_be_ctrl.v
+L0 1
+R4
+r1
+31
+R5
+R1
+!i10b 1
+!s100 Z1F@^NjO8U_nFNZ<S?6ho3
+!s85 0
+!s108 1662611443.214000
+!s107 E:/code/workspace_FPGA/spi_flash/spi_flash_be/rtl/flash_be_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/spi_flash/spi_flash_be/rtl|E:/code/workspace_FPGA/spi_flash/spi_flash_be/rtl/flash_be_ctrl.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/spi_flash/spi_flash_be/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vinternal_logic
+I2^=;geh3F<hQSf9hbid2f3
+R2
+R3
+w1086255746
+8E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/internal_logic.v
+FE:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/internal_logic.v
+L0 20
+R4
+r1
+31
+R5
+R6
+Z7 !s110 1662611445
+!i10b 1
+!s100 BMeh^K0NS>2hhWK;YXWm73
+!s85 0
+!s108 1662611445.168000
+!s107 E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/parameter.v|E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/internal_logic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12|E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/internal_logic.v|
+vm25p16
+R7
+I<3]n]9fZ7T=[n1k[IE3ko0
+R2
+R3
+w1086255776
+8E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/M25p16.v
+FE:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/M25p16.v
+L0 20
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 [EIeg@V`Jo61?Yf8_?1b80
+!s85 0
+!s108 1662611445.443000
+!s107 E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/parameter.v|E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/M25p16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12|E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/M25p16.v|
+vmemory_access
+R7
+IWjRz46nNEj;VcW^j_;V9T1
+R2
+R3
+w1086255824
+8E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/memory_access.v
+FE:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/memory_access.v
+L0 20
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 5<MH?c[`[z5jH3e0AW>MP2
+!s85 0
+!s108 1662611445.672000
+!s107 E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/parameter.v|E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/memory_access.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12|E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/M25P16_VG_V12/memory_access.v|
+vtb_flash_be_ctrl
+R1
+Ijen@Kgj8Md@>=4V7M_T:j1
+R2
+R3
+w1662611419
+8E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/tb_flash_be_ctrl.v
+FE:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/tb_flash_be_ctrl.v
+L0 2
+R4
+r1
+31
+R5
+!i10b 1
+!s100 0bn164D6U?V=jGdAhjc8G1
+!s85 0
+!s108 1662611443.434000
+!s107 E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/tb_flash_be_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim|E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim/tb_flash_be_ctrl.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/spi_flash/spi_flash_be/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

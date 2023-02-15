@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\flip_flop\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1654758015
+V0<Z26GKi7K8QEdKc]KJWB0
+04 12 4 work tb_flip_flop fast 0
+=3-48ba4e63e9b7-62a19a7f-113-4194
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vflip_flop
+ImCdHl:B^2O;0]feSQND9l0
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:\code\workspace_FPGA\flip_flop\prj\simulation\modelsim
+w1654757986
+8E:/code/workspace_FPGA/flip_flop/rtl/flip_flop.v
+FE:/code/workspace_FPGA/flip_flop/rtl/flip_flop.v
+L0 1
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s110 1654758000
+!i10b 1
+!s100 @n9E3z6lR2o9FF[<@WMhn2
+!s85 0
+!s108 1654758000.932000
+!s107 E:/code/workspace_FPGA/flip_flop/rtl/flip_flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/flip_flop/rtl|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|E:/code/workspace_FPGA/flip_flop/rtl/flip_flop.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/flip_flop/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_flip_flop
+In<K6nRW4WBDLK;RC[=e5z2
+R1
+R2
+w1654757357
+8E:/code/workspace_FPGA/flip_flop/prj/../sim/tb_flip_flop.v
+FE:/code/workspace_FPGA/flip_flop/prj/../sim/tb_flip_flop.v
+L0 2
+R3
+r1
+31
+R4
+!s110 1654757527
+!i10b 1
+!s100 3E9@WeG8[0KU=G@6Q8GJR3
+!s85 0
+!s108 1654757527.941000
+!s107 E:/code/workspace_FPGA/flip_flop/prj/../sim/tb_flip_flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/flip_flop/prj/../sim|E:/code/workspace_FPGA/flip_flop/prj/../sim/tb_flip_flop.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/flip_flop/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\breath_led\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1661698084
+VlFzC^OC^mPP5Z`neHj6o<1
+04 13 4 work tb_breath_led fast 0
+=1-48ba4e63e9b7-630b8024-193-8d44
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vbreath_led
+Ik0:QfR<`L8d;Y<DBf]9J^1
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:\code\workspace_FPGA\breath_led\prj\simulation\modelsim
+w1655110532
+8E:/code/workspace_FPGA/breath_led/rtl/breath_led.v
+FE:/code/workspace_FPGA/breath_led/rtl/breath_led.v
+L0 1
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s110 1661698082
+!i10b 1
+!s100 FDKO9O`Ac8PonS3z29jLn0
+!s85 0
+!s108 1661698082.825000
+!s107 E:/code/workspace_FPGA/breath_led/rtl/breath_led.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/breath_led/rtl|E:/code/workspace_FPGA/breath_led/rtl/breath_led.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/breath_led/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_breath_led
+IT9FH^m6K@IYzbmjjj5kda2
+R1
+R2
+w1655111002
+8E:/code/workspace_FPGA/breath_led/prj/../sim/tb_breath_led.v
+FE:/code/workspace_FPGA/breath_led/prj/../sim/tb_breath_led.v
+L0 2
+R3
+r1
+31
+R4
+!s110 1661698083
+!i10b 1
+!s100 ZHVd2iEo7;QlVObl5l>PH2
+!s85 0
+!s108 1661698083.152000
+!s107 E:/code/workspace_FPGA/breath_led/prj/../sim/tb_breath_led.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/breath_led/prj/../sim|E:/code/workspace_FPGA/breath_led/prj/../sim/tb_breath_led.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/breath_led/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

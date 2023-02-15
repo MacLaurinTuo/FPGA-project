@@ -1,0 +1,15 @@
+|blocking
+sys_clk => out[0]~reg0.CLK
+sys_clk => out[1]~reg0.CLK
+sys_clk => in_reg[0].CLK
+sys_clk => in_reg[1].CLK
+sys_rst_n => out[0]~reg0.ACLR
+sys_rst_n => out[1]~reg0.ACLR
+sys_rst_n => in_reg[0].ACLR
+sys_rst_n => in_reg[1].ACLR
+in[0] => in_reg[0].DATAIN
+in[1] => in_reg[1].DATAIN
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

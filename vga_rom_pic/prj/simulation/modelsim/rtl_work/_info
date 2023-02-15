@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\vga_rom_pic\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1670921880
+V^RJE^Cl;Zkoc`21ePjYd?1
+04 14 4 work tb_vga_rom_pic fast 0
+=1-48ba4e63e9b7-63983e98-18a-5d84
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vrom_pic
+IMHhIRblngmFBdMXA=n<143
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:\code\workspace_FPGA\vga_rom_pic\prj\simulation\modelsim
+w1670848401
+8E:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/rom_pic/rom_pic.v
+FE:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/rom_pic/rom_pic.v
+L0 39
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s110 1670921879
+!i10b 1
+!s100 3HFX9Cm[2IF3a^N@GIPza0
+!s85 0
+!s108 1670921879.023000
+!s107 E:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/rom_pic/rom_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/rom_pic|E:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/rom_pic/rom_pic.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/rom_pic -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_vga_rom_pic
+R5
+I2k348ICz5QO9fV]<cco2C2
+R1
+R2
+w1670918081
+8E:/code/workspace_FPGA/vga_rom_pic/prj/../sim/tb_vga_rom_pic.v
+FE:/code/workspace_FPGA/vga_rom_pic/prj/../sim/tb_vga_rom_pic.v
+L0 3
+R3
+r1
+31
+R4
+!i10b 1
+!s100 B@=XPEZ_k1Cm1hDX8n@1f1
+!s85 0
+!s108 1670921879.691000
+!s107 E:/code/workspace_FPGA/vga_rom_pic/prj/../sim/tb_vga_rom_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_rom_pic/prj/../sim|E:/code/workspace_FPGA/vga_rom_pic/prj/../sim/tb_vga_rom_pic.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/vga_rom_pic/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vvga_clk
+R5
+IBKFn28U>4AYmP1IB^:z5A2
+R1
+R2
+w1670917295
+8E:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/vga_clk/vga_clk.v
+FE:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/vga_clk/vga_clk.v
+L0 39
+R3
+r1
+31
+R4
+!i10b 1
+!s100 U6idmE>c>=nhSBINk7WRS3
+!s85 0
+!s108 1670921879.238000
+!s107 E:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/vga_clk/vga_clk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/vga_clk|E:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/vga_clk/vga_clk.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/vga_rom_pic/prj/ip_core/vga_clk -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vvga_clk_altpll
+R5
+IOYU]ciZz^]WL@ze[<T;ZT0
+R1
+R2
+w1670917323
+8E:/code/workspace_FPGA/vga_rom_pic/prj/db/vga_clk_altpll.v
+FE:/code/workspace_FPGA/vga_rom_pic/prj/db/vga_clk_altpll.v
+L0 30
+R3
+r1
+31
+R4
+!i10b 1
+!s100 CC4SnVV=ZeNaQS2zg:P^T1
+!s85 0
+!s108 1670921879.468000
+!s107 E:/code/workspace_FPGA/vga_rom_pic/prj/db/vga_clk_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_rom_pic/prj/db|E:/code/workspace_FPGA/vga_rom_pic/prj/db/vga_clk_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/vga_rom_pic/prj/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vvga_ctrl
+Z6 !s110 1670921878
+IIm?[l8o;4c8D:ZUDeCDU81
+R1
+R2
+w1669375292
+8E:/code/workspace_FPGA/vga_rom_pic/rtl/vga_ctrl.v
+FE:/code/workspace_FPGA/vga_rom_pic/rtl/vga_ctrl.v
+L0 1
+R3
+r1
+31
+R4
+Z7 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/vga_rom_pic/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 Q^7ObcT;o]HWEFF]@:8MX0
+!s85 0
+!s108 1670921878.773000
+!s107 E:/code/workspace_FPGA/vga_rom_pic/rtl/vga_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_rom_pic/rtl|E:/code/workspace_FPGA/vga_rom_pic/rtl/vga_ctrl.v|
+vvga_pic
+R6
+Ig9cUBD?eJV50lE6RhJZN`0
+R1
+R2
+w1670916915
+8E:/code/workspace_FPGA/vga_rom_pic/rtl/vga_pic.v
+FE:/code/workspace_FPGA/vga_rom_pic/rtl/vga_pic.v
+L0 1
+R3
+r1
+31
+R4
+R7
+!i10b 1
+!s100 dJQHf=G0`1_<SH21Z6hTM3
+!s85 0
+!s108 1670921878.533000
+!s107 E:/code/workspace_FPGA/vga_rom_pic/rtl/vga_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_rom_pic/rtl|E:/code/workspace_FPGA/vga_rom_pic/rtl/vga_pic.v|
+vvga_rom_pic
+I=^feJF9WV:Wo_`RBV22oc2
+R1
+R2
+w1670917079
+8E:/code/workspace_FPGA/vga_rom_pic/rtl/vga_rom_pic.v
+FE:/code/workspace_FPGA/vga_rom_pic/rtl/vga_rom_pic.v
+L0 1
+R3
+r1
+31
+R4
+R6
+R7
+!i10b 1
+!s100 ZG1V7g^AFGGJ3Y[bN^]dY3
+!s85 0
+!s108 1670921878.011000
+!s107 E:/code/workspace_FPGA/vga_rom_pic/rtl/vga_rom_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/vga_rom_pic/rtl|E:/code/workspace_FPGA/vga_rom_pic/rtl/vga_rom_pic.v|

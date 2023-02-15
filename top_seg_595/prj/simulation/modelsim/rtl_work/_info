@@ -1,0 +1,86 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\top_seg_595\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+VUF@BZAhIVn5MI4CElQUf72
+04 11 4 work tb_bcd_8421 fast 0
+=4-48ba4e63e9b7-62b04436-218-30b8
+Z1 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+n@_opt
+Z2 OL;O;10.2;57
+Z3 dE:\code\workspace_FPGA\top_seg_595\prj\simulation\modelsim
+!s110 1655718966
+T_opt1
+!s110 1655912467
+VVfW:m0^7FfF9VDEz<j?]=3
+04 14 4 work tb_seg_dynamic fast 0
+=1-48ba4e63e9b7-62b33813-61-1d10
+R1
+n@_opt1
+R2
+vbcd_8421
+Z4 !s110 1655912454
+I=7W@hcBA1lzGf;GEb9ORW3
+Z5 V`JN@9S9cnhjKRR_L]QIcM3
+R3
+w1655732423
+8E:/code/workspace_FPGA/top_seg_595/rtl/bcd_8421.v
+FE:/code/workspace_FPGA/top_seg_595/rtl/bcd_8421.v
+L0 1
+Z6 OL;L;10.2;57
+r1
+31
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z8 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/top_seg_595/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 njWi>O^ihH>g1k4k<;Td^3
+!s85 0
+!s108 1655912454.931000
+!s107 E:/code/workspace_FPGA/top_seg_595/rtl/bcd_8421.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/top_seg_595/rtl|E:/code/workspace_FPGA/top_seg_595/rtl/bcd_8421.v|
+vseg_dynamic
+IgN25Mo?aTaQ2B>6=z7fck0
+R5
+R3
+w1655907236
+8E:/code/workspace_FPGA/top_seg_595/rtl/seg_dynamic.v
+FE:/code/workspace_FPGA/top_seg_595/rtl/seg_dynamic.v
+L0 1
+R6
+r1
+31
+R7
+R4
+R8
+!i10b 1
+!s100 C5W2X<f4XX^8OEg9Z8j6Z3
+!s85 0
+!s108 1655912454.522000
+!s107 E:/code/workspace_FPGA/top_seg_595/rtl/seg_dynamic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/top_seg_595/rtl|E:/code/workspace_FPGA/top_seg_595/rtl/seg_dynamic.v|
+vtb_seg_dynamic
+IDT[=PRAZAGVo:75fjciml3
+R5
+R3
+w1655912414
+8E:/code/workspace_FPGA/top_seg_595/prj/../sim/tb_seg_dynamic.v
+FE:/code/workspace_FPGA/top_seg_595/prj/../sim/tb_seg_dynamic.v
+L0 2
+R6
+r1
+31
+R7
+!s110 1655912455
+!i10b 1
+!s100 fZzmzk<BXhYiFG3YkXdT72
+!s85 0
+!s108 1655912455.406000
+!s107 E:/code/workspace_FPGA/top_seg_595/prj/../sim/tb_seg_dynamic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/top_seg_595/prj/../sim|E:/code/workspace_FPGA/top_seg_595/prj/../sim/tb_seg_dynamic.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/top_seg_595/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

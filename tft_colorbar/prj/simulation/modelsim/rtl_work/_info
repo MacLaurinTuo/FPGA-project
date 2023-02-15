@@ -1,0 +1,137 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\tft_colorbar\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1669963213
+VUMkA2XYlQ;V0=H[LUA7Q`3
+04 15 4 work tb_tft_colorbar fast 0
+=1-48ba4e63e9b7-63899dca-15f-5944
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vclk_gen
+Z1 !s110 1669963207
+Il8UjIJ_@2X;G:8ZNL7>]>1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\tft_colorbar\prj\simulation\modelsim
+w1669962383
+8E:/code/workspace_FPGA/tft_colorbar/prj/ipcore/clk_gen/clk_gen.v
+FE:/code/workspace_FPGA/tft_colorbar/prj/ipcore/clk_gen/clk_gen.v
+L0 39
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 bfK6P@MSk`JF@LGKHlE>T0
+!s85 0
+!s108 1669963207.205000
+!s107 E:/code/workspace_FPGA/tft_colorbar/prj/ipcore/clk_gen/clk_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_colorbar/prj/ipcore/clk_gen|E:/code/workspace_FPGA/tft_colorbar/prj/ipcore/clk_gen/clk_gen.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_colorbar/prj/ipcore/clk_gen -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vclk_gen_altpll
+R1
+IIC0j5DnglOSVKZC0CNHh82
+R2
+R3
+w1669962817
+8E:/code/workspace_FPGA/tft_colorbar/prj/db/clk_gen_altpll.v
+FE:/code/workspace_FPGA/tft_colorbar/prj/db/clk_gen_altpll.v
+L0 30
+R4
+r1
+31
+R5
+!i10b 1
+!s100 ]hV?[2bDz_0Ic<z0B0K<o0
+!s85 0
+!s108 1669963207.411000
+!s107 E:/code/workspace_FPGA/tft_colorbar/prj/db/clk_gen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_colorbar/prj/db|E:/code/workspace_FPGA/tft_colorbar/prj/db/clk_gen_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_colorbar/prj/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_tft_colorbar
+R1
+IeEIgm?X0c>Y1XfB?<C1j>0
+R2
+R3
+w1669963003
+8E:/code/workspace_FPGA/tft_colorbar/prj/../sim/tb_tft_colorbar.v
+FE:/code/workspace_FPGA/tft_colorbar/prj/../sim/tb_tft_colorbar.v
+L0 3
+R4
+r1
+31
+R5
+!i10b 1
+!s100 ljfFnnkD^>oiOd8YkOobL2
+!s85 0
+!s108 1669963207.609000
+!s107 E:/code/workspace_FPGA/tft_colorbar/prj/../sim/tb_tft_colorbar.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_colorbar/prj/../sim|E:/code/workspace_FPGA/tft_colorbar/prj/../sim/tb_tft_colorbar.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_colorbar/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtft_colorbar
+I3AMD=OK2XLR;CMl>L>Ha?3
+R2
+R3
+w1669962805
+8E:/code/workspace_FPGA/tft_colorbar/rtl/tft_colorbar.v
+FE:/code/workspace_FPGA/tft_colorbar/rtl/tft_colorbar.v
+L0 1
+R4
+r1
+31
+R5
+Z6 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_colorbar/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+R1
+!i10b 1
+!s100 DzVikEU<[7I5e2d]0@C]O1
+!s85 0
+!s108 1669963207.011000
+!s107 E:/code/workspace_FPGA/tft_colorbar/rtl/tft_colorbar.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_colorbar/rtl|E:/code/workspace_FPGA/tft_colorbar/rtl/tft_colorbar.v|
+vtft_ctrl
+Z7 !s110 1669963206
+I8EAL=HS>1_GO42jD=MjMh3
+R2
+R3
+w1669962636
+8E:/code/workspace_FPGA/tft_colorbar/rtl/tft_ctrl.v
+FE:/code/workspace_FPGA/tft_colorbar/rtl/tft_ctrl.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 TX1gXz50PC7HULCZnZgDU0
+!s85 0
+!s108 1669963206.816000
+!s107 E:/code/workspace_FPGA/tft_colorbar/rtl/tft_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_colorbar/rtl|E:/code/workspace_FPGA/tft_colorbar/rtl/tft_ctrl.v|
+vtft_pic
+I]CzN9_3j^V6_3`968BziW3
+R2
+R3
+w1669961846
+8E:/code/workspace_FPGA/tft_colorbar/rtl/tft_pic.v
+FE:/code/workspace_FPGA/tft_colorbar/rtl/tft_pic.v
+L0 1
+R4
+r1
+31
+R5
+R7
+R6
+!i10b 1
+!s100 0UI6Glz`1e=6AKz`E5DAN1
+!s85 0
+!s108 1669963206.607000
+!s107 E:/code/workspace_FPGA/tft_colorbar/rtl/tft_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_colorbar/rtl|E:/code/workspace_FPGA/tft_colorbar/rtl/tft_pic.v|

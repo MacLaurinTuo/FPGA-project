@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\tft_rom_pic_dynamic\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1671183297
+VBdjJ5cRkTD]ainRCE`Z3o3
+04 22 4 work tb_tft_rom_pic_dynamic fast 0
+=1-48ba4e63e9b7-639c3bbe-263-61f4
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vrom_pic
+Z1 !s110 1671183291
+ID[XeZ<SKCSK1Po]S>`X041
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\tft_rom_pic_dynamic\prj\simulation\modelsim
+w1670937914
+8E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/rom_pic/rom_pic.v
+FE:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/rom_pic/rom_pic.v
+L0 39
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 SMVV72I8B@RIW5kOIWM[51
+!s85 0
+!s108 1671183291.542000
+!s107 E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/rom_pic/rom_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/rom_pic|E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/rom_pic/rom_pic.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/rom_pic -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_tft_rom_pic_dynamic
+R1
+IJFAo1^KgHM0>iZ=7m7aOo3
+R2
+R3
+w1671183218
+8E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/../sim/tb_tft_rom_pic_dynamic.v
+FE:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/../sim/tb_tft_rom_pic_dynamic.v
+L0 3
+R4
+r1
+31
+R5
+!i10b 1
+!s100 3_Xlnme=j[84]f3;PI48k1
+!s85 0
+!s108 1671183291.902000
+!s107 E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/../sim/tb_tft_rom_pic_dynamic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/../sim|E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/../sim/tb_tft_rom_pic_dynamic.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtft_ctrl
+I]:a<D@J8<iJj`NIP4B?CI0
+R2
+R3
+w1669962636
+8E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_ctrl.v
+FE:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_ctrl.v
+L0 1
+R4
+r1
+31
+R5
+Z6 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+R1
+!i10b 1
+!s100 TX1gXz50PC7HULCZnZgDU0
+!s85 0
+!s108 1671183291.150000
+!s107 E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl|E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_ctrl.v|
+vtft_pic
+Z7 !s110 1671183290
+Ib0Hl4<gPIXe<847Gb^N:i1
+R2
+R3
+w1671182948
+8E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_pic.v
+FE:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_pic.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 RiaUUJ6[:_^2iTRokR^UZ0
+!s85 0
+!s108 1671183290.970000
+!s107 E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl|E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_pic.v|
+vtft_rom_pic_dynamic
+ISC;S__[A[N6XdJRojNif10
+R2
+R3
+w1671183023
+8E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_rom_pic_dynamic.v
+FE:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_rom_pic_dynamic.v
+L0 1
+R4
+r1
+31
+R5
+R7
+R6
+!i10b 1
+!s100 6CBZ:dD>UeS_FzB^S=Mol0
+!s85 0
+!s108 1671183290.789000
+!s107 E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_rom_pic_dynamic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl|E:/code/workspace_FPGA/tft_rom_pic_dynamic/rtl/tft_rom_pic_dynamic.v|
+vvga_clk
+R1
+I^z1o1[^NfGRUCZX;_e>U93
+R2
+R3
+w1670936910
+8E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/vga_clk/vga_clk.v
+FE:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/vga_clk/vga_clk.v
+L0 39
+R4
+r1
+31
+R5
+!i10b 1
+!s100 nImFR9QaTbX96nA@WR:nY2
+!s85 0
+!s108 1671183291.343000
+!s107 E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/vga_clk/vga_clk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/vga_clk|E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/vga_clk/vga_clk.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/ip_core/vga_clk -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vvga_clk_altpll
+R1
+IPe]gz:TI:0EMWJS1eMaem0
+R2
+R3
+w1671183035
+8E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/db/vga_clk_altpll.v
+FE:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/db/vga_clk_altpll.v
+L0 30
+R4
+r1
+31
+R5
+!i10b 1
+!s100 gZ2Pm5H@7jSL>WPk4`f@03
+!s85 0
+!s108 1671183291.725000
+!s107 E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/db/vga_clk_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/db|E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/db/vga_clk_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/tft_rom_pic_dynamic/prj/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

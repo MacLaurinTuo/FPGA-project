@@ -1,0 +1,77 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\fifo\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1656743356
+V867jS@Gh5CkGK>7B2oe173
+04 7 4 work tb_fifo fast 0
+=1-48ba4e63e9b7-62bfe5bc-d2-4794
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vfifo
+Z1 !s110 1656743355
+IhiG;cJYWWDoKea2A4U0G<0
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\fifo\prj\simulation\modelsim
+w1656641435
+8E:/code/workspace_FPGA/fifo/rtl/fifo.v
+FE:/code/workspace_FPGA/fifo/rtl/fifo.v
+L0 1
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 A_CVcT39I7HkQXZX_^d6>3
+!s85 0
+!s108 1656743355.308000
+!s107 E:/code/workspace_FPGA/fifo/rtl/fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/fifo/rtl|E:/code/workspace_FPGA/fifo/rtl/fifo.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/fifo/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vscfifo_8x256
+R1
+I4dmja5L2LWi0_Qf9LL8571
+R2
+R3
+w1656726648
+8E:/code/workspace_FPGA/fifo/prj/ipcore/scfifo_8x256/scfifo_8x256.v
+FE:/code/workspace_FPGA/fifo/prj/ipcore/scfifo_8x256/scfifo_8x256.v
+L0 39
+R4
+r1
+31
+R5
+!i10b 1
+!s100 f@YVeDaXi=@1kmaJiX:GZ3
+!s85 0
+!s108 1656743355.665000
+!s107 E:/code/workspace_FPGA/fifo/prj/ipcore/scfifo_8x256/scfifo_8x256.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/fifo/prj/ipcore/scfifo_8x256|E:/code/workspace_FPGA/fifo/prj/ipcore/scfifo_8x256/scfifo_8x256.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/fifo/prj/ipcore/scfifo_8x256 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_fifo
+R1
+I?W:;b<^<8QT287kNi94gb1
+R2
+R3
+w1656659708
+8E:/code/workspace_FPGA/fifo/prj/../sim/tb_fifo.v
+FE:/code/workspace_FPGA/fifo/prj/../sim/tb_fifo.v
+L0 2
+R4
+r1
+31
+R5
+!i10b 1
+!s100 g6[3?ImESMHJDZTVB2XLi1
+!s85 0
+!s108 1656743355.504000
+!s107 E:/code/workspace_FPGA/fifo/prj/../sim/tb_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/fifo/prj/../sim|E:/code/workspace_FPGA/fifo/prj/../sim/tb_fifo.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/fifo/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

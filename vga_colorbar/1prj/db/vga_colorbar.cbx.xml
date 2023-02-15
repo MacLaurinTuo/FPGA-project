@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="vga_colorbar">
+		<CBX_INST_ENTRY INSTANCE_NAME="|vga_colorbar|vga_clk:vga_clk_inst|altpll:altpll_component" CBX_FILE_NAME="vga_clk_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

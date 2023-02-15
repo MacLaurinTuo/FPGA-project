@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at flash_read_ctrl.v(184): always construct contains both blocking and non-blocking assignments

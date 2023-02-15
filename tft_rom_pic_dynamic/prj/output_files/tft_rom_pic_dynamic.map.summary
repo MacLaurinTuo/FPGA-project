@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Dec 16 18:15:47 2022
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : tft_rom_pic_dynamic
+Top-level Entity Name : tft_rom_pic_dynamic
+Family : Cyclone IV E
+Total logic elements : 290
+    Total combinational functions : 288
+    Dedicated logic registers : 66
+Total registers : 66
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 262,144
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

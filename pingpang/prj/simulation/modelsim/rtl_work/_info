@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\pingpang\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1671871811
+VQHSD9G`CR^DX9f:giB`zC3
+04 11 4 work tb_pingpang fast 0
+=1-48ba4e63e9b7-63a6bd43-269-45b0
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vclk_gen
+Z1 !s110 1671871802
+Imlj4:Y6nR7nUi3@mo:ObM3
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:\code\workspace_FPGA\pingpang\prj\simulation\modelsim
+w1671863167
+8E:/code/workspace_FPGA/pingpang/prj/ip_core/clk_gen/clk_gen.v
+FE:/code/workspace_FPGA/pingpang/prj/ip_core/clk_gen/clk_gen.v
+L0 39
+Z4 OL;L;10.2;57
+r1
+31
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 4MYn]UTmCJec?;nSPdkB?1
+!s85 0
+!s108 1671871802.368000
+!s107 E:/code/workspace_FPGA/pingpang/prj/ip_core/clk_gen/clk_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/pingpang/prj/ip_core/clk_gen|E:/code/workspace_FPGA/pingpang/prj/ip_core/clk_gen/clk_gen.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/pingpang/prj/ip_core/clk_gen -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vclk_gen_altpll
+R1
+IT^R:Ng;b:=T:?Fe_eAQQJ3
+R2
+R3
+w1671866483
+8E:/code/workspace_FPGA/pingpang/prj/db/clk_gen_altpll.v
+FE:/code/workspace_FPGA/pingpang/prj/db/clk_gen_altpll.v
+L0 30
+R4
+r1
+31
+R5
+!i10b 1
+!s100 NlBE96HjBBKf00bMh8Hk92
+!s85 0
+!s108 1671871802.751000
+!s107 E:/code/workspace_FPGA/pingpang/prj/db/clk_gen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/pingpang/prj/db|E:/code/workspace_FPGA/pingpang/prj/db/clk_gen_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/pingpang/prj/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vdata_gen
+R1
+IeK5EKLT:e34ROO0;T4YKU3
+R2
+R3
+w1671866437
+8E:/code/workspace_FPGA/pingpang/rtl/data_gen.v
+FE:/code/workspace_FPGA/pingpang/rtl/data_gen.v
+L0 1
+R4
+r1
+31
+R5
+Z6 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/pingpang/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 EeTb^fiDjf;7g8@_jBoD_0
+!s85 0
+!s108 1671871802.187000
+!s107 E:/code/workspace_FPGA/pingpang/rtl/data_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/pingpang/rtl|E:/code/workspace_FPGA/pingpang/rtl/data_gen.v|
+vpingpang
+IhZlPTIi]BKi]5[b?9]15k2
+R2
+R3
+w1671868772
+8E:/code/workspace_FPGA/pingpang/rtl/pingpang.v
+FE:/code/workspace_FPGA/pingpang/rtl/pingpang.v
+L0 1
+R4
+r1
+31
+R5
+R6
+R1
+!i10b 1
+!s100 a_74oznPOa;Q^YIIXH3Y13
+!s85 0
+!s108 1671871801.991000
+!s107 E:/code/workspace_FPGA/pingpang/rtl/pingpang.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/pingpang/rtl|E:/code/workspace_FPGA/pingpang/rtl/pingpang.v|
+vram
+R1
+I_CGT<j272T@dJRVzf1N;A0
+R2
+R3
+w1671863647
+8E:/code/workspace_FPGA/pingpang/prj/ip_core/ram/ram.v
+FE:/code/workspace_FPGA/pingpang/prj/ip_core/ram/ram.v
+L0 39
+R4
+r1
+31
+R5
+!i10b 1
+!s100 PZ@]SFCg>ARS@3zFYK<V>1
+!s85 0
+!s108 1671871802.575000
+!s107 E:/code/workspace_FPGA/pingpang/prj/ip_core/ram/ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/pingpang/prj/ip_core/ram|E:/code/workspace_FPGA/pingpang/prj/ip_core/ram/ram.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/pingpang/prj/ip_core/ram -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vram_ctrl
+ISQ2Ei8OEA2<Ea]In3UJ;82
+R2
+R3
+w1671871737
+8E:/code/workspace_FPGA/pingpang/rtl/ram_ctrl.v
+FE:/code/workspace_FPGA/pingpang/rtl/ram_ctrl.v
+L0 1
+R4
+r1
+31
+R5
+R6
+!s110 1671871801
+!i10b 1
+!s100 M9]<8=7AUOVIQGBF8X=G^2
+!s85 0
+!s108 1671871801.789000
+!s107 E:/code/workspace_FPGA/pingpang/rtl/ram_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/pingpang/rtl|E:/code/workspace_FPGA/pingpang/rtl/ram_ctrl.v|
+vtb_pingpang
+R1
+I3]3Cb<HCGH?5[FUh@n<`00
+R2
+R3
+w1671865215
+8E:/code/workspace_FPGA/pingpang/prj/../sim/tb_pingpang.v
+FE:/code/workspace_FPGA/pingpang/prj/../sim/tb_pingpang.v
+L0 2
+R4
+r1
+31
+R5
+!i10b 1
+!s100 SF<dQmF_k`MP4kZ<g3UbX2
+!s85 0
+!s108 1671871802.926000
+!s107 E:/code/workspace_FPGA/pingpang/prj/../sim/tb_pingpang.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/pingpang/prj/../sim|E:/code/workspace_FPGA/pingpang/prj/../sim/tb_pingpang.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/pingpang/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

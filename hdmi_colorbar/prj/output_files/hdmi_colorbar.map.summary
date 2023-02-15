@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Dec 01 12:01:35 2022
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : hdmi_colorbar
+Top-level Entity Name : hdmi_colorbar
+Family : Cyclone IV E
+Total logic elements : 357
+    Total combinational functions : 345
+    Dedicated logic registers : 159
+Total registers : 175
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

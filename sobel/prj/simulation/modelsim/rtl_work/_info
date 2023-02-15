@@ -1,0 +1,237 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\code\workspace_FPGA\sobel\prj\simulation\modelsim
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1671613982
+VH1Cz;VJOYlA`<]EM]:iR12
+04 8 4 work tb_sobel fast 0
+=1-48ba4e63e9b7-63a2ce1e-1f3-75a4
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2;57
+vclk_gen
+IzY9[kSXaRaj;9=c^Ief:X0
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:\code\workspace_FPGA\sobel\prj\simulation\modelsim
+w1671535604
+8E:/code/workspace_FPGA/sobel/prj/ip_core/clk_gen/clk_gen.v
+FE:/code/workspace_FPGA/sobel/prj/ip_core/clk_gen/clk_gen.v
+L0 39
+Z3 OL;L;10.2;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s110 1671613974
+!i10b 1
+!s100 25=U7kHM@2H[N4M`PKd>o1
+!s85 0
+!s108 1671613974.018000
+!s107 E:/code/workspace_FPGA/sobel/prj/ip_core/clk_gen/clk_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/prj/ip_core/clk_gen|E:/code/workspace_FPGA/sobel/prj/ip_core/clk_gen/clk_gen.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/sobel/prj/ip_core/clk_gen -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vclk_gen_altpll
+R5
+IeZ?O0G^`Fd5ZPMNS@PY:02
+R1
+R2
+w1671541226
+8E:/code/workspace_FPGA/sobel/prj/db/clk_gen_altpll.v
+FE:/code/workspace_FPGA/sobel/prj/db/clk_gen_altpll.v
+L0 30
+R3
+r1
+31
+R4
+!i10b 1
+!s100 4Bc^IicDhND_FX0fTVTG53
+!s85 0
+!s108 1671613974.686000
+!s107 E:/code/workspace_FPGA/sobel/prj/db/clk_gen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/prj/db|E:/code/workspace_FPGA/sobel/prj/db/clk_gen_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/sobel/prj/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vfifo_8x16384
+Z6 !s110 1671613973
+I:`4cPkFJhWBg0UJY:A<WR3
+R1
+R2
+w1671528220
+8E:/code/workspace_FPGA/sobel/prj/ip_core/fifo_8x16384.v
+FE:/code/workspace_FPGA/sobel/prj/ip_core/fifo_8x16384.v
+L0 39
+R3
+r1
+31
+R4
+!i10b 1
+!s100 2bV9UI?QZVI@NO46:5=E92
+!s85 0
+!s108 1671613973.843000
+!s107 E:/code/workspace_FPGA/sobel/prj/ip_core/fifo_8x16384.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/prj/ip_core|E:/code/workspace_FPGA/sobel/prj/ip_core/fifo_8x16384.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/sobel/prj/ip_core -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vram_pic
+R5
+I_6E@O_fe[nOcgfdIKzheL3
+R1
+R2
+w1671538112
+8E:/code/workspace_FPGA/sobel/prj/ip_core/ram_pic/ram_pic.v
+FE:/code/workspace_FPGA/sobel/prj/ip_core/ram_pic/ram_pic.v
+L0 39
+R3
+r1
+31
+R4
+!i10b 1
+!s100 KJH=V1WCAeX[[:F@P2S@41
+!s85 0
+!s108 1671613974.219000
+!s107 E:/code/workspace_FPGA/sobel/prj/ip_core/ram_pic/ram_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/prj/ip_core/ram_pic|E:/code/workspace_FPGA/sobel/prj/ip_core/ram_pic/ram_pic.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/sobel/prj/ip_core/ram_pic -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vsobel
+R6
+IR5oF`^1UbjfSlKh6DRdCH1
+R1
+R2
+w1671609322
+8E:/code/workspace_FPGA/sobel/rtl/sobel.v
+FE:/code/workspace_FPGA/sobel/rtl/sobel.v
+L0 1
+R3
+r1
+31
+R4
+Z7 !s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/sobel/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 Z:jXoYGGElZWScfYX?Hhj0
+!s85 0
+!s108 1671613973.646000
+!s107 E:/code/workspace_FPGA/sobel/rtl/sobel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/rtl|E:/code/workspace_FPGA/sobel/rtl/sobel.v|
+vsobel_ctrl
+R6
+I1Oa2YPzCU9579[cjCPY^d2
+R1
+R2
+w1671613922
+8E:/code/workspace_FPGA/sobel/rtl/sobel_ctrl.v
+FE:/code/workspace_FPGA/sobel/rtl/sobel_ctrl.v
+L0 1
+R3
+r1
+31
+R4
+R7
+!i10b 1
+!s100 MY0a0=JE=MV]c4f>Hz?Ie2
+!s85 0
+!s108 1671613973.466000
+!s107 E:/code/workspace_FPGA/sobel/rtl/sobel_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/rtl|E:/code/workspace_FPGA/sobel/rtl/sobel_ctrl.v|
+vtb_sobel
+R5
+IL[g5hAYzU2l<9>ojEGV130
+R1
+R2
+w1671610395
+8E:/code/workspace_FPGA/sobel/prj/../sim/tb_sobel.v
+FE:/code/workspace_FPGA/sobel/prj/../sim/tb_sobel.v
+L0 3
+R3
+r1
+31
+R4
+!i10b 1
+!s100 hXZm5aL;2MP6]LMOn7W`61
+!s85 0
+!s108 1671613974.886000
+!s107 E:/code/workspace_FPGA/sobel/prj/../sim/tb_sobel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/prj/../sim|E:/code/workspace_FPGA/sobel/prj/../sim/tb_sobel.v|
+!s92 -vlog01compat -work work +incdir+E:/code/workspace_FPGA/sobel/prj/../sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtft_ctrl
+R6
+I67AaoA_3dTOGn5Um9^IW61
+R1
+R2
+w1671538581
+8E:/code/workspace_FPGA/sobel/rtl/tft_ctrl.v
+FE:/code/workspace_FPGA/sobel/rtl/tft_ctrl.v
+L0 1
+R3
+r1
+31
+R4
+R7
+!i10b 1
+!s100 TX1gXz50PC7HULCZnZgDU0
+!s85 0
+!s108 1671613973.288000
+!s107 E:/code/workspace_FPGA/sobel/rtl/tft_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/rtl|E:/code/workspace_FPGA/sobel/rtl/tft_ctrl.v|
+vtft_pic
+IOJ7_cQdzDggOH8VzEXReG0
+R1
+R2
+w1671607021
+8E:/code/workspace_FPGA/sobel/rtl/tft_pic.v
+FE:/code/workspace_FPGA/sobel/rtl/tft_pic.v
+L0 1
+R3
+r1
+31
+R4
+R7
+R6
+!i10b 1
+!s100 mHGKWJ[3m74RiYmRdGVCI3
+!s85 0
+!s108 1671613973.103000
+!s107 E:/code/workspace_FPGA/sobel/rtl/tft_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/rtl|E:/code/workspace_FPGA/sobel/rtl/tft_pic.v|
+vuart_rx
+Z8 !s110 1671613972
+I8zEB97MmG>gdAPF5D_<YW0
+R1
+R2
+w1657727310
+8E:/code/workspace_FPGA/sobel/rtl/uart_rx.v
+FE:/code/workspace_FPGA/sobel/rtl/uart_rx.v
+L0 1
+R3
+r1
+31
+R4
+R7
+!i10b 1
+!s100 ePae^Iz06Qj_h>cnB3H_i2
+!s85 0
+!s108 1671613972.918000
+!s107 E:/code/workspace_FPGA/sobel/rtl/uart_rx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/rtl|E:/code/workspace_FPGA/sobel/rtl/uart_rx.v|
+vuart_tx
+I^LnkLHf2ki=_V`0FRFQAL1
+R1
+R2
+w1657762260
+8E:/code/workspace_FPGA/sobel/rtl/uart_tx.v
+FE:/code/workspace_FPGA/sobel/rtl/uart_tx.v
+L0 1
+R3
+r1
+31
+R4
+R8
+R7
+!i10b 1
+!s100 @ZS2@9IRDhUJVnXK=d0_;3
+!s85 0
+!s108 1671613972.721000
+!s107 E:/code/workspace_FPGA/sobel/rtl/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/code/workspace_FPGA/sobel/rtl|E:/code/workspace_FPGA/sobel/rtl/uart_tx.v|

@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Thu Sep 08 21:13:40 2022
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : spi_flash_read
+Top-level Entity Name : spi_flash_read
+Family : Cyclone IV GX
+Total logic elements : 213
+    Total combinational functions : 195
+    Dedicated logic registers : 146
+Total registers : 146
+Total pins : 8
+Total virtual pins : 0
+Total memory bits : 2,048
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0
